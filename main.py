@@ -7,6 +7,7 @@ from datetime import datetime
 from random import randint
 import re
 from emoji import demojize
+import sqlite3
 
 load_dotenv();
 
@@ -22,23 +23,55 @@ async def twitterLogin():
 
 # Get Tweets
 async def getTwitterPosts():
-    tweets = await client.search_tweet("(Elon OR Musk) min_faves:10 lang:en -filter:links filter:replies", product='Latest', count=10)
+    conn = sqlite3.connect("realTimeData.db")
+    cursor = conn.cursor()
+    tweets = await client.search_tweet("($TSLA) lang:en -filter:links", product='Latest', count=10)
     tweetCount = 0
     for tweet in tweets:
         tweetCount += 1
-        #tweetData = [tweetCount, preprocessing_tweet(tweet.text), tweet.reply_count, tweet.view_count, tweet.favorite_count, tweet.retweet_count, tweet.created_at]
-        #print(tweetData)
-        print([tweetCount, tweet.text])
-        print([tweetCount, preprocessing_tweet(tweet.text)])
+        tweetData = [
+            tweet.id,
+            tweet.text,
+            preprocessingTweet(tweet.text), 
+            tweet.reply_count, 
+            tweet.view_count, 
+            tweet.favorite_count, 
+            tweet.retweet_count, 
+            tweet.created_at
+        ]
+        cursor.execute('''
+            INSERT INTO tweets (id, origText, cleanText, replyCount, viewCount, favoriteCount, retweetCount, createdDate)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+        ''', tweetData)
 
-def preprocessing_tweet(text):
+        conn.commit()
+        conn.close()
+
+def preprocessingTweet(text):
     text = demojize(text); # Convert emoji to text
     text = re.sub(r'@\w+', '[MENTION]', text) # Remove @ to another user
     text = re.sub(r'#(\w+)', r'\1', text) # Remove # but keeps text
+    text = re.sub("\n+", " ", text) # Remove \n
     text = text.strip() # Remove extra spaces
     return text
 
 
 client.load_cookies('cookies.json')
-# asyncio.run(twitterLogin())
-asyncio.run(getTwitterPosts());
+#asyncio.run(twitterLogin())
+asyncio.run(getTwitterPosts())
+
+conn = sqlite3.connect("realTimeData.db")
+cursor = conn.cursor()
+cursor.execute('''
+    CREATE TABLE IF NOT EXISTS tweets (
+        id INTEGER PRIMARY KEY,
+        origText TEXT NOT NULL,
+        cleanText TEXT NOT NULL,
+        replyCount INTEGER NOT NULL,
+        viewCount INTEGER NOT NULL,
+        favoriteCount INTEGER NOT NULL,
+        retweetCount INTEGER NOT NULL,
+        createdDate TEXT NOT NULL
+    )
+''')
+conn.commit()
