@@ -1,65 +1,8 @@
-from twikit import Client, TooManyRequests
-from dotenv import load_dotenv
+import twitter
 import asyncio
-import os
-import time
-from datetime import datetime
-from random import randint
-import re
-from emoji import demojize
 import sqlite3
 
-load_dotenv();
-
-# Authenticate to X.com (Twitter)
-client = Client(language='en-US')
-async def twitterLogin():
-    if client is None:
-        print("Client initialization failed.")
-        return
-    await client.login(auth_info_1=os.getenv("twitterUsername"), auth_info_2=os.getenv("twitterEmail"), password=os.getenv("twitterPassword"))
-    client.save_cookies('cookies.json')
-
-
-# Get Tweets
-async def getTwitterPosts():
-    conn = sqlite3.connect("realTimeData.db")
-    cursor = conn.cursor()
-    tweets = await client.search_tweet("($TSLA) lang:en -filter:links", product='Latest', count=10)
-    tweetCount = 0
-    for tweet in tweets:
-        tweetCount += 1
-        tweetData = [
-            tweet.id,
-            tweet.text,
-            preprocessingTweet(tweet.text), 
-            tweet.reply_count, 
-            tweet.view_count, 
-            tweet.favorite_count, 
-            tweet.retweet_count, 
-            tweet.created_at
-        ]
-        cursor.execute('''
-            INSERT INTO tweets (id, origText, cleanText, replyCount, viewCount, favoriteCount, retweetCount, createdDate)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-        ''', tweetData)
-
-        conn.commit()
-        conn.close()
-
-def preprocessingTweet(text):
-    text = demojize(text); # Convert emoji to text
-    text = re.sub(r'@\w+', '[MENTION]', text) # Remove @ to another user
-    text = re.sub(r'#(\w+)', r'\1', text) # Remove # but keeps text
-    text = re.sub("\n+", " ", text) # Remove \n
-    text = text.strip() # Remove extra spaces
-    return text
-
-
-client.load_cookies('cookies.json')
-#asyncio.run(twitterLogin())
-asyncio.run(getTwitterPosts())
-
+# Create database for twitter data if it doesn't exist 
 conn = sqlite3.connect("realTimeData.db")
 cursor = conn.cursor()
 cursor.execute('''
@@ -71,7 +14,34 @@ cursor.execute('''
         viewCount INTEGER NOT NULL,
         favoriteCount INTEGER NOT NULL,
         retweetCount INTEGER NOT NULL,
-        createdDate TEXT NOT NULL
+        createdDate TEXT NOT NULL,
+        Positive Decimal(7, 5) NOT NULL,
+        Hopeful Decimal(7, 5) NOT NULL, 
+        Pride Decimal(7, 5) NOT NULL, 
+        Approval Decimal(7, 5) NOT NULL, 
+        Curiosity Decimal(7, 5) NOT NULL, 
+        Fear Decimal(7, 5) NOT NULL, 
+        Remorse Decimal(7, 5) NOT NULL, 
+        Sadness Decimal(7, 5) NOT NULL, 
+        Disapproval Decimal(7, 5) NOT NULL, 
+        Neutral Decimal(7, 5) NOT NULL
     )
 ''')
+cursor.execute('CREATE INDEX IF NOT EXISTS idx_tweet_id ON tweets (id)')
+cursor.execute('CREATE INDEX IF NOT EXISTS idx_created_date ON tweets (createdDate)')
 conn.commit()
+
+async def fetchTweetsPeriodically():
+    while True:
+        print("Getting Twitter posts...")
+        await twitter.getTwitterPosts()
+        print("Waiting 5 mins...")
+        await asyncio.sleep(300)
+
+async def main():
+    await twitter.twitterLogin()
+    asyncio.create_task(fetchTweetsPeriodically())
+    while True:
+        await asyncio.sleep(3600)
+
+asyncio.run(main());
