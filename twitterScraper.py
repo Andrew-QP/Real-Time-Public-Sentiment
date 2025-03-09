@@ -1,5 +1,7 @@
+import config
 import goEmotions
 from twikit import Client, TooManyRequests
+import twikit
 from dotenv import load_dotenv
 import asyncio
 import os
@@ -27,7 +29,10 @@ async def twitterLogin():
 async def getTwitterPosts():
     conn = sqlite3.connect("realTimeData.db")
     cursor = conn.cursor()
-    tweets = await client.search_tweet("($TSLA) lang:en -filter:links", product='Latest', count=10)
+    try:
+        tweets = await client.search_tweet("($TSLA) lang:en -filter:links", product='Latest', count=10)
+    except twikit.errors.AccountSuspended as e:
+        config.twitterRateLimitReached = True
     tweetCount = 0
     for tweet in tweets:
         # Check if tweet is already in the database
@@ -40,18 +45,27 @@ async def getTwitterPosts():
 
         tweetData = [
             tweet.id,
-            tweet.text,
-            preprocessingTweet(tweet.text), 
+            tweet.full_text,
+            preprocessingTweet(tweet.full_text), 
             tweet.reply_count, 
             tweet.view_count, 
             tweet.favorite_count, 
             tweet.retweet_count, 
             tweet.created_at
         ]
-        sentimentScores = goEmotions.getTextSentiment(tweet.text)
+        sentimentScores = goEmotions.getTextSentiment(tweet.full_text)
         for category in sentimentScores:
             tweetData.append(sentimentScores[category])
-
+        # Handle none data type
+        if (tweetData[3] is None):
+            tweetData[3] = 0
+        if (tweetData[4] is None):
+            tweetData[4] = 0
+        if (tweetData[5] is None):
+            tweetData[5] = 0
+        if (tweetData[6] is None):
+            tweetData[6] = 0
+        print(tweetData)
         cursor.execute('''
             INSERT INTO tweets (id, origText, cleanText, replyCount, viewCount, favoriteCount, retweetCount, createdDate,
                        Positive, Hopeful, Pride, Approval, Curiosity, Fear, Remorse, Sadness, Disapproval, Neutral)
