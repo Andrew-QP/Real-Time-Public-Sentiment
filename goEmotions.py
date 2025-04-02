@@ -67,8 +67,8 @@ def getTextSentiment(text):
 
 # Example usage
 # tweet = "I hope $TSLA stock increases"
-tweet = "I wish $TSLA will go up in price. I hate how thing are going right now. I believe this harsh reality is temporary."
-sentimentScores = getTextSentiment(tweet)
+# tweet = "I wish $TSLA will go up in price. I hate how thing are going right now. I believe this harsh reality is temporary."
+# sentimentScores = getTextSentiment(tweet)
 
-print("Sentiment Scores for Tweet:")
-print(sentimentScores)
+# print("Sentiment Scores for Tweet:")
+# print(sentimentScores)
