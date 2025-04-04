@@ -1,0 +1,70 @@
+2025-04-04 12:23:39 PM [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-04 12:23:55 PM [INFO] Added job "collectData" to job store "default"
+2025-04-04 12:23:55 PM [INFO] Scheduler started
+2025-04-04 12:30:00 PM [INFO] Running job "collectData (trigger: cron[minute='0,10,20,30,40,50'], next run at: 2025-04-04 12:30:00 CDT)" (scheduled at 2025-04-04 12:30:00-05:00)
+2025-04-04 12:30:00 PM [INFO] Starting data collection...
+2025-04-04 12:30:00 PM [INFO] Sleeping for 102.72 seconds before scrolling
+2025-04-04 12:32:01 PM [INFO] 11 stocks added and 0 tweets added!
+2025-04-04 12:32:01 PM [INFO] Data collection completed successfully.
+2025-04-04 12:32:01 PM [INFO] Job "collectData (trigger: cron[minute='0,10,20,30,40,50'], next run at: 2025-04-04 12:40:00 CDT)" executed successfully
+2025-04-04 12:32:01 PM [INFO] collect_data detected by completion listener.
+2025-04-04 12:32:06 PM [INFO] Task listener finished.
+--------------
+2025-04-04 12:32:21 PM [INFO] Shutting down...
+2025-04-04 12:32:21 PM [WARNING] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))': /session/2b3950b73ff42db745297890e2ebdea7
+2025-04-04 12:32:21 PM [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fba6d527250>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2b3950b73ff42db745297890e2ebdea7
+2025-04-04 12:32:21 PM [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fba6d527610>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2b3950b73ff42db745297890e2ebdea7
+2025-04-04 12:32:21 PM [INFO] Scheduler has been shut down
+2025-04-04 02:14:53 PM [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-04 02:15:05 PM [INFO] Added job "collectData" to job store "default"
+2025-04-04 02:15:05 PM [INFO] Scheduler started
+2025-04-04 02:20:00 PM [INFO] Running job "collectData (trigger: cron[minute='0,10,20,30,40,50'], next run at: 2025-04-04 14:20:00 CDT)" (scheduled at 2025-04-04 14:20:00-05:00)
+2025-04-04 02:20:00 PM [INFO] Starting data collection...
+2025-04-04 02:20:00 PM [INFO] Sleeping for 106.59 seconds before scrolling
+2025-04-04 02:22:00 PM [INFO] 11 stocks added and 25 tweets added!
+2025-04-04 02:22:00 PM [INFO] Data collection completed successfully.
+2025-04-04 02:22:00 PM [INFO] Job "collectData (trigger: cron[minute='0,10,20,30,40,50'], next run at: 2025-04-04 14:30:00 CDT)" executed successfully
+2025-04-04 02:22:00 PM [INFO] collect_data detected by completion listener.
+2025-04-04 02:22:05 PM [INFO] Task listener finished.
+--------------
+2025-04-04 02:30:00 PM [INFO] Running job "collectData (trigger: cron[minute='0,10,20,30,40,50'], next run at: 2025-04-04 14:40:00 CDT)" (scheduled at 2025-04-04 14:30:00-05:00)
+2025-04-04 02:30:00 PM [INFO] Starting data collection...
+2025-04-04 02:30:00 PM [INFO] Sleeping for 72.66 seconds before scrolling
+2025-04-04 02:31:30 PM [INFO] 11 stocks added and 30 tweets added!
+2025-04-04 02:31:30 PM [INFO] Data collection completed successfully.
+2025-04-04 02:31:30 PM [INFO] Job "collectData (trigger: cron[minute='0,10,20,30,40,50'], next run at: 2025-04-04 14:40:00 CDT)" executed successfully
+2025-04-04 02:31:30 PM [INFO] collect_data detected by completion listener.
+2025-04-04 02:31:35 PM [INFO] Task listener finished.
+--------------
+2025-04-04 02:40:00 PM [INFO] Running job "collectData (trigger: cron[minute='0,10,20,30,40,50'], next run at: 2025-04-04 14:50:00 CDT)" (scheduled at 2025-04-04 14:40:00-05:00)
+2025-04-04 02:40:00 PM [INFO] Starting data collection...
+2025-04-04 02:40:00 PM [INFO] Sleeping for 95.29 seconds before scrolling
+2025-04-04 02:41:51 PM [INFO] 11 stocks added and 13 tweets added!
+2025-04-04 02:41:51 PM [INFO] Data collection completed successfully.
+2025-04-04 02:41:51 PM [INFO] Job "collectData (trigger: cron[minute='0,10,20,30,40,50'], next run at: 2025-04-04 14:50:00 CDT)" executed successfully
+2025-04-04 02:41:51 PM [INFO] collect_data detected by completion listener.
+2025-04-04 02:41:56 PM [INFO] Task listener finished.
+--------------
+2025-04-04 02:50:00 PM [INFO] Running job "collectData (trigger: cron[minute='0,10,20,30,40,50'], next run at: 2025-04-04 15:00:00 CDT)" (scheduled at 2025-04-04 14:50:00-05:00)
+2025-04-04 02:50:00 PM [INFO] Starting data collection...
+2025-04-04 02:50:00 PM [INFO] Sleeping for 80.86 seconds before scrolling
+2025-04-04 02:51:41 PM [INFO] 11 stocks added and 16 tweets added!
+2025-04-04 02:51:41 PM [INFO] Data collection completed successfully.
+2025-04-04 02:51:41 PM [INFO] Job "collectData (trigger: cron[minute='0,10,20,30,40,50'], next run at: 2025-04-04 15:00:00 CDT)" executed successfully
+2025-04-04 02:51:41 PM [INFO] collect_data detected by completion listener.
+2025-04-04 02:51:46 PM [INFO] Task listener finished.
+--------------
+2025-04-04 03:00:00 PM [INFO] Running job "collectData (trigger: cron[minute='0,10,20,30,40,50'], next run at: 2025-04-04 15:10:00 CDT)" (scheduled at 2025-04-04 15:00:00-05:00)
+2025-04-04 03:00:00 PM [INFO] Starting data collection...
+2025-04-04 03:00:00 PM [INFO] Sleeping for 102.45 seconds before scrolling
+2025-04-04 03:01:56 PM [INFO] 10 stocks added and 25 tweets added!
+2025-04-04 03:01:56 PM [INFO] Data collection completed successfully.
+2025-04-04 03:01:56 PM [INFO] Job "collectData (trigger: cron[minute='0,10,20,30,40,50'], next run at: 2025-04-04 15:10:00 CDT)" executed successfully
+2025-04-04 03:01:56 PM [INFO] collect_data detected by completion listener.
+2025-04-04 03:02:01 PM [INFO] Task listener finished.
+--------------
+2025-04-04 03:02:24 PM [INFO] Shutting down...
+2025-04-04 03:02:24 PM [WARNING] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))': /session/5357f42c04b63ce2984d3b1af66709f2
+2025-04-04 03:02:24 PM [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f2e88717250>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/5357f42c04b63ce2984d3b1af66709f2
+2025-04-04 03:02:24 PM [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f2e88717390>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/5357f42c04b63ce2984d3b1af66709f2
+2025-04-04 03:02:24 PM [INFO] Scheduler has been shut down

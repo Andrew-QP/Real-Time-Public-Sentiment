@@ -1,8 +1,10 @@
-#import twitterWebScraper as tws
-import asyncio
+import twitterWebScraper as tws
 import sqlite3
 import time
-import threading
+import random
+import logging
+import pytz
+from datetime import datetime
 from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.events import EVENT_JOB_EXECUTED, EVENT_JOB_ERROR
 
@@ -54,71 +56,68 @@ cursor.execute('''
 cursor.execute('CREATE INDEX IF NOT EXISTS idx_stock_prices_time ON stockPrice(time)')
 conn.commit()
 
-# # Task functions
-# def collect_tweet_data():
-#     print("Collecting tweet data...")
+# Custom time converter for Central Time
+def central_time_converter(*args):
+    return datetime.now(pytz.timezone("US/Central")).timetuple()
+logging.basicConfig(
+    filename='collector.log',
+    level=logging.INFO,
+    format='%(asctime)s [%(levelname)s] %(message)s',
+    datefmt='%Y-%m-%d %I:%M:%S %p'
+)
+logging.Formatter.converter = central_time_converter
 
-# def collect_finance_data():
-#     print("Collecting finance data...")
+# Task functions
+def collectData():
+    try:
+        logging.info("Starting data collection...")
+        driver.refresh()
+        sleep_duration = random.uniform(60, 120)  # Random time between 1 and 2 minutes
+        logging.info(f"Sleeping for {sleep_duration:.2f} seconds before scrolling")
+        time.sleep(sleep_duration)
+        tws.humanLikeScroll(driver, 5)
+        logOutput = tws.combineTweetStock(driver)
+        if logOutput:
+            logging.info(logOutput)
+        logging.info("Data collection completed successfully.")
+    except Exception as e:
+        logging.error(f"collectData failed: {e}")
 
-# def make_predictions():
-#     print("Making predictions...")
+def make_predictions():
+    logging.info("Making predictions...")
 
-# def update_graphs():
-#     print("Updating graphs...")
-
-# # Global flags to track task completion
-# tweet_data_collected = False
-# finance_data_collected = False
-# lock = threading.Lock()
-
-# # Task completion listener
-# def task_listener(event):
-#     global tweet_data_collected, finance_data_collected
-
-#     # Listen for completion of tasks
-#     with lock:
-#         if event.job_id == 'collect_tweets' and event.exception is None:
-#             tweet_data_collected = True
-#             print("Tweet data collection completed.")
-
-#         elif event.job_id == 'collect_finance' and event.exception is None:
-#             finance_data_collected = True
-#             print("Finance data collection completed.")
-
-#         # Trigger predictions only if both data collection tasks are completed
-#         print(f"{tweet_data_collected} | {finance_data_collected}")
-        
-#         # Trigger predictions and graph updates only once after both are done
-#         if tweet_data_collected and finance_data_collected:
-#             # Ensure tasks are triggered only once
-#             print("Both data collections completed. Running predictions and updating graphs.")
-            
-#             time.sleep(5)
-#             make_predictions()
-#             update_graphs()
-#             print("--------------")
-            
-#             # Reset the flags after triggering the tasks
-#             tweet_data_collected = False
-#             finance_data_collected = False
+def update_graphs():
+    logging.info("Updating graphs...")
 
 
-# # Initialize BackgroundScheduler
-# scheduler = BackgroundScheduler()
+# Task completion listener
+def task_listener(event):
+    if event.job_id == 'collect_data':
+        if event.exception is None: 
+            logging.info("collect_data detected by completion listener.")
+        else:
+            logging.error(f"collect_data encountered an error in listener: {event.exception}")
+        time.sleep(5)
+        # make_predictions()
+        # update_graphs()
+        logging.info("Task listener finished.\n--------------")
 
-# # Add jobs to scheduler (set specific times for tweet and finance data collection)
-# scheduler.add_job(collect_tweet_data, 'cron', minute='2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58', id='collect_tweets')
-# scheduler.add_job(collect_finance_data, 'cron', minute='2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58', id='collect_finance')
 
-# # Add listener for task completion
-# scheduler.add_listener(task_listener, EVENT_JOB_EXECUTED | EVENT_JOB_ERROR)
 
-# # Start the scheduler
-# # driver = tws.login()
-# # driver.get("https://x.com/search?q=%24TSLA%20lang%3Aen%20-filter%3Alinks&f=live&src=typed_query")
-# print("Starting...")
-# scheduler.start()
+# Initialize BackgroundScheduler
+scheduler = BackgroundScheduler()
+
+# Add jobs to scheduler (set specific times for tweet and finance data collection)
+scheduler.add_job(collectData, 'cron', minute='0, 10, 20, 30, 40, 50', id='collect_data')
+
+# Add listener for task completion
+scheduler.add_listener(task_listener, EVENT_JOB_EXECUTED | EVENT_JOB_ERROR)
+
+# Start the scheduler
+print("Starting...")
+driver = tws.login()
+driver.get("https://x.com/search?q=%24TSLA%20lang%3Aen%20-filter%3Alinks&f=live&src=typed_query")
+scheduler.start()
 
 
 
@@ -126,25 +125,12 @@ conn.commit()
 
 
 
-# # To keep the program running
-# try:
-#     while True:
-#         time.sleep(1)  # Keeps the program running, allowing scheduler to run in background
-# except (KeyboardInterrupt, SystemExit):
-#     # Shut down the scheduler gracefully when exiting
-#     scheduler.shutdown()
-
-
-
-
-
-
-
-# driver = login()
-# driver.get("https://x.com/search?q=%24TSLA%20lang%3Aen%20-filter%3Alinks&f=live&src=typed_query")
-
-# extractTweets(driver)
-
-# humanLikeScroll(driver, 15)
-
-# driver.quit()
+# To keep the program running
+try:
+    while True:
+        time.sleep(1)  # Keeps the program running, allowing scheduler to run in background
+except (KeyboardInterrupt, SystemExit):
+    # Shut down the scheduler gracefully when exiting
+    logging.info("Shutting down...")
+    driver.quit()
+    scheduler.shutdown()

@@ -6,7 +6,9 @@ import time
 import pickle
 import random
 import os
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
+import yfinance as yf
+import requests
 import pytz
 from dotenv import load_dotenv
 import sqlite3
@@ -28,7 +30,7 @@ USER_AGENTS = [
 def setupDriver():
     # Set up Brave options
     options = Options()
-    options.binary_location = "/usr/bin/brave-browser"  # Update with your Brave installation path
+    options.binary_location = os.getenv("bravePath")  # Update with your Brave installation path
 
     # Choose a random User-Agent from the list
     user_agent = random.choice(USER_AGENTS)
@@ -39,7 +41,7 @@ def setupDriver():
     user_data_dir = os.path.join(os.getcwd(), "cookies")  # Create a 'cookies' directory in the current working directory
     options.add_argument(f"user-data-dir={user_data_dir}")  # Use this directory for storing cookies
 
-    # Create a WebDriver instance using the Brave browser (ensure ChromeDriver is in PATH)
+    # Create a WebDriver instance using the Brave browser
     driver = webdriver.Chrome(options=options)
     return driver
 
@@ -107,14 +109,14 @@ def convertToCentral(utc_time_str):
     central_zone = pytz.timezone('US/Central')
 
     # Parse the input UTC time string into a datetime object
-    utc_time = datetime.strptime(utc_time_str, "%Y-%m-%dT%H:%M:%S.%fZ")
+    utc_time = datetime.strptime(utc_time_str, "%Y-%m-%d %H:%M")
     utc_time = utc_zone.localize(utc_time)  # Localize to UTC
 
     # Convert to Central Time
     central_time = utc_time.astimezone(central_zone)
 
     # Return the Central time in string format
-    return central_time.strftime('%Y-%m-%d %I:%M:%S %p')  # 12-hour format
+    return central_time.strftime('%Y-%m-%d %I:%M %p')  # 12-hour format
 
 # %%
 def humanLikeScroll(driver, duration=30, randDirection = True):
@@ -176,8 +178,85 @@ def humanLikeScroll(driver, duration=30, randDirection = True):
 
 
 # %%
+def getStockData():
+    # Define the timezone (Eastern Time)
+    tz = pytz.timezone('America/New_York')
+
+    # Get the current time in ET
+    now = datetime.now(tz)
+
+    # Adjust the time window to be the **previous** 10-minute window
+    start_minute = (now.minute // 10) * 10 - 10  # Shift back by 10 minutes
+    if start_minute < 0:
+        start_minute += 60  # Handle cases where minute becomes negative
+        now = now - timedelta(hours=1)
+
+    start_time = now.replace(minute=start_minute, second=0, microsecond=0)
+    end_time = start_time + timedelta(minutes=10)  # Now correctly ends at the current 10-minute mark
+
+    # Convert to UTC for filtering
+    start_time_utc = start_time.astimezone(pytz.utc)
+    end_time_utc = end_time.astimezone(pytz.utc)
+
+    # Convert to date format for Yahoo Finance API
+    start_date = start_time.strftime("%Y-%m-%d")
+    end_date = (start_time + timedelta(days=1)).strftime("%Y-%m-%d")
+
+    try:
+        stock = yf.Ticker("TSLA")
+        hist = stock.history(interval="1m", start=start_date, end=end_date)
+
+        # Ensure hist.index is timezone-aware
+        if hist.index.tzinfo is None:
+            hist.index = hist.index.tz_localize('UTC')
+
+        # Print available timestamps
+        # print("\nAll timestamps in data:")
+        # print(hist.index)
+
+        # Filter based on UTC timestamps
+        hist_filtered = hist[(hist.index >= start_time_utc) & (hist.index <= end_time_utc)]
+
+        # Debug output
+        # print(f"\nLocal Start Time (ET): {start_time}")
+        # print(f"Local End Time (ET): {end_time}")
+        # print(f"UTC Start Time: {start_time_utc}")
+        # print(f"UTC End Time: {end_time_utc}")
+
+        if hist_filtered.empty:
+            print("No data returned for the 10-minute window. Market might be closed.")
+            return None
+
+        # Convert to list of dictionaries and include timestamps
+        result = [
+            {
+                "Datetime": idx.astimezone(pytz.utc).strftime("%Y-%m-%d %H:%M"), # In UTC
+                "Open": row["Open"],
+                "High": row["High"],
+                "Low": row["Low"],
+                "Close": row["Close"],
+                "Volume": row["Volume"]
+            }
+            for idx, row in hist_filtered.iterrows()
+        ]
+
+        # Print result with timestamps
+        # print("\nFiltered Data:")
+        # for entry in result:
+        #     print(entry)
+
+        return result
+    except Exception as e:
+        print(f"Error fetching stock data: {e}")
+        return None
+
+
+# %%
 def extractTweets(driver):
-    tweetsAdded = 0 # Count how many unique tweets added to the database
+    timeNow = datetime.now(timezone.utc) # Get current UTC time
+    timeNow = datetime.now(timezone.utc).replace(microsecond=0) # Remove miliseconds
+    tweetsFound = 0 # Count how many unique tweets added to the database
+    tweets = []
     conn = sqlite3.connect("rtsProjectDB.db")
     cursor = conn.cursor()
     
@@ -188,9 +267,6 @@ def extractTweets(driver):
         
         for tweet in tweetElements:
             try:
-                # Get the div with tweetText (multiple spans with tweet content)
-                tweetTextElement = tweet.find_element(By.XPATH, ".//div[@data-testid='tweetText']")
-                
                 # Get tweet ID
                 tweet_link = tweet.find_element(By.XPATH, ".//a[contains(@href, '/status/')]").get_attribute("href")
                 matchID = re.search(r'/status/(\d+)', tweet_link)
@@ -199,9 +275,20 @@ def extractTweets(driver):
                 # Check if tweet is already in the database
                 cursor.execute('SELECT 1 FROM tweets WHERE id = ?', (tweet_id,))
                 existing_tweet = cursor.fetchone()
-                if existing_tweet: # Skip rest of tweets if a duplicate is found
+                if existing_tweet: # Skip if a duplicate is found
                     print(f"Duplicate tweet found. Skipping the rest...")
                     break
+
+                # Get tweet creation date (timestamp)
+                created_date = tweet.find_element(By.XPATH, ".//time").get_attribute("datetime")
+                created_date_DTObject = datetime.strptime(created_date, "%Y-%m-%dT%H:%M:%S.%fZ")
+                created_date_DTObject = created_date_DTObject.replace(tzinfo=timezone.utc)
+                #print(f"{timeNow} - {created_date_DTObject}")
+                if timeNow - created_date_DTObject > timedelta(minutes=10): #Skip tweets older than 10 minutes
+                    break
+
+                # Get the div with tweetText (multiple spans/imgs with tweet content)
+                tweetTextElement = tweet.find_element(By.XPATH, ".//div[@data-testid='tweetText']")
                 
                 # Get tweet text (including emoji)
                 tweet_text = ""
@@ -225,12 +312,7 @@ def extractTweets(driver):
                 reply_count = reply_count if reply_count else "0"
                 retweet_count = retweet_count if retweet_count else "0"
                 like_count = like_count if like_count else "0"
-                # view_count = view_count if view_count else "0"
-
-                # Get tweet creation date (timestamp)
-                created_date = tweet.find_element(By.XPATH, ".//time").get_attribute("datetime")
-
-                
+       
                 # Store tweet data in a dictionary
                 tweetData = [
                     tweet_id,
@@ -240,25 +322,14 @@ def extractTweets(driver):
                     view_count,
                     like_count,
                     retweet_count,
-                    convertToCentral(created_date)
+                    created_date
                 ]
-                # Get sentiment scores from the clean text
-                sentimentScores = goEmotions.getTextSentiment(tweetData[2])
-                for category in sentimentScores:
-                    tweetData.append(sentimentScores[category])
 
-                # Add to database
-                cursor.execute('''
-                    INSERT INTO tweets (id, origText, cleanText, replyCount, viewCount, likeCount, retweetCount, createdDate,
-                            Positive, Hopeful, Pride, Approval, Curiosity, Fear, Remorse, Sadness, Disapproval, Neutral)
-                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-                ''', tweetData)
-                conn.commit()
+                tweets.append(tweetData)
+                tweetsFound += 1
 
-                tweetsAdded += 1
-
-                if (tweetsAdded > 5):
-                    break;
+                # if (tweetsFound > 4):
+                #     break
                 
             except Exception as e:
                 print(f"Error extracting data from tweet: {e}")
@@ -267,16 +338,90 @@ def extractTweets(driver):
         print(f"Error while extracting tweets: {e}")
     
     conn.close()
-    print(f"{tweetsAdded} tweets added!")
+    print(f"extractTweets found {tweetsFound} tweets")
+    tweets.reverse() # From oldest to neweset
+    return tweets
+
 
 # %%
-driver = login()
-driver.get("https://x.com/search?q=%24TSLA%20lang%3Aen%20-filter%3Alinks&f=live&src=typed_query")
+def combineTweetStock(driver):
+    conn = sqlite3.connect("rtsProjectDB.db")
+    cursor = conn.cursor()
+    tweets = extractTweets(driver)
+    stockData = getStockData()
+
+    # Convert stock timestamps to minute format
+    print("Adding to stock map & stockPrice")
+    stock_map = {}
+    stocksAdded = 0
+    stockToInsert = []
+    for stockEntry in stockData:
+        # Convert stock timestamp
+        stock_time = stockEntry['Datetime']
+        stock_map[stock_time] = [
+            stockEntry['Open'],
+            stockEntry['High'],
+            stockEntry['Low'],
+            stockEntry['Close'],
+            stockEntry['Volume'],
+        ]
+        # Store stock data separately for graphing
+        centralTime = convertToCentral(stockEntry['Datetime'])
+        stockToInsert.append((centralTime, stockEntry['Open'], stockEntry['High'], stockEntry['Low'], stockEntry['Close'], stockEntry['Volume']))
+        stocksAdded += 1
+    cursor.executemany('INSERT OR IGNORE INTO stockPrice (time, open, high, low, close, volume) VALUES (?, ?, ?, ?, ?, ?)', stockToInsert)
+    conn.commit()
+
+
+    # Process tweets
+    print("Processing Tweets")
+    tweetsAdded = 0
+    for tweet in tweets:
+        # Add sentiment scores
+        sentimentScores = goEmotions.getTextSentiment(tweet[2])
+        for category in sentimentScores:
+            tweet.append(sentimentScores[category])
+
+        # Match tweet to stock data using time
+        tweet_time = tweet[7].strip()  # Strip any extra spaces
+        # Remove the '.000Z' and convert to datetime
+        tweet_time = datetime.strptime(tweet_time, "%Y-%m-%dT%H:%M:%S.%fZ")
+        # Format the datetime object to the desired format
+        tweet_time = tweet_time.strftime("%Y-%m-%d %H:%M")
+
+        # Add stock data to tweet
+        stockInfo = stock_map.get(tweet_time, [])  # Match creation date/time to stock date/time
+        if stockInfo: # If not empty...
+            tweet.extend(stockInfo)
+        
+        # Add to database
+        tweet[7] = convertToCentral(tweet_time)
+        try:
+            cursor.execute('''
+                INSERT INTO tweets (id, origText, cleanText, replyCount, viewCount, likeCount, retweetCount, createdDate,
+                                    Positive, Hopeful, Pride, Approval, Curiosity, Fear, Remorse, Sadness, Disapproval, Neutral,
+                                    open, high, low, close, volume)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            ''', tweet)
+            conn.commit()
+            tweetsAdded += 1
+        except Exception as e:
+            print(f"Error inserting tweet into database: {e}") # Most likely 3 pm missing stock information
+
+    
+    conn.close()
+    print(f'{stocksAdded} stocks added and {tweetsAdded} tweets added!')
+    return f'{stocksAdded} stocks added and {tweetsAdded} tweets added!'
 
 # %%
-humanLikeScroll(driver, 15)
-# %%
-extractTweets(driver)
-# %%
-driver.quit()
-# %%
+def tempLogin():
+    driver = setupDriver()
+    #driver.get("https://x.com/i/flow/login")
+
+    driver.get("https://x.com")  # Navigate to the homepage or login page to check if we have cookies
+    time.sleep(5)  # Wait for the page to load
+        
+    # Check if the account menu is available, meaning we're already logged in
+    if checkAccountLoggedIn(driver):
+        print("Logged in using cookies.")
+        return driver  # Return the driver with cookies applied
