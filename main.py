@@ -7,6 +7,9 @@ import pytz
 from datetime import datetime
 from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.events import EVENT_JOB_EXECUTED, EVENT_JOB_ERROR
+from apscheduler.triggers.cron import CronTrigger
+
+stop_program = False
 
 # Create database for twitter data if it doesn't exist 
 conn = sqlite3.connect("rtsProjectDB.db")
@@ -102,13 +105,18 @@ def task_listener(event):
         # update_graphs()
         logging.info("Task listener finished.\n--------------")
 
-
+def stockMarketClose():
+    global stop_program
+    current_time = datetime.now(pytz.timezone("US/Central"))
+    if current_time.hour == 15 and current_time.minute >= 8:
+        stop_program = True
 
 # Initialize BackgroundScheduler
 scheduler = BackgroundScheduler()
 
 # Add jobs to scheduler (set specific times for tweet and finance data collection)
 scheduler.add_job(collectData, 'cron', minute='0, 10, 20, 30, 40, 50', id='collect_data')
+scheduler.add_job(stockMarketClose, CronTrigger(minute="*", hour="15"), id='stockMarketClose')
 
 # Add listener for task completion
 scheduler.add_listener(task_listener, EVENT_JOB_EXECUTED | EVENT_JOB_ERROR)
@@ -127,8 +135,12 @@ scheduler.start()
 
 # To keep the program running
 try:
-    while True:
+    while not stop_program:
         time.sleep(1)  # Keeps the program running, allowing scheduler to run in background
+    logging.info("Stopping the program since stock market closing...")
+    driver.quit()
+    scheduler.shutdown()
+    exit()  # Gracefully exit the program
 except (KeyboardInterrupt, SystemExit):
     # Shut down the scheduler gracefully when exiting
     logging.info("Shutting down...")
