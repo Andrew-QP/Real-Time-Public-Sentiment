@@ -244,7 +244,7 @@ def getStockData():
         # print("\nFiltered Data:")
         # for entry in result:
         #     print(entry)
-
+        print(f"getStockData found {len(result)}")
         return result
     except Exception as e:
         print(f"Error fetching stock data: {e}")
@@ -369,8 +369,9 @@ def combineTweetStock(driver):
         centralTime = convertToCentral(stockEntry['Datetime'])
         stockToInsert.append((centralTime, stockEntry['Open'], stockEntry['High'], stockEntry['Low'], stockEntry['Close'], stockEntry['Volume']))
         stocksAdded += 1
-    cursor.executemany('INSERT OR IGNORE INTO stockPrice (time, open, high, low, close, volume) VALUES (?, ?, ?, ?, ?, ?)', stockToInsert)
-    conn.commit()
+    if (stockToInsert):
+        cursor.executemany('INSERT OR IGNORE INTO stockPrice (time, open, high, low, close, volume) VALUES (?, ?, ?, ?, ?, ?)', stockToInsert)
+        conn.commit()
 
 
     # Process tweets

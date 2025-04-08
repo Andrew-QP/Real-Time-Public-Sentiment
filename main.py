@@ -115,7 +115,7 @@ def stockMarketClose():
 scheduler = BackgroundScheduler()
 
 # Add jobs to scheduler (set specific times for tweet and finance data collection)
-scheduler.add_job(collectData, 'cron', minute='0, 10, 20, 30, 40, 50', id='collect_data')
+scheduler.add_job(collectData, 'cron', minute='1, 11, 21, 31, 41, 51', id='collect_data')
 scheduler.add_job(stockMarketClose, CronTrigger(minute="*", hour="15"), id='stockMarketClose')
 
 # Add listener for task completion
