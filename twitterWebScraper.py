@@ -299,6 +299,13 @@ def extractTweets(driver):
                         tweet_text += child.text # If it's a span, get the text
                     elif child.tag_name == 'img':
                         tweet_text += child.get_attribute("alt") # If img, get emoji in the alt attribute
+
+                # Skip tweets containing Discord or Telegram links
+                text_lower = tweet_text.lower()
+                if any(link in text_lower for link in ["discord.gg", "discord.com", "t.me/", "telegram.me"]):
+                    print(f"Skipping tweet with external group link: {tweet_text[:50]}...")
+                    continue
+
                 
                 # Get tweet metadata (reply count, retweet count, like count, view count)
                 reply_count = tweet.find_element(By.XPATH, ".//button[@data-testid='reply']//span").text

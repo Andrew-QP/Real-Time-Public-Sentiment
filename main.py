@@ -130,19 +130,20 @@ scheduler.start()
 
 
 
-
-
-
-# To keep the program running
 try:
     while not stop_program:
-        time.sleep(1)  # Keeps the program running, allowing scheduler to run in background
-    logging.info("Stopping the program since stock market closing...")
-    driver.quit()
-    scheduler.shutdown()
-    exit()  # Gracefully exit the program
+            time.sleep(1)  # Keeps the program running, allowing scheduler to run in background
 except (KeyboardInterrupt, SystemExit):
-    # Shut down the scheduler gracefully when exiting
-    logging.info("Shutting down...")
-    driver.quit()
-    scheduler.shutdown()
+    logging.info("Received exit signal. Shutting down...")
+
+finally:
+    logging.info("Cleaning up: closing driver and shutting down scheduler.")
+    try:
+        driver.quit()
+    except Exception as e:
+        logging.error(f"Error quitting driver: {e}")
+    try:
+        if scheduler.running:
+            scheduler.shutdown()
+    except Exception as e:
+        logging.error(f"Error shutting down scheduler: {e}")
