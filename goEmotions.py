@@ -66,8 +66,8 @@ def getTextSentiment(text):
 
 
 # Example usage
-# tweet = "I hope $TSLA stock increases"
-# tweet = "I wish $TSLA will go up in price. I hate how thing are going right now. I believe this harsh reality is temporary."
+# tweet = "I trust the man and the plan. I'm long $TSLA with full confidence. I'll regret not buying more Tesla this week."
+# # tweet = "I wish $TSLA will go up in price. I hate how thing are going right now. I believe this harsh reality is temporary."
 # sentimentScores = getTextSentiment(tweet)
 
 # print("Sentiment Scores for Tweet:")
