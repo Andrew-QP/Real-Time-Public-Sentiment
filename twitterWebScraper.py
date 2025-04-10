@@ -408,10 +408,12 @@ def combineTweetStock(driver):
         tweet[7] = convertToCentral(tweet_time)
         try:
             cursor.execute('''
-                INSERT INTO tweets (id, origText, cleanText, replyCount, viewCount, likeCount, retweetCount, createdDate,
-                                    Positive, Hopeful, Pride, Approval, Curiosity, Fear, Remorse, Sadness, Disapproval, Neutral,
-                                    open, high, low, close, volume)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                INSERT INTO tweets (id, origText, cleanText, replyCount, viewCount, likeCount, 
+                retweetCount, createdDate,
+                anger, anticipation, disgust, fear, joy, love, optimism, pessimism, sadness, surprise, trust,
+                open, high, low, close, volume
+                )
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             ''', tweet)
             conn.commit()
             tweetsAdded += 1

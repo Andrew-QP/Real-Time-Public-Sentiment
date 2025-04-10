@@ -50,6 +50,7 @@ cursor.execute('''
 cursor.execute('CREATE INDEX IF NOT EXISTS idx_tweet_id ON tweets (id)')
 cursor.execute('CREATE INDEX IF NOT EXISTS idx_created_date ON tweets (createdDate)')
 conn.commit()
+# Table for stock prices
 cursor.execute('''
     CREATE TABLE IF NOT EXISTS stockPrice (
         time TEXT PRIMARY KEY,
@@ -62,6 +63,22 @@ cursor.execute('''
 ''')
 cursor.execute('CREATE INDEX IF NOT EXISTS idx_stock_prices_time ON stockPrice(time)')
 conn.commit()
+# Table for flags
+# Create a table for flags
+cursor.execute('''
+    CREATE TABLE IF NOT EXISTS flags (
+        id INTEGER PRIMARY KEY,
+        update_graph INTEGER DEFAULT 0
+    )
+''')
+cursor.execute('CREATE INDEX IF NOT EXISTS idx_flags_id ON flags(id)')
+conn.commit()
+# Initialize the flags table with a default value if it doesn't exist
+cursor.execute('SELECT COUNT(*) FROM flags')
+count = cursor.fetchone()[0]
+if count == 0:
+    cursor.execute('INSERT INTO flags (id, update_graph) VALUES (1, 0)')
+    conn.commit()
 
 # Custom time converter for Central Time
 def central_time_converter(*args):
@@ -93,67 +110,6 @@ def collectData():
 def make_predictions():
     logging.info("Making predictions...")
 
-def get_stock_data():
-    conn = sqlite3.connect("rtsProjectDB.db")
-    cursor = conn.cursor()
-    
-    # Get the last 50 stock prices (sorted by time)
-    cursor.execute("SELECT time, close FROM stockPrice ORDER BY time DESC LIMIT 50")
-    data = cursor.fetchall()
-    
-    conn.close()
-    
-    # Convert time from string to datetime
-    for i in range(len(data)):
-        data[i] = (datetime.strptime(data[i][0], '%Y-%m-%d %I:%M %p'), data[i][1])
-
-    # Reverse the data to show it in chronological order
-    data.reverse()
-    
-    return pd.DataFrame(data, columns=["Time", "Close"])
-
-def update_graphs():
-    logging.info("Updating graphs...")
-    # Get the latest stock data from the database
-    stock_data_df = get_stock_data()
-    
-    # Create the Plotly graph
-    fig = go.Figure()
-
-    fig.add_trace(go.Scatter(
-        x=stock_data_df['Time'], 
-        y=stock_data_df['Close'], 
-        mode='lines+markers',
-        name="Close Price",
-        line=dict(color='blue', width=2),
-        marker=dict(size=5)
-    ))
-
-    # Define tickvals every 5th in the last 20
-    recent_df = stock_data_df.tail(20)
-    tickvals = recent_df['Time'][::5]
-
-    # Update layout for better readability
-    fig.update_layout(
-    title="Real-Time Stock Price",
-    xaxis_title="Time",
-    yaxis_title="Stock Price (USD)",
-    xaxis=dict(
-        tickmode='array',
-        tickangle=45,
-        tickvals=tickvals,
-        range=[recent_df['Time'].iloc[0], recent_df['Time'].iloc[-1]],  # default zoom
-        tickformat="%I:%M %p"
-    ),
-    autosize=True,
-    margin=dict(l=40, r=40, b=80, t=80),
-    template="plotly_dark"
-)
-
-    # Show the updated figure
-    fig.show()
-
-
 # Task completion listener
 def task_listener(event):
     if event.job_id == 'collect_data':
@@ -163,7 +119,11 @@ def task_listener(event):
             logging.error(f"collect_data encountered an error in listener: {event.exception}")
         time.sleep(5)
         # make_predictions()
-        update_graphs()
+
+        cursor = conn.cursor()
+        cursor.execute("UPDATE flags SET update_graph = 1 WHERE id = 1")
+        conn.commit()
+
         logging.info("Task listener finished.\n--------------")
 
 def stockMarketClose():
