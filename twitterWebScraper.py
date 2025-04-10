@@ -1,5 +1,6 @@
 # %%
-import goEmotions
+# import goEmotions
+import robertaEmotions
 import re
 from emoji import demojize
 import time
@@ -386,7 +387,8 @@ def combineTweetStock(driver):
     tweetsAdded = 0
     for tweet in tweets:
         # Add sentiment scores
-        sentimentScores = goEmotions.getTextSentiment(tweet[2])
+        # sentimentScores = goEmotions.getTextSentiment(tweet[2])
+        sentimentScores = robertaEmotions.getTextSentiment(tweet[2])
         for category in sentimentScores:
             tweet.append(sentimentScores[category])
 
