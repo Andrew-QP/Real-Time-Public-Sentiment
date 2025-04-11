@@ -16,15 +16,14 @@ def getTextSentiment(text):
     results = emotion_classifier(text)
     emotion_scores = {label: 0 for label in labels}  # Initialize the sentiment dictionary
     emotion_scores = {r['label'].lower(): r['score'] for r in results[0]}
-    
     return emotion_scores
 
 # Example usage
-# text = "You mean back when $TSLA was somewhere around $469 a share? :grinning_face_with_big_eyes::folded_hands:"
-# sentiment_scores = getTextSentiment(text)
+text = "Bought some $TSLA and started my first ever ETF dividends portfolio :beaming_face_with_smiling_eyes:"
+sentiment_scores = getTextSentiment(text)
 
-# print(sentiment_scores)
-# # Display results
-# print(f"Text: {text}")
-# for emotion, score in sentiment_scores.items():
-#     print(f"  {emotion}: {score:.4f}")
+print(sentiment_scores)
+# Display results
+print(f"Text: {text}")
+for emotion, score in sentiment_scores.items():
+    print(f"  {emotion}: {score:.4f}")

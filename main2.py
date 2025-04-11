@@ -4,8 +4,6 @@ import time
 import random
 import logging
 import pytz
-import plotly.graph_objs as go
-import pandas as pd
 import sys
 from datetime import datetime
 from apscheduler.schedulers.background import BackgroundScheduler
@@ -120,9 +118,15 @@ def task_listener(event):
         time.sleep(5)
         # make_predictions()
 
-        cursor = conn.cursor()
-        cursor.execute("UPDATE flags SET update_graph = 1 WHERE id = 1")
-        conn.commit()
+        try:
+            with sqlite3.connect("rtsProjectDB.db") as local_conn:
+                local_cursor = local_conn.cursor()
+                local_cursor.execute("UPDATE flags SET update_graph = 1 WHERE id = 1")
+                local_conn.commit()
+                print("Set update flag to 1")
+        except Exception as e:
+            logging.error(f"Error updating flags in task_listener: {e}")
+
 
         logging.info("Task listener finished.\n--------------")
 
