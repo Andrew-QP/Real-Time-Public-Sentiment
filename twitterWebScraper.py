@@ -1,5 +1,6 @@
 # %%
-import goEmotions
+# import goEmotions
+import robertaEmotions
 import re
 from emoji import demojize
 import time
@@ -26,6 +27,7 @@ USER_AGENTS = [
     "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.79 Safari/537.36"
 ]
 
+sentimentLabels = ["anger", "anticipation", "disgust", "fear", "joy", "love", "optimism", "pessimism", "sadness", "surprise", "trust"]
 # %%
 def setupDriver():
     # Set up Brave options
@@ -285,6 +287,7 @@ def extractTweets(driver):
                 created_date_DTObject = created_date_DTObject.replace(tzinfo=timezone.utc)
                 #print(f"{timeNow} - {created_date_DTObject}")
                 if timeNow - created_date_DTObject > timedelta(minutes=10): #Skip tweets older than 10 minutes
+                    print(f"Tweet older than 10 minutes found. Skipping the rest...")
                     break
 
                 # Get the div with tweetText (multiple spans/imgs with tweet content)
@@ -304,6 +307,12 @@ def extractTweets(driver):
                 text_lower = tweet_text.lower()
                 if any(link in text_lower for link in ["discord.gg", "discord.com", "t.me/", "telegram.me"]):
                     print(f"Skipping tweet with external group link: {tweet_text[:50]}...")
+                    continue
+
+                # Skip tweets with 10 or more consecutive tickers
+                consecutive_tickers = re.findall(r'((?:\$\w+[ \t]*){10,})', tweet_text)
+                if consecutive_tickers:
+                    print(f"Skipping spammy ticker block: {tweet_text[:50]}...")
                     continue
 
                 
@@ -386,8 +395,9 @@ def combineTweetStock(driver):
     tweetsAdded = 0
     for tweet in tweets:
         # Add sentiment scores
-        sentimentScores = goEmotions.getTextSentiment(tweet[2])
-        for category in sentimentScores:
+        # sentimentScores = goEmotions.getTextSentiment(tweet[2])
+        sentimentScores = robertaEmotions.getTextSentiment(tweet[2])
+        for category in sentimentLabels:
             tweet.append(sentimentScores[category])
 
         # Match tweet to stock data using time
@@ -406,10 +416,12 @@ def combineTweetStock(driver):
         tweet[7] = convertToCentral(tweet_time)
         try:
             cursor.execute('''
-                INSERT INTO tweets (id, origText, cleanText, replyCount, viewCount, likeCount, retweetCount, createdDate,
-                                    Positive, Hopeful, Pride, Approval, Curiosity, Fear, Remorse, Sadness, Disapproval, Neutral,
-                                    open, high, low, close, volume)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                INSERT INTO tweets (id, origText, cleanText, replyCount, viewCount, likeCount, 
+                retweetCount, createdDate,
+                anger, anticipation, disgust, fear, joy, love, optimism, pessimism, sadness, surprise, trust,
+                open, high, low, close, volume
+                )
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             ''', tweet)
             conn.commit()
             tweetsAdded += 1

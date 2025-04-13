@@ -874,3 +874,1322 @@
 2025-04-08 03:08:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-08 15:09:00 CDT)" executed successfully
 2025-04-08 03:08:00 PM [INFO] Cleaning up: closing driver and shutting down scheduler.
 2025-04-08 03:08:00 PM [INFO] Scheduler has been shut down
+2025-04-09 08:49:27 AM [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-09 08:49:27 AM [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-09 08:49:44 AM [INFO] Added job "collectData" to job store "default"
+2025-04-09 08:49:44 AM [INFO] Added job "stockMarketClose" to job store "default"
+2025-04-09 08:49:44 AM [INFO] Scheduler started
+2025-04-09 08:51:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 08:51:00 CDT)" (scheduled at 2025-04-09 08:51:00-05:00)
+2025-04-09 08:51:00 AM [INFO] Starting data collection...
+2025-04-09 08:51:00 AM [INFO] Sleeping for 95.72 seconds before scrolling
+2025-04-09 08:52:54 AM [INFO] 11 stocks added and 16 tweets added!
+2025-04-09 08:52:54 AM [INFO] Data collection completed successfully.
+2025-04-09 08:52:54 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 09:01:00 CDT)" executed successfully
+2025-04-09 08:52:54 AM [INFO] collect_data detected by completion listener.
+2025-04-09 08:52:59 AM [INFO] Task listener finished.
+--------------
+2025-04-09 09:01:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 09:11:00 CDT)" (scheduled at 2025-04-09 09:01:00-05:00)
+2025-04-09 09:01:00 AM [INFO] Starting data collection...
+2025-04-09 09:01:00 AM [INFO] Sleeping for 76.36 seconds before scrolling
+2025-04-09 09:02:30 AM [INFO] 11 stocks added and 28 tweets added!
+2025-04-09 09:02:30 AM [INFO] Data collection completed successfully.
+2025-04-09 09:02:30 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 09:11:00 CDT)" executed successfully
+2025-04-09 09:02:30 AM [INFO] collect_data detected by completion listener.
+2025-04-09 09:02:35 AM [INFO] Task listener finished.
+--------------
+2025-04-09 09:11:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 09:21:00 CDT)" (scheduled at 2025-04-09 09:11:00-05:00)
+2025-04-09 09:11:00 AM [INFO] Starting data collection...
+2025-04-09 09:11:00 AM [INFO] Sleeping for 109.46 seconds before scrolling
+2025-04-09 09:13:14 AM [INFO] 11 stocks added and 14 tweets added!
+2025-04-09 09:13:14 AM [INFO] Data collection completed successfully.
+2025-04-09 09:13:14 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 09:21:00 CDT)" executed successfully
+2025-04-09 09:13:14 AM [INFO] collect_data detected by completion listener.
+2025-04-09 09:13:19 AM [INFO] Task listener finished.
+--------------
+2025-04-09 09:21:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 09:31:00 CDT)" (scheduled at 2025-04-09 09:21:00-05:00)
+2025-04-09 09:21:00 AM [INFO] Starting data collection...
+2025-04-09 09:21:00 AM [INFO] Sleeping for 89.71 seconds before scrolling
+2025-04-09 09:22:38 AM [INFO] 11 stocks added and 10 tweets added!
+2025-04-09 09:22:38 AM [INFO] Data collection completed successfully.
+2025-04-09 09:22:38 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 09:31:00 CDT)" executed successfully
+2025-04-09 09:22:38 AM [INFO] collect_data detected by completion listener.
+2025-04-09 09:22:43 AM [INFO] Task listener finished.
+--------------
+2025-04-09 09:31:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 09:41:00 CDT)" (scheduled at 2025-04-09 09:31:00-05:00)
+2025-04-09 09:31:00 AM [INFO] Starting data collection...
+2025-04-09 09:31:00 AM [INFO] Sleeping for 114.31 seconds before scrolling
+2025-04-09 09:33:05 AM [INFO] 11 stocks added and 21 tweets added!
+2025-04-09 09:33:05 AM [INFO] Data collection completed successfully.
+2025-04-09 09:33:05 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 09:41:00 CDT)" executed successfully
+2025-04-09 09:33:05 AM [INFO] collect_data detected by completion listener.
+2025-04-09 09:33:10 AM [INFO] Task listener finished.
+--------------
+2025-04-09 09:41:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 09:51:00 CDT)" (scheduled at 2025-04-09 09:41:00-05:00)
+2025-04-09 09:41:00 AM [INFO] Starting data collection...
+2025-04-09 09:41:00 AM [INFO] Sleeping for 102.56 seconds before scrolling
+2025-04-09 09:42:56 AM [INFO] 11 stocks added and 22 tweets added!
+2025-04-09 09:42:56 AM [INFO] Data collection completed successfully.
+2025-04-09 09:42:56 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 09:51:00 CDT)" executed successfully
+2025-04-09 09:42:56 AM [INFO] collect_data detected by completion listener.
+2025-04-09 09:43:01 AM [INFO] Task listener finished.
+--------------
+2025-04-09 09:51:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 10:01:00 CDT)" (scheduled at 2025-04-09 09:51:00-05:00)
+2025-04-09 09:51:00 AM [INFO] Starting data collection...
+2025-04-09 09:51:00 AM [INFO] Sleeping for 65.48 seconds before scrolling
+2025-04-09 09:52:18 AM [INFO] 11 stocks added and 24 tweets added!
+2025-04-09 09:52:18 AM [INFO] Data collection completed successfully.
+2025-04-09 09:52:18 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 10:01:00 CDT)" executed successfully
+2025-04-09 09:52:18 AM [INFO] collect_data detected by completion listener.
+2025-04-09 09:52:23 AM [INFO] Task listener finished.
+--------------
+2025-04-09 10:01:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 10:11:00 CDT)" (scheduled at 2025-04-09 10:01:00-05:00)
+2025-04-09 10:01:00 AM [INFO] Starting data collection...
+2025-04-09 10:01:00 AM [INFO] Sleeping for 81.97 seconds before scrolling
+2025-04-09 10:02:31 AM [INFO] 11 stocks added and 12 tweets added!
+2025-04-09 10:02:31 AM [INFO] Data collection completed successfully.
+2025-04-09 10:02:31 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 10:11:00 CDT)" executed successfully
+2025-04-09 10:02:31 AM [INFO] collect_data detected by completion listener.
+2025-04-09 10:02:36 AM [INFO] Task listener finished.
+--------------
+2025-04-09 10:11:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 10:21:00 CDT)" (scheduled at 2025-04-09 10:11:00-05:00)
+2025-04-09 10:11:00 AM [INFO] Starting data collection...
+2025-04-09 10:11:00 AM [INFO] Sleeping for 99.13 seconds before scrolling
+2025-04-09 10:12:52 AM [INFO] 11 stocks added and 16 tweets added!
+2025-04-09 10:12:52 AM [INFO] Data collection completed successfully.
+2025-04-09 10:12:52 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 10:21:00 CDT)" executed successfully
+2025-04-09 10:12:52 AM [INFO] collect_data detected by completion listener.
+2025-04-09 10:12:57 AM [INFO] Task listener finished.
+--------------
+2025-04-09 10:21:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 10:31:00 CDT)" (scheduled at 2025-04-09 10:21:00-05:00)
+2025-04-09 10:21:00 AM [INFO] Starting data collection...
+2025-04-09 10:21:00 AM [INFO] Sleeping for 108.24 seconds before scrolling
+2025-04-09 10:22:59 AM [INFO] 11 stocks added and 21 tweets added!
+2025-04-09 10:22:59 AM [INFO] Data collection completed successfully.
+2025-04-09 10:22:59 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 10:31:00 CDT)" executed successfully
+2025-04-09 10:22:59 AM [INFO] collect_data detected by completion listener.
+2025-04-09 10:23:04 AM [INFO] Task listener finished.
+--------------
+2025-04-09 10:31:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 10:41:00 CDT)" (scheduled at 2025-04-09 10:31:00-05:00)
+2025-04-09 10:31:00 AM [INFO] Starting data collection...
+2025-04-09 10:31:00 AM [INFO] Sleeping for 78.32 seconds before scrolling
+2025-04-09 10:32:31 AM [INFO] 11 stocks added and 19 tweets added!
+2025-04-09 10:32:31 AM [INFO] Data collection completed successfully.
+2025-04-09 10:32:31 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 10:41:00 CDT)" executed successfully
+2025-04-09 10:32:31 AM [INFO] collect_data detected by completion listener.
+2025-04-09 10:32:36 AM [INFO] Task listener finished.
+--------------
+2025-04-09 10:41:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 10:51:00 CDT)" (scheduled at 2025-04-09 10:41:00-05:00)
+2025-04-09 10:41:00 AM [INFO] Starting data collection...
+2025-04-09 10:41:00 AM [INFO] Sleeping for 70.03 seconds before scrolling
+2025-04-09 10:42:18 AM [INFO] 11 stocks added and 10 tweets added!
+2025-04-09 10:42:18 AM [INFO] Data collection completed successfully.
+2025-04-09 10:42:18 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 10:51:00 CDT)" executed successfully
+2025-04-09 10:42:18 AM [INFO] collect_data detected by completion listener.
+2025-04-09 10:42:23 AM [INFO] Task listener finished.
+--------------
+2025-04-09 10:51:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 11:01:00 CDT)" (scheduled at 2025-04-09 10:51:00-05:00)
+2025-04-09 10:51:00 AM [INFO] Starting data collection...
+2025-04-09 10:51:00 AM [INFO] Sleeping for 76.42 seconds before scrolling
+2025-04-09 10:52:30 AM [INFO] 11 stocks added and 17 tweets added!
+2025-04-09 10:52:30 AM [INFO] Data collection completed successfully.
+2025-04-09 10:52:30 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 11:01:00 CDT)" executed successfully
+2025-04-09 10:52:30 AM [INFO] collect_data detected by completion listener.
+2025-04-09 10:52:35 AM [INFO] Task listener finished.
+--------------
+2025-04-09 11:01:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 11:11:00 CDT)" (scheduled at 2025-04-09 11:01:00-05:00)
+2025-04-09 11:01:00 AM [INFO] Starting data collection...
+2025-04-09 11:01:00 AM [INFO] Sleeping for 70.01 seconds before scrolling
+2025-04-09 11:02:34 AM [INFO] 11 stocks added and 20 tweets added!
+2025-04-09 11:02:34 AM [INFO] Data collection completed successfully.
+2025-04-09 11:02:34 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 11:11:00 CDT)" executed successfully
+2025-04-09 11:02:34 AM [INFO] collect_data detected by completion listener.
+2025-04-09 11:02:39 AM [INFO] Task listener finished.
+--------------
+2025-04-09 11:11:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 11:21:00 CDT)" (scheduled at 2025-04-09 11:11:00-05:00)
+2025-04-09 11:11:00 AM [INFO] Starting data collection...
+2025-04-09 11:11:00 AM [INFO] Sleeping for 117.68 seconds before scrolling
+2025-04-09 11:13:10 AM [INFO] 11 stocks added and 19 tweets added!
+2025-04-09 11:13:10 AM [INFO] Data collection completed successfully.
+2025-04-09 11:13:10 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 11:21:00 CDT)" executed successfully
+2025-04-09 11:13:10 AM [INFO] collect_data detected by completion listener.
+2025-04-09 11:13:15 AM [INFO] Task listener finished.
+--------------
+2025-04-09 11:21:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 11:31:00 CDT)" (scheduled at 2025-04-09 11:21:00-05:00)
+2025-04-09 11:21:00 AM [INFO] Starting data collection...
+2025-04-09 11:21:00 AM [INFO] Sleeping for 117.59 seconds before scrolling
+2025-04-09 11:23:06 AM [INFO] 11 stocks added and 10 tweets added!
+2025-04-09 11:23:06 AM [INFO] Data collection completed successfully.
+2025-04-09 11:23:06 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 11:31:00 CDT)" executed successfully
+2025-04-09 11:23:06 AM [INFO] collect_data detected by completion listener.
+2025-04-09 11:23:11 AM [INFO] Task listener finished.
+--------------
+2025-04-09 11:31:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 11:41:00 CDT)" (scheduled at 2025-04-09 11:31:00-05:00)
+2025-04-09 11:31:00 AM [INFO] Starting data collection...
+2025-04-09 11:31:00 AM [INFO] Sleeping for 92.52 seconds before scrolling
+2025-04-09 11:32:41 AM [INFO] 11 stocks added and 10 tweets added!
+2025-04-09 11:32:41 AM [INFO] Data collection completed successfully.
+2025-04-09 11:32:41 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 11:41:00 CDT)" executed successfully
+2025-04-09 11:32:41 AM [INFO] collect_data detected by completion listener.
+2025-04-09 11:32:46 AM [INFO] Task listener finished.
+--------------
+2025-04-09 11:41:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 11:51:00 CDT)" (scheduled at 2025-04-09 11:41:00-05:00)
+2025-04-09 11:41:00 AM [INFO] Starting data collection...
+2025-04-09 11:41:00 AM [INFO] Sleeping for 110.94 seconds before scrolling
+2025-04-09 11:43:00 AM [INFO] 11 stocks added and 16 tweets added!
+2025-04-09 11:43:00 AM [INFO] Data collection completed successfully.
+2025-04-09 11:43:00 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 11:51:00 CDT)" executed successfully
+2025-04-09 11:43:00 AM [INFO] collect_data detected by completion listener.
+2025-04-09 11:43:05 AM [INFO] Task listener finished.
+--------------
+2025-04-09 11:51:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 12:01:00 CDT)" (scheduled at 2025-04-09 11:51:00-05:00)
+2025-04-09 11:51:00 AM [INFO] Starting data collection...
+2025-04-09 11:51:00 AM [INFO] Sleeping for 68.09 seconds before scrolling
+2025-04-09 11:52:22 AM [INFO] 11 stocks added and 18 tweets added!
+2025-04-09 11:52:22 AM [INFO] Data collection completed successfully.
+2025-04-09 11:52:22 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 12:01:00 CDT)" executed successfully
+2025-04-09 11:52:22 AM [INFO] collect_data detected by completion listener.
+2025-04-09 11:52:27 AM [INFO] Task listener finished.
+--------------
+2025-04-09 12:01:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 12:11:00 CDT)" (scheduled at 2025-04-09 12:01:00-05:00)
+2025-04-09 12:01:00 PM [INFO] Starting data collection...
+2025-04-09 12:01:00 PM [INFO] Sleeping for 80.02 seconds before scrolling
+2025-04-09 12:02:42 PM [INFO] 11 stocks added and 12 tweets added!
+2025-04-09 12:02:42 PM [INFO] Data collection completed successfully.
+2025-04-09 12:02:42 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 12:11:00 CDT)" executed successfully
+2025-04-09 12:02:42 PM [INFO] collect_data detected by completion listener.
+2025-04-09 12:02:47 PM [INFO] Task listener finished.
+--------------
+2025-04-09 12:11:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 12:21:00 CDT)" (scheduled at 2025-04-09 12:11:00-05:00)
+2025-04-09 12:11:00 PM [INFO] Starting data collection...
+2025-04-09 12:11:00 PM [INFO] Sleeping for 73.76 seconds before scrolling
+2025-04-09 12:12:27 PM [INFO] 11 stocks added and 20 tweets added!
+2025-04-09 12:12:27 PM [INFO] Data collection completed successfully.
+2025-04-09 12:12:27 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 12:21:00 CDT)" executed successfully
+2025-04-09 12:12:27 PM [INFO] collect_data detected by completion listener.
+2025-04-09 12:12:32 PM [INFO] Task listener finished.
+--------------
+2025-04-09 12:21:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 12:31:00 CDT)" (scheduled at 2025-04-09 12:21:00-05:00)
+2025-04-09 12:21:00 PM [INFO] Starting data collection...
+2025-04-09 12:21:00 PM [INFO] Sleeping for 72.04 seconds before scrolling
+2025-04-09 12:22:20 PM [INFO] 11 stocks added and 15 tweets added!
+2025-04-09 12:22:20 PM [INFO] Data collection completed successfully.
+2025-04-09 12:22:20 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 12:31:00 CDT)" executed successfully
+2025-04-09 12:22:20 PM [INFO] collect_data detected by completion listener.
+2025-04-09 12:22:25 PM [INFO] Task listener finished.
+--------------
+2025-04-09 12:31:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 12:41:00 CDT)" (scheduled at 2025-04-09 12:31:00-05:00)
+2025-04-09 12:31:00 PM [INFO] Starting data collection...
+2025-04-09 12:31:00 PM [INFO] Sleeping for 69.94 seconds before scrolling
+2025-04-09 12:32:28 PM [INFO] 11 stocks added and 36 tweets added!
+2025-04-09 12:32:28 PM [INFO] Data collection completed successfully.
+2025-04-09 12:32:28 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 12:41:00 CDT)" executed successfully
+2025-04-09 12:32:28 PM [INFO] collect_data detected by completion listener.
+2025-04-09 12:32:33 PM [INFO] Task listener finished.
+--------------
+2025-04-09 12:41:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 12:51:00 CDT)" (scheduled at 2025-04-09 12:41:00-05:00)
+2025-04-09 12:41:00 PM [INFO] Starting data collection...
+2025-04-09 12:41:00 PM [INFO] Sleeping for 81.88 seconds before scrolling
+2025-04-09 12:42:32 PM [INFO] 11 stocks added and 26 tweets added!
+2025-04-09 12:42:32 PM [INFO] Data collection completed successfully.
+2025-04-09 12:42:32 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 12:51:00 CDT)" executed successfully
+2025-04-09 12:42:32 PM [INFO] collect_data detected by completion listener.
+2025-04-09 12:42:37 PM [INFO] Task listener finished.
+--------------
+2025-04-09 12:51:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 13:01:00 CDT)" (scheduled at 2025-04-09 12:51:00-05:00)
+2025-04-09 12:51:00 PM [INFO] Starting data collection...
+2025-04-09 12:51:00 PM [INFO] Sleeping for 81.24 seconds before scrolling
+2025-04-09 12:52:33 PM [INFO] 11 stocks added and 30 tweets added!
+2025-04-09 12:52:33 PM [INFO] Data collection completed successfully.
+2025-04-09 12:52:33 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 13:01:00 CDT)" executed successfully
+2025-04-09 12:52:33 PM [INFO] collect_data detected by completion listener.
+2025-04-09 12:52:38 PM [INFO] Task listener finished.
+--------------
+2025-04-09 01:01:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 13:11:00 CDT)" (scheduled at 2025-04-09 13:01:00-05:00)
+2025-04-09 01:01:00 PM [INFO] Starting data collection...
+2025-04-09 01:01:00 PM [INFO] Sleeping for 77.29 seconds before scrolling
+2025-04-09 01:02:47 PM [INFO] 11 stocks added and 38 tweets added!
+2025-04-09 01:02:47 PM [INFO] Data collection completed successfully.
+2025-04-09 01:02:47 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 13:11:00 CDT)" executed successfully
+2025-04-09 01:02:47 PM [INFO] collect_data detected by completion listener.
+2025-04-09 01:02:52 PM [INFO] Task listener finished.
+--------------
+2025-04-09 01:11:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 13:21:00 CDT)" (scheduled at 2025-04-09 13:11:00-05:00)
+2025-04-09 01:11:00 PM [INFO] Starting data collection...
+2025-04-09 01:11:00 PM [INFO] Sleeping for 102.04 seconds before scrolling
+2025-04-09 01:12:51 PM [INFO] 11 stocks added and 19 tweets added!
+2025-04-09 01:12:51 PM [INFO] Data collection completed successfully.
+2025-04-09 01:12:51 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 13:21:00 CDT)" executed successfully
+2025-04-09 01:12:51 PM [INFO] collect_data detected by completion listener.
+2025-04-09 01:12:56 PM [INFO] Task listener finished.
+--------------
+2025-04-09 01:21:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 13:31:00 CDT)" (scheduled at 2025-04-09 13:21:00-05:00)
+2025-04-09 01:21:00 PM [INFO] Starting data collection...
+2025-04-09 01:21:00 PM [INFO] Sleeping for 90.97 seconds before scrolling
+2025-04-09 01:22:43 PM [INFO] 11 stocks added and 19 tweets added!
+2025-04-09 01:22:43 PM [INFO] Data collection completed successfully.
+2025-04-09 01:22:43 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 13:31:00 CDT)" executed successfully
+2025-04-09 01:22:43 PM [INFO] collect_data detected by completion listener.
+2025-04-09 01:22:48 PM [INFO] Task listener finished.
+--------------
+2025-04-09 01:31:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 13:41:00 CDT)" (scheduled at 2025-04-09 13:31:00-05:00)
+2025-04-09 01:31:00 PM [INFO] Starting data collection...
+2025-04-09 01:31:00 PM [INFO] Sleeping for 85.08 seconds before scrolling
+2025-04-09 01:32:36 PM [INFO] 11 stocks added and 23 tweets added!
+2025-04-09 01:32:36 PM [INFO] Data collection completed successfully.
+2025-04-09 01:32:36 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 13:41:00 CDT)" executed successfully
+2025-04-09 01:32:36 PM [INFO] collect_data detected by completion listener.
+2025-04-09 01:32:41 PM [INFO] Task listener finished.
+--------------
+2025-04-09 01:41:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 13:51:00 CDT)" (scheduled at 2025-04-09 13:41:00-05:00)
+2025-04-09 01:41:00 PM [INFO] Starting data collection...
+2025-04-09 01:41:00 PM [INFO] Sleeping for 104.24 seconds before scrolling
+2025-04-09 01:42:57 PM [INFO] 11 stocks added and 18 tweets added!
+2025-04-09 01:42:57 PM [INFO] Data collection completed successfully.
+2025-04-09 01:42:57 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 13:51:00 CDT)" executed successfully
+2025-04-09 01:42:57 PM [INFO] collect_data detected by completion listener.
+2025-04-09 01:43:02 PM [INFO] Task listener finished.
+--------------
+2025-04-09 01:51:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 14:01:00 CDT)" (scheduled at 2025-04-09 13:51:00-05:00)
+2025-04-09 01:51:00 PM [INFO] Starting data collection...
+2025-04-09 01:51:00 PM [INFO] Sleeping for 102.20 seconds before scrolling
+2025-04-09 01:52:57 PM [INFO] 11 stocks added and 34 tweets added!
+2025-04-09 01:52:57 PM [INFO] Data collection completed successfully.
+2025-04-09 01:52:57 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 14:01:00 CDT)" executed successfully
+2025-04-09 01:52:57 PM [INFO] collect_data detected by completion listener.
+2025-04-09 01:53:02 PM [INFO] Task listener finished.
+--------------
+2025-04-09 02:01:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 14:11:00 CDT)" (scheduled at 2025-04-09 14:01:00-05:00)
+2025-04-09 02:01:00 PM [INFO] Starting data collection...
+2025-04-09 02:01:00 PM [INFO] Sleeping for 91.39 seconds before scrolling
+2025-04-09 02:02:43 PM [INFO] 11 stocks added and 29 tweets added!
+2025-04-09 02:02:43 PM [INFO] Data collection completed successfully.
+2025-04-09 02:02:43 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 14:11:00 CDT)" executed successfully
+2025-04-09 02:02:43 PM [INFO] collect_data detected by completion listener.
+2025-04-09 02:02:48 PM [INFO] Task listener finished.
+--------------
+2025-04-09 02:11:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 14:21:00 CDT)" (scheduled at 2025-04-09 14:11:00-05:00)
+2025-04-09 02:11:00 PM [INFO] Starting data collection...
+2025-04-09 02:11:00 PM [INFO] Sleeping for 86.44 seconds before scrolling
+2025-04-09 02:12:37 PM [INFO] 11 stocks added and 28 tweets added!
+2025-04-09 02:12:37 PM [INFO] Data collection completed successfully.
+2025-04-09 02:12:37 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 14:21:00 CDT)" executed successfully
+2025-04-09 02:12:37 PM [INFO] collect_data detected by completion listener.
+2025-04-09 02:12:42 PM [INFO] Task listener finished.
+--------------
+2025-04-09 02:21:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 14:31:00 CDT)" (scheduled at 2025-04-09 14:21:00-05:00)
+2025-04-09 02:21:00 PM [INFO] Starting data collection...
+2025-04-09 02:21:00 PM [INFO] Sleeping for 62.60 seconds before scrolling
+2025-04-09 02:22:25 PM [INFO] 11 stocks added and 28 tweets added!
+2025-04-09 02:22:25 PM [INFO] Data collection completed successfully.
+2025-04-09 02:22:25 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 14:31:00 CDT)" executed successfully
+2025-04-09 02:22:25 PM [INFO] collect_data detected by completion listener.
+2025-04-09 02:22:30 PM [INFO] Task listener finished.
+--------------
+2025-04-09 02:31:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 14:41:00 CDT)" (scheduled at 2025-04-09 14:31:00-05:00)
+2025-04-09 02:31:00 PM [INFO] Starting data collection...
+2025-04-09 02:31:00 PM [INFO] Sleeping for 109.29 seconds before scrolling
+2025-04-09 02:33:14 PM [INFO] 11 stocks added and 34 tweets added!
+2025-04-09 02:33:14 PM [INFO] Data collection completed successfully.
+2025-04-09 02:33:14 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 14:41:00 CDT)" executed successfully
+2025-04-09 02:33:14 PM [INFO] collect_data detected by completion listener.
+2025-04-09 02:33:19 PM [INFO] Task listener finished.
+--------------
+2025-04-09 02:41:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 14:51:00 CDT)" (scheduled at 2025-04-09 14:41:00-05:00)
+2025-04-09 02:41:00 PM [INFO] Starting data collection...
+2025-04-09 02:41:00 PM [INFO] Sleeping for 107.44 seconds before scrolling
+2025-04-09 02:42:58 PM [INFO] 11 stocks added and 30 tweets added!
+2025-04-09 02:42:58 PM [INFO] Data collection completed successfully.
+2025-04-09 02:42:58 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 14:51:00 CDT)" executed successfully
+2025-04-09 02:42:58 PM [INFO] collect_data detected by completion listener.
+2025-04-09 02:43:03 PM [INFO] Task listener finished.
+--------------
+2025-04-09 02:51:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 15:01:00 CDT)" (scheduled at 2025-04-09 14:51:00-05:00)
+2025-04-09 02:51:00 PM [INFO] Starting data collection...
+2025-04-09 02:51:00 PM [INFO] Sleeping for 95.28 seconds before scrolling
+2025-04-09 02:52:47 PM [INFO] 11 stocks added and 30 tweets added!
+2025-04-09 02:52:47 PM [INFO] Data collection completed successfully.
+2025-04-09 02:52:47 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 15:01:00 CDT)" executed successfully
+2025-04-09 02:52:47 PM [INFO] collect_data detected by completion listener.
+2025-04-09 02:52:52 PM [INFO] Task listener finished.
+--------------
+2025-04-09 03:00:00 PM [INFO] Running job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-09 15:01:00 CDT)" (scheduled at 2025-04-09 15:00:00-05:00)
+2025-04-09 03:00:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-09 15:01:00 CDT)" executed successfully
+2025-04-09 03:01:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 15:11:00 CDT)" (scheduled at 2025-04-09 15:01:00-05:00)
+2025-04-09 03:01:00 PM [INFO] Running job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-09 15:02:00 CDT)" (scheduled at 2025-04-09 15:01:00-05:00)
+2025-04-09 03:01:00 PM [INFO] Starting data collection...
+2025-04-09 03:01:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-09 15:02:00 CDT)" executed successfully
+2025-04-09 03:01:00 PM [INFO] Sleeping for 63.27 seconds before scrolling
+2025-04-09 03:02:00 PM [INFO] Running job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-09 15:03:00 CDT)" (scheduled at 2025-04-09 15:02:00-05:00)
+2025-04-09 03:02:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-09 15:03:00 CDT)" executed successfully
+2025-04-09 03:02:32 PM [INFO] 10 stocks added and 33 tweets added!
+2025-04-09 03:02:32 PM [INFO] Data collection completed successfully.
+2025-04-09 03:02:32 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-09 15:11:00 CDT)" executed successfully
+2025-04-09 03:02:32 PM [INFO] collect_data detected by completion listener.
+2025-04-09 03:02:37 PM [INFO] Task listener finished.
+--------------
+2025-04-09 03:03:00 PM [INFO] Running job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-09 15:04:00 CDT)" (scheduled at 2025-04-09 15:03:00-05:00)
+2025-04-09 03:03:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-09 15:04:00 CDT)" executed successfully
+2025-04-09 03:04:00 PM [INFO] Running job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-09 15:05:00 CDT)" (scheduled at 2025-04-09 15:04:00-05:00)
+2025-04-09 03:04:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-09 15:05:00 CDT)" executed successfully
+2025-04-09 03:05:00 PM [INFO] Running job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-09 15:06:00 CDT)" (scheduled at 2025-04-09 15:05:00-05:00)
+2025-04-09 03:05:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-09 15:06:00 CDT)" executed successfully
+2025-04-09 03:06:00 PM [INFO] Running job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-09 15:07:00 CDT)" (scheduled at 2025-04-09 15:06:00-05:00)
+2025-04-09 03:06:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-09 15:07:00 CDT)" executed successfully
+2025-04-09 03:07:00 PM [INFO] Running job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-09 15:08:00 CDT)" (scheduled at 2025-04-09 15:07:00-05:00)
+2025-04-09 03:07:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-09 15:08:00 CDT)" executed successfully
+2025-04-09 03:08:00 PM [INFO] Running job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-09 15:09:00 CDT)" (scheduled at 2025-04-09 15:08:00-05:00)
+2025-04-09 03:08:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-09 15:09:00 CDT)" executed successfully
+2025-04-09 03:08:00 PM [INFO] Cleaning up: closing driver and shutting down scheduler.
+2025-04-09 03:08:00 PM [INFO] Scheduler has been shut down
+2025-04-10 08:23:22 AM [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-10 08:23:22 AM [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-10 08:23:40 AM [INFO] Added job "collectData" to job store "default"
+2025-04-10 08:23:40 AM [INFO] Added job "stockMarketClose" to job store "default"
+2025-04-10 08:23:40 AM [INFO] Scheduler started
+2025-04-10 08:24:02 AM [INFO] Received exit signal. Shutting down...
+2025-04-10 08:24:02 AM [INFO] Cleaning up: closing driver and shutting down scheduler.
+2025-04-10 08:24:02 AM [WARNING] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))': /session/8a9d189e8ea97b39ab326f04d56fb79f
+2025-04-10 08:24:02 AM [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8a88f1e0d0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/8a9d189e8ea97b39ab326f04d56fb79f
+2025-04-10 08:24:02 AM [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8a88f1e350>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/8a9d189e8ea97b39ab326f04d56fb79f
+2025-04-10 08:24:02 AM [INFO] Scheduler has been shut down
+2025-04-10 08:26:40 AM [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-10 08:26:40 AM [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-10 08:26:52 AM [INFO] Added job "collectData" to job store "default"
+2025-04-10 08:26:52 AM [INFO] Added job "stockMarketClose" to job store "default"
+2025-04-10 08:26:52 AM [INFO] Scheduler started
+2025-04-10 08:31:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 08:31:00 CDT)" (scheduled at 2025-04-10 08:31:00-05:00)
+2025-04-10 08:31:00 AM [INFO] Starting data collection...
+2025-04-10 08:31:00 AM [INFO] Sleeping for 89.72 seconds before scrolling
+2025-04-10 08:32:54 AM [INFO] 1 stocks added and 8 tweets added!
+2025-04-10 08:32:54 AM [INFO] Data collection completed successfully.
+2025-04-10 08:32:54 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 08:41:00 CDT)" executed successfully
+2025-04-10 08:32:54 AM [INFO] collect_data detected by completion listener.
+2025-04-10 08:32:59 AM [INFO] Updating graphs...
+2025-04-10 08:32:59 AM [ERROR] Error notifying listener
+Traceback (most recent call last):
+  File "/home/andrew/.local/lib/python3.13/site-packages/apscheduler/schedulers/base.py", line 1038, in _dispatch_event
+    cb(event)
+    ~~^^^^^^^
+  File "/home/andrew/Documents/Real-Time-Public-Sentiment/main.py", line 156, in task_listener
+    update_graphs()
+    ~~~~~~~~~~~~~^^
+  File "/home/andrew/Documents/Real-Time-Public-Sentiment/main.py", line 118, in update_graphs
+    stock_data_df = get_stock_data()
+  File "/home/andrew/Documents/Real-Time-Public-Sentiment/main.py", line 108, in get_stock_data
+    data[i] = (datetime.strptime(data[i][0], '%Y-%m-%d %I:%M:%S %p'), data[i][1])
+               ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.13/_strptime.py", line 674, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+                                    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.13/_strptime.py", line 453, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+                     (data_string, format))
+ValueError: time data '2025-04-10 08:30 AM' does not match format '%Y-%m-%d %I:%M:%S %p'
+2025-04-10 08:35:23 AM [INFO] Received exit signal. Shutting down...
+2025-04-10 08:35:23 AM [INFO] Cleaning up: closing driver and shutting down scheduler.
+2025-04-10 08:35:23 AM [WARNING] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))': /session/feee274cb4d7b19abfe509e2a396c5a8
+2025-04-10 08:35:23 AM [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8403b26210>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/feee274cb4d7b19abfe509e2a396c5a8
+2025-04-10 08:35:23 AM [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8403b26850>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/feee274cb4d7b19abfe509e2a396c5a8
+2025-04-10 08:35:23 AM [INFO] Scheduler has been shut down
+2025-04-10 08:35:30 AM [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-10 08:35:30 AM [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-10 08:35:41 AM [INFO] Added job "collectData" to job store "default"
+2025-04-10 08:35:41 AM [INFO] Added job "stockMarketClose" to job store "default"
+2025-04-10 08:35:41 AM [INFO] Scheduler started
+2025-04-10 08:41:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 08:41:00 CDT)" (scheduled at 2025-04-10 08:41:00-05:00)
+2025-04-10 08:41:00 AM [INFO] Starting data collection...
+2025-04-10 08:41:00 AM [INFO] Sleeping for 89.31 seconds before scrolling
+2025-04-10 08:42:39 AM [INFO] 11 stocks added and 22 tweets added!
+2025-04-10 08:42:39 AM [INFO] Data collection completed successfully.
+2025-04-10 08:42:39 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 08:51:00 CDT)" executed successfully
+2025-04-10 08:42:39 AM [INFO] collect_data detected by completion listener.
+2025-04-10 08:42:44 AM [INFO] Updating graphs...
+2025-04-10 08:42:46 AM [INFO] Task listener finished.
+--------------
+2025-04-10 08:51:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 09:01:00 CDT)" (scheduled at 2025-04-10 08:51:00-05:00)
+2025-04-10 08:51:00 AM [INFO] Starting data collection...
+2025-04-10 08:51:00 AM [INFO] Sleeping for 86.73 seconds before scrolling
+2025-04-10 08:52:38 AM [INFO] 11 stocks added and 20 tweets added!
+2025-04-10 08:52:38 AM [INFO] Data collection completed successfully.
+2025-04-10 08:52:38 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 09:01:00 CDT)" executed successfully
+2025-04-10 08:52:38 AM [INFO] collect_data detected by completion listener.
+2025-04-10 08:52:43 AM [INFO] Updating graphs...
+2025-04-10 08:52:43 AM [INFO] Task listener finished.
+--------------
+2025-04-10 08:57:46 AM [INFO] Received exit signal. Shutting down...
+2025-04-10 08:57:46 AM [INFO] Cleaning up: closing driver and shutting down scheduler.
+2025-04-10 08:57:46 AM [WARNING] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))': /session/c85cae155cb15d185a67b79a9dcd5d77
+2025-04-10 08:57:46 AM [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff39290ee90>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/c85cae155cb15d185a67b79a9dcd5d77
+2025-04-10 08:57:46 AM [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff39290f110>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/c85cae155cb15d185a67b79a9dcd5d77
+2025-04-10 08:57:46 AM [INFO] Scheduler has been shut down
+2025-04-10 08:57:52 AM [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-10 08:57:52 AM [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-10 08:58:04 AM [INFO] Added job "collectData" to job store "default"
+2025-04-10 08:58:04 AM [INFO] Added job "stockMarketClose" to job store "default"
+2025-04-10 08:58:04 AM [INFO] Scheduler started
+2025-04-10 09:01:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 09:01:00 CDT)" (scheduled at 2025-04-10 09:01:00-05:00)
+2025-04-10 09:01:00 AM [INFO] Starting data collection...
+2025-04-10 09:01:00 AM [INFO] Sleeping for 64.71 seconds before scrolling
+2025-04-10 09:02:24 AM [INFO] 11 stocks added and 29 tweets added!
+2025-04-10 09:02:24 AM [INFO] Data collection completed successfully.
+2025-04-10 09:02:24 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 09:11:00 CDT)" executed successfully
+2025-04-10 09:02:24 AM [INFO] collect_data detected by completion listener.
+2025-04-10 09:02:29 AM [INFO] Updating graphs...
+2025-04-10 09:02:30 AM [INFO] Task listener finished.
+--------------
+2025-04-10 09:11:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 09:21:00 CDT)" (scheduled at 2025-04-10 09:11:00-05:00)
+2025-04-10 09:11:00 AM [INFO] Starting data collection...
+2025-04-10 09:11:00 AM [INFO] Sleeping for 87.29 seconds before scrolling
+2025-04-10 09:12:37 AM [INFO] 11 stocks added and 20 tweets added!
+2025-04-10 09:12:37 AM [INFO] Data collection completed successfully.
+2025-04-10 09:12:37 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 09:21:00 CDT)" executed successfully
+2025-04-10 09:12:37 AM [INFO] collect_data detected by completion listener.
+2025-04-10 09:12:42 AM [INFO] Updating graphs...
+2025-04-10 09:12:42 AM [INFO] Task listener finished.
+--------------
+2025-04-10 09:21:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 09:31:00 CDT)" (scheduled at 2025-04-10 09:21:00-05:00)
+2025-04-10 09:21:00 AM [INFO] Starting data collection...
+2025-04-10 09:21:00 AM [INFO] Sleeping for 66.50 seconds before scrolling
+2025-04-10 09:22:21 AM [INFO] 11 stocks added and 22 tweets added!
+2025-04-10 09:22:21 AM [INFO] Data collection completed successfully.
+2025-04-10 09:22:21 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 09:31:00 CDT)" executed successfully
+2025-04-10 09:22:21 AM [INFO] collect_data detected by completion listener.
+2025-04-10 09:22:26 AM [INFO] Updating graphs...
+2025-04-10 09:22:26 AM [INFO] Task listener finished.
+--------------
+2025-04-10 09:31:10 AM [WARNING] Run time of job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 09:41:00 CDT)" was missed by 0:00:10.000352
+2025-04-10 09:41:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 09:51:00 CDT)" (scheduled at 2025-04-10 09:41:00-05:00)
+2025-04-10 09:41:00 AM [INFO] Starting data collection...
+2025-04-10 09:41:00 AM [ERROR] collectData failed: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=135.0.7049.52)
+Stacktrace:
+#0 0x55e524d36d0a <unknown>
+#1 0x55e5247e75f0 <unknown>
+#2 0x55e5247cd48e <unknown>
+#3 0x55e5247f6109 <unknown>
+#4 0x55e524866f49 <unknown>
+#5 0x55e524883ffc <unknown>
+#6 0x55e52485e433 <unknown>
+#7 0x55e52482aea3 <unknown>
+#8 0x55e52482bb01 <unknown>
+#9 0x55e524cfbb5b <unknown>
+#10 0x55e524cffa41 <unknown>
+#11 0x55e524ce2c52 <unknown>
+#12 0x55e524d005b4 <unknown>
+#13 0x55e524cc6f0f <unknown>
+#14 0x55e524d24db8 <unknown>
+#15 0x55e524d24f96 <unknown>
+#16 0x55e524d35b56 <unknown>
+#17 0x7f7b73fc7ba8 start_thread
+#18 0x7f7b7404bb8c __clone3
+
+2025-04-10 09:41:00 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 09:51:00 CDT)" executed successfully
+2025-04-10 09:41:00 AM [INFO] collect_data detected by completion listener.
+2025-04-10 09:41:05 AM [INFO] Updating graphs...
+2025-04-10 09:41:05 AM [INFO] Task listener finished.
+--------------
+2025-04-10 09:43:03 AM [INFO] Received exit signal. Shutting down...
+2025-04-10 09:43:03 AM [INFO] Cleaning up: closing driver and shutting down scheduler.
+2025-04-10 09:43:03 AM [WARNING] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))': /session/bb00288a5ded63fc871953a0f3de3016
+2025-04-10 09:43:03 AM [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1a4a023ed0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/bb00288a5ded63fc871953a0f3de3016
+2025-04-10 09:43:03 AM [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1a4a05c550>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/bb00288a5ded63fc871953a0f3de3016
+2025-04-10 09:43:03 AM [INFO] Scheduler has been shut down
+2025-04-10 09:43:10 AM [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-10 09:43:10 AM [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-10 09:43:22 AM [INFO] Added job "collectData" to job store "default"
+2025-04-10 09:43:22 AM [INFO] Added job "stockMarketClose" to job store "default"
+2025-04-10 09:43:22 AM [INFO] Scheduler started
+2025-04-10 09:51:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 09:51:00 CDT)" (scheduled at 2025-04-10 09:51:00-05:00)
+2025-04-10 09:51:00 AM [INFO] Starting data collection...
+2025-04-10 09:51:00 AM [INFO] Sleeping for 80.59 seconds before scrolling
+2025-04-10 09:52:30 AM [INFO] 11 stocks added and 18 tweets added!
+2025-04-10 09:52:30 AM [INFO] Data collection completed successfully.
+2025-04-10 09:52:30 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 10:01:00 CDT)" executed successfully
+2025-04-10 09:52:30 AM [INFO] collect_data detected by completion listener.
+2025-04-10 09:52:35 AM [INFO] Updating graphs...
+2025-04-10 09:52:36 AM [INFO] Task listener finished.
+--------------
+2025-04-10 10:01:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 10:11:00 CDT)" (scheduled at 2025-04-10 10:01:00-05:00)
+2025-04-10 10:01:00 AM [INFO] Starting data collection...
+2025-04-10 10:01:00 AM [INFO] Sleeping for 61.06 seconds before scrolling
+2025-04-10 10:02:11 AM [INFO] 11 stocks added and 19 tweets added!
+2025-04-10 10:02:11 AM [INFO] Data collection completed successfully.
+2025-04-10 10:02:11 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 10:11:00 CDT)" executed successfully
+2025-04-10 10:02:11 AM [INFO] collect_data detected by completion listener.
+2025-04-10 10:02:16 AM [INFO] Updating graphs...
+2025-04-10 10:02:16 AM [INFO] Task listener finished.
+--------------
+2025-04-10 10:11:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 10:21:00 CDT)" (scheduled at 2025-04-10 10:11:00-05:00)
+2025-04-10 10:11:00 AM [INFO] Starting data collection...
+2025-04-10 10:11:00 AM [INFO] Sleeping for 88.52 seconds before scrolling
+2025-04-10 10:12:47 AM [INFO] 11 stocks added and 10 tweets added!
+2025-04-10 10:12:47 AM [INFO] Data collection completed successfully.
+2025-04-10 10:12:47 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 10:21:00 CDT)" executed successfully
+2025-04-10 10:12:47 AM [INFO] collect_data detected by completion listener.
+2025-04-10 10:12:52 AM [INFO] Updating graphs...
+2025-04-10 10:12:52 AM [INFO] Task listener finished.
+--------------
+2025-04-10 10:21:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 10:31:00 CDT)" (scheduled at 2025-04-10 10:21:00-05:00)
+2025-04-10 10:21:00 AM [INFO] Starting data collection...
+2025-04-10 10:21:00 AM [INFO] Sleeping for 70.52 seconds before scrolling
+2025-04-10 10:22:36 AM [INFO] 11 stocks added and 26 tweets added!
+2025-04-10 10:22:36 AM [INFO] Data collection completed successfully.
+2025-04-10 10:22:36 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 10:31:00 CDT)" executed successfully
+2025-04-10 10:22:36 AM [INFO] collect_data detected by completion listener.
+2025-04-10 10:22:41 AM [INFO] Updating graphs...
+2025-04-10 10:22:41 AM [INFO] Task listener finished.
+--------------
+2025-04-10 10:31:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 10:41:00 CDT)" (scheduled at 2025-04-10 10:31:00-05:00)
+2025-04-10 10:31:00 AM [INFO] Starting data collection...
+2025-04-10 10:31:00 AM [INFO] Sleeping for 60.93 seconds before scrolling
+2025-04-10 10:32:27 AM [INFO] 11 stocks added and 23 tweets added!
+2025-04-10 10:32:27 AM [INFO] Data collection completed successfully.
+2025-04-10 10:32:27 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 10:41:00 CDT)" executed successfully
+2025-04-10 10:32:27 AM [INFO] collect_data detected by completion listener.
+2025-04-10 10:32:32 AM [INFO] Updating graphs...
+2025-04-10 10:32:32 AM [INFO] Task listener finished.
+--------------
+2025-04-10 10:41:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 10:51:00 CDT)" (scheduled at 2025-04-10 10:41:00-05:00)
+2025-04-10 10:41:00 AM [INFO] Starting data collection...
+2025-04-10 10:41:00 AM [INFO] Sleeping for 66.40 seconds before scrolling
+2025-04-10 10:42:18 AM [INFO] 11 stocks added and 19 tweets added!
+2025-04-10 10:42:18 AM [INFO] Data collection completed successfully.
+2025-04-10 10:42:18 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 10:51:00 CDT)" executed successfully
+2025-04-10 10:42:18 AM [INFO] collect_data detected by completion listener.
+2025-04-10 10:42:23 AM [INFO] Updating graphs...
+2025-04-10 10:42:23 AM [INFO] Task listener finished.
+--------------
+2025-04-10 10:51:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 11:01:00 CDT)" (scheduled at 2025-04-10 10:51:00-05:00)
+2025-04-10 10:51:00 AM [INFO] Starting data collection...
+2025-04-10 10:51:00 AM [INFO] Sleeping for 75.97 seconds before scrolling
+2025-04-10 10:52:28 AM [INFO] 11 stocks added and 20 tweets added!
+2025-04-10 10:52:28 AM [INFO] Data collection completed successfully.
+2025-04-10 10:52:28 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 11:01:00 CDT)" executed successfully
+2025-04-10 10:52:28 AM [INFO] collect_data detected by completion listener.
+2025-04-10 10:52:33 AM [INFO] Updating graphs...
+2025-04-10 10:52:33 AM [INFO] Task listener finished.
+--------------
+2025-04-10 11:01:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 11:11:00 CDT)" (scheduled at 2025-04-10 11:01:00-05:00)
+2025-04-10 11:01:00 AM [INFO] Starting data collection...
+2025-04-10 11:01:00 AM [INFO] Sleeping for 79.35 seconds before scrolling
+2025-04-10 11:02:30 AM [INFO] 11 stocks added and 20 tweets added!
+2025-04-10 11:02:30 AM [INFO] Data collection completed successfully.
+2025-04-10 11:02:30 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 11:11:00 CDT)" executed successfully
+2025-04-10 11:02:30 AM [INFO] collect_data detected by completion listener.
+2025-04-10 11:02:35 AM [INFO] Updating graphs...
+2025-04-10 11:02:35 AM [INFO] Task listener finished.
+--------------
+2025-04-10 11:11:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 11:21:00 CDT)" (scheduled at 2025-04-10 11:11:00-05:00)
+2025-04-10 11:11:00 AM [INFO] Starting data collection...
+2025-04-10 11:11:00 AM [INFO] Sleeping for 69.54 seconds before scrolling
+2025-04-10 11:12:26 AM [INFO] 11 stocks added and 26 tweets added!
+2025-04-10 11:12:26 AM [INFO] Data collection completed successfully.
+2025-04-10 11:12:26 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 11:21:00 CDT)" executed successfully
+2025-04-10 11:12:26 AM [INFO] collect_data detected by completion listener.
+2025-04-10 11:12:31 AM [INFO] Updating graphs...
+2025-04-10 11:12:31 AM [INFO] Task listener finished.
+--------------
+2025-04-10 11:21:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 11:31:00 CDT)" (scheduled at 2025-04-10 11:21:00-05:00)
+2025-04-10 11:21:00 AM [INFO] Starting data collection...
+2025-04-10 11:21:00 AM [INFO] Sleeping for 80.64 seconds before scrolling
+2025-04-10 11:22:36 AM [INFO] 11 stocks added and 29 tweets added!
+2025-04-10 11:22:36 AM [INFO] Data collection completed successfully.
+2025-04-10 11:22:36 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 11:31:00 CDT)" executed successfully
+2025-04-10 11:22:36 AM [INFO] collect_data detected by completion listener.
+2025-04-10 11:22:41 AM [INFO] Updating graphs...
+2025-04-10 11:22:41 AM [INFO] Task listener finished.
+--------------
+2025-04-10 11:31:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 11:41:00 CDT)" (scheduled at 2025-04-10 11:31:00-05:00)
+2025-04-10 11:31:00 AM [INFO] Starting data collection...
+2025-04-10 11:31:00 AM [INFO] Sleeping for 80.07 seconds before scrolling
+2025-04-10 11:32:35 AM [INFO] 11 stocks added and 35 tweets added!
+2025-04-10 11:32:35 AM [INFO] Data collection completed successfully.
+2025-04-10 11:32:35 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 11:41:00 CDT)" executed successfully
+2025-04-10 11:32:35 AM [INFO] collect_data detected by completion listener.
+2025-04-10 11:32:40 AM [INFO] Updating graphs...
+2025-04-10 11:32:40 AM [INFO] Task listener finished.
+--------------
+2025-04-10 11:41:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 11:51:00 CDT)" (scheduled at 2025-04-10 11:41:00-05:00)
+2025-04-10 11:41:00 AM [INFO] Starting data collection...
+2025-04-10 11:41:00 AM [INFO] Sleeping for 67.82 seconds before scrolling
+2025-04-10 11:42:18 AM [INFO] 11 stocks added and 17 tweets added!
+2025-04-10 11:42:18 AM [INFO] Data collection completed successfully.
+2025-04-10 11:42:18 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 11:51:00 CDT)" executed successfully
+2025-04-10 11:42:18 AM [INFO] collect_data detected by completion listener.
+2025-04-10 11:42:23 AM [INFO] Updating graphs...
+2025-04-10 11:42:23 AM [INFO] Task listener finished.
+--------------
+2025-04-10 11:51:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 12:01:00 CDT)" (scheduled at 2025-04-10 11:51:00-05:00)
+2025-04-10 11:51:00 AM [INFO] Starting data collection...
+2025-04-10 11:51:00 AM [INFO] Sleeping for 79.18 seconds before scrolling
+2025-04-10 11:52:35 AM [INFO] 11 stocks added and 30 tweets added!
+2025-04-10 11:52:35 AM [INFO] Data collection completed successfully.
+2025-04-10 11:52:35 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 12:01:00 CDT)" executed successfully
+2025-04-10 11:52:35 AM [INFO] collect_data detected by completion listener.
+2025-04-10 11:52:40 AM [INFO] Updating graphs...
+2025-04-10 11:52:40 AM [INFO] Task listener finished.
+--------------
+2025-04-10 12:01:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 12:11:00 CDT)" (scheduled at 2025-04-10 12:01:00-05:00)
+2025-04-10 12:01:00 PM [INFO] Starting data collection...
+2025-04-10 12:01:00 PM [INFO] Sleeping for 89.03 seconds before scrolling
+2025-04-10 12:02:52 PM [INFO] 11 stocks added and 26 tweets added!
+2025-04-10 12:02:52 PM [INFO] Data collection completed successfully.
+2025-04-10 12:02:52 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 12:11:00 CDT)" executed successfully
+2025-04-10 12:02:52 PM [INFO] collect_data detected by completion listener.
+2025-04-10 12:02:57 PM [INFO] Updating graphs...
+2025-04-10 12:02:57 PM [INFO] Task listener finished.
+--------------
+2025-04-10 12:11:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 12:21:00 CDT)" (scheduled at 2025-04-10 12:11:00-05:00)
+2025-04-10 12:11:00 PM [INFO] Starting data collection...
+2025-04-10 12:11:00 PM [INFO] Sleeping for 83.00 seconds before scrolling
+2025-04-10 12:12:38 PM [INFO] 11 stocks added and 26 tweets added!
+2025-04-10 12:12:38 PM [INFO] Data collection completed successfully.
+2025-04-10 12:12:38 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 12:21:00 CDT)" executed successfully
+2025-04-10 12:12:38 PM [INFO] collect_data detected by completion listener.
+2025-04-10 12:12:43 PM [INFO] Updating graphs...
+2025-04-10 12:12:43 PM [INFO] Task listener finished.
+--------------
+2025-04-10 12:21:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 12:31:00 CDT)" (scheduled at 2025-04-10 12:21:00-05:00)
+2025-04-10 12:21:00 PM [INFO] Starting data collection...
+2025-04-10 12:21:00 PM [INFO] Sleeping for 79.37 seconds before scrolling
+2025-04-10 12:22:34 PM [INFO] 11 stocks added and 29 tweets added!
+2025-04-10 12:22:34 PM [INFO] Data collection completed successfully.
+2025-04-10 12:22:34 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 12:31:00 CDT)" executed successfully
+2025-04-10 12:22:34 PM [INFO] collect_data detected by completion listener.
+2025-04-10 12:22:39 PM [INFO] Updating graphs...
+2025-04-10 12:22:39 PM [INFO] Task listener finished.
+--------------
+2025-04-10 12:31:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 12:41:00 CDT)" (scheduled at 2025-04-10 12:31:00-05:00)
+2025-04-10 12:31:00 PM [INFO] Starting data collection...
+2025-04-10 12:31:00 PM [INFO] Sleeping for 69.22 seconds before scrolling
+2025-04-10 12:32:30 PM [INFO] 11 stocks added and 25 tweets added!
+2025-04-10 12:32:30 PM [INFO] Data collection completed successfully.
+2025-04-10 12:32:30 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 12:41:00 CDT)" executed successfully
+2025-04-10 12:32:30 PM [INFO] collect_data detected by completion listener.
+2025-04-10 12:32:35 PM [INFO] Updating graphs...
+2025-04-10 12:32:35 PM [INFO] Task listener finished.
+--------------
+2025-04-10 12:41:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 12:51:00 CDT)" (scheduled at 2025-04-10 12:41:00-05:00)
+2025-04-10 12:41:00 PM [INFO] Starting data collection...
+2025-04-10 12:41:00 PM [INFO] Sleeping for 76.56 seconds before scrolling
+2025-04-10 12:42:26 PM [INFO] 11 stocks added and 22 tweets added!
+2025-04-10 12:42:26 PM [INFO] Data collection completed successfully.
+2025-04-10 12:42:26 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 12:51:00 CDT)" executed successfully
+2025-04-10 12:42:26 PM [INFO] collect_data detected by completion listener.
+2025-04-10 12:42:31 PM [INFO] Updating graphs...
+2025-04-10 12:42:31 PM [INFO] Task listener finished.
+--------------
+2025-04-10 12:51:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 13:01:00 CDT)" (scheduled at 2025-04-10 12:51:00-05:00)
+2025-04-10 12:51:00 PM [INFO] Starting data collection...
+2025-04-10 12:51:00 PM [INFO] Sleeping for 62.96 seconds before scrolling
+2025-04-10 12:52:15 PM [INFO] 11 stocks added and 21 tweets added!
+2025-04-10 12:52:15 PM [INFO] Data collection completed successfully.
+2025-04-10 12:52:15 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 13:01:00 CDT)" executed successfully
+2025-04-10 12:52:15 PM [INFO] collect_data detected by completion listener.
+2025-04-10 12:52:20 PM [INFO] Updating graphs...
+2025-04-10 12:52:20 PM [INFO] Task listener finished.
+--------------
+2025-04-10 01:01:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 13:11:00 CDT)" (scheduled at 2025-04-10 13:01:00-05:00)
+2025-04-10 01:01:00 PM [INFO] Starting data collection...
+2025-04-10 01:01:00 PM [INFO] Sleeping for 60.27 seconds before scrolling
+2025-04-10 01:02:14 PM [INFO] 11 stocks added and 30 tweets added!
+2025-04-10 01:02:14 PM [INFO] Data collection completed successfully.
+2025-04-10 01:02:14 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 13:11:00 CDT)" executed successfully
+2025-04-10 01:02:14 PM [INFO] collect_data detected by completion listener.
+2025-04-10 01:02:19 PM [INFO] Updating graphs...
+2025-04-10 01:02:19 PM [INFO] Task listener finished.
+--------------
+2025-04-10 01:11:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 13:21:00 CDT)" (scheduled at 2025-04-10 13:11:00-05:00)
+2025-04-10 01:11:00 PM [INFO] Starting data collection...
+2025-04-10 01:11:00 PM [INFO] Sleeping for 64.37 seconds before scrolling
+2025-04-10 01:12:15 PM [INFO] 11 stocks added and 19 tweets added!
+2025-04-10 01:12:15 PM [INFO] Data collection completed successfully.
+2025-04-10 01:12:15 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 13:21:00 CDT)" executed successfully
+2025-04-10 01:12:15 PM [INFO] collect_data detected by completion listener.
+2025-04-10 01:12:20 PM [INFO] Updating graphs...
+2025-04-10 01:12:20 PM [INFO] Task listener finished.
+--------------
+2025-04-10 01:21:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 13:31:00 CDT)" (scheduled at 2025-04-10 13:21:00-05:00)
+2025-04-10 01:21:00 PM [INFO] Starting data collection...
+2025-04-10 01:21:00 PM [INFO] Sleeping for 70.62 seconds before scrolling
+2025-04-10 01:22:30 PM [INFO] 11 stocks added and 10 tweets added!
+2025-04-10 01:22:30 PM [INFO] Data collection completed successfully.
+2025-04-10 01:22:30 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 13:31:00 CDT)" executed successfully
+2025-04-10 01:22:30 PM [INFO] collect_data detected by completion listener.
+2025-04-10 01:22:35 PM [INFO] Updating graphs...
+2025-04-10 01:22:35 PM [INFO] Task listener finished.
+--------------
+2025-04-10 01:31:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 13:41:00 CDT)" (scheduled at 2025-04-10 13:31:00-05:00)
+2025-04-10 01:31:00 PM [INFO] Starting data collection...
+2025-04-10 01:31:00 PM [INFO] Sleeping for 84.98 seconds before scrolling
+2025-04-10 01:32:34 PM [INFO] 11 stocks added and 18 tweets added!
+2025-04-10 01:32:34 PM [INFO] Data collection completed successfully.
+2025-04-10 01:32:34 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 13:41:00 CDT)" executed successfully
+2025-04-10 01:32:34 PM [INFO] collect_data detected by completion listener.
+2025-04-10 01:32:39 PM [INFO] Updating graphs...
+2025-04-10 01:32:40 PM [INFO] Task listener finished.
+--------------
+2025-04-10 01:41:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 13:51:00 CDT)" (scheduled at 2025-04-10 13:41:00-05:00)
+2025-04-10 01:41:00 PM [INFO] Starting data collection...
+2025-04-10 01:41:00 PM [INFO] Sleeping for 85.77 seconds before scrolling
+2025-04-10 01:42:47 PM [INFO] 11 stocks added and 10 tweets added!
+2025-04-10 01:42:47 PM [INFO] Data collection completed successfully.
+2025-04-10 01:42:47 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 13:51:00 CDT)" executed successfully
+2025-04-10 01:42:47 PM [INFO] collect_data detected by completion listener.
+2025-04-10 01:42:52 PM [INFO] Updating graphs...
+2025-04-10 01:42:52 PM [INFO] Task listener finished.
+--------------
+2025-04-10 01:51:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 14:01:00 CDT)" (scheduled at 2025-04-10 13:51:00-05:00)
+2025-04-10 01:51:00 PM [INFO] Starting data collection...
+2025-04-10 01:51:00 PM [INFO] Sleeping for 77.05 seconds before scrolling
+2025-04-10 01:52:26 PM [INFO] 11 stocks added and 8 tweets added!
+2025-04-10 01:52:26 PM [INFO] Data collection completed successfully.
+2025-04-10 01:52:26 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 14:01:00 CDT)" executed successfully
+2025-04-10 01:52:26 PM [INFO] collect_data detected by completion listener.
+2025-04-10 01:52:31 PM [INFO] Updating graphs...
+2025-04-10 01:52:31 PM [INFO] Task listener finished.
+--------------
+2025-04-10 02:01:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 14:11:00 CDT)" (scheduled at 2025-04-10 14:01:00-05:00)
+2025-04-10 02:01:00 PM [INFO] Starting data collection...
+2025-04-10 02:01:00 PM [INFO] Sleeping for 86.16 seconds before scrolling
+2025-04-10 02:02:36 PM [INFO] 11 stocks added and 15 tweets added!
+2025-04-10 02:02:36 PM [INFO] Data collection completed successfully.
+2025-04-10 02:02:36 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 14:11:00 CDT)" executed successfully
+2025-04-10 02:02:36 PM [INFO] collect_data detected by completion listener.
+2025-04-10 02:02:41 PM [INFO] Updating graphs...
+2025-04-10 02:02:41 PM [INFO] Task listener finished.
+--------------
+2025-04-10 02:11:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 14:21:00 CDT)" (scheduled at 2025-04-10 14:11:00-05:00)
+2025-04-10 02:11:00 PM [INFO] Starting data collection...
+2025-04-10 02:11:00 PM [INFO] Sleeping for 63.60 seconds before scrolling
+2025-04-10 02:12:16 PM [INFO] 11 stocks added and 16 tweets added!
+2025-04-10 02:12:16 PM [INFO] Data collection completed successfully.
+2025-04-10 02:12:16 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 14:21:00 CDT)" executed successfully
+2025-04-10 02:12:16 PM [INFO] collect_data detected by completion listener.
+2025-04-10 02:12:21 PM [INFO] Updating graphs...
+2025-04-10 02:12:21 PM [INFO] Task listener finished.
+--------------
+2025-04-10 02:21:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 14:31:00 CDT)" (scheduled at 2025-04-10 14:21:00-05:00)
+2025-04-10 02:21:00 PM [INFO] Starting data collection...
+2025-04-10 02:21:00 PM [INFO] Sleeping for 67.55 seconds before scrolling
+2025-04-10 02:22:15 PM [INFO] 11 stocks added and 9 tweets added!
+2025-04-10 02:22:15 PM [INFO] Data collection completed successfully.
+2025-04-10 02:22:15 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 14:31:00 CDT)" executed successfully
+2025-04-10 02:22:15 PM [INFO] collect_data detected by completion listener.
+2025-04-10 02:22:20 PM [INFO] Updating graphs...
+2025-04-10 02:22:20 PM [INFO] Task listener finished.
+--------------
+2025-04-10 02:31:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 14:41:00 CDT)" (scheduled at 2025-04-10 14:31:00-05:00)
+2025-04-10 02:31:00 PM [INFO] Starting data collection...
+2025-04-10 02:31:00 PM [INFO] Sleeping for 73.90 seconds before scrolling
+2025-04-10 02:32:23 PM [INFO] 11 stocks added and 15 tweets added!
+2025-04-10 02:32:23 PM [INFO] Data collection completed successfully.
+2025-04-10 02:32:23 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 14:41:00 CDT)" executed successfully
+2025-04-10 02:32:23 PM [INFO] collect_data detected by completion listener.
+2025-04-10 02:32:28 PM [INFO] Updating graphs...
+2025-04-10 02:32:28 PM [INFO] Task listener finished.
+--------------
+2025-04-10 02:41:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 14:51:00 CDT)" (scheduled at 2025-04-10 14:41:00-05:00)
+2025-04-10 02:41:00 PM [INFO] Starting data collection...
+2025-04-10 02:41:00 PM [INFO] Sleeping for 78.03 seconds before scrolling
+2025-04-10 02:42:33 PM [INFO] 11 stocks added and 11 tweets added!
+2025-04-10 02:42:33 PM [INFO] Data collection completed successfully.
+2025-04-10 02:42:33 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 14:51:00 CDT)" executed successfully
+2025-04-10 02:42:33 PM [INFO] collect_data detected by completion listener.
+2025-04-10 02:42:38 PM [INFO] Updating graphs...
+2025-04-10 02:42:38 PM [INFO] Task listener finished.
+--------------
+2025-04-10 02:51:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 15:01:00 CDT)" (scheduled at 2025-04-10 14:51:00-05:00)
+2025-04-10 02:51:00 PM [INFO] Starting data collection...
+2025-04-10 02:51:00 PM [INFO] Sleeping for 86.76 seconds before scrolling
+2025-04-10 02:52:49 PM [INFO] 11 stocks added and 17 tweets added!
+2025-04-10 02:52:49 PM [INFO] Data collection completed successfully.
+2025-04-10 02:52:49 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 15:01:00 CDT)" executed successfully
+2025-04-10 02:52:49 PM [INFO] collect_data detected by completion listener.
+2025-04-10 02:52:54 PM [INFO] Updating graphs...
+2025-04-10 02:52:54 PM [INFO] Task listener finished.
+--------------
+2025-04-10 03:00:00 PM [INFO] Running job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-10 15:01:00 CDT)" (scheduled at 2025-04-10 15:00:00-05:00)
+2025-04-10 03:00:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-10 15:01:00 CDT)" executed successfully
+2025-04-10 03:01:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 15:11:00 CDT)" (scheduled at 2025-04-10 15:01:00-05:00)
+2025-04-10 03:01:00 PM [INFO] Running job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-10 15:02:00 CDT)" (scheduled at 2025-04-10 15:01:00-05:00)
+2025-04-10 03:01:00 PM [INFO] Starting data collection...
+2025-04-10 03:01:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-10 15:02:00 CDT)" executed successfully
+2025-04-10 03:01:00 PM [INFO] Sleeping for 62.44 seconds before scrolling
+2025-04-10 03:02:00 PM [INFO] Running job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-10 15:03:00 CDT)" (scheduled at 2025-04-10 15:02:00-05:00)
+2025-04-10 03:02:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-10 15:03:00 CDT)" executed successfully
+2025-04-10 03:02:13 PM [INFO] 10 stocks added and 12 tweets added!
+2025-04-10 03:02:13 PM [INFO] Data collection completed successfully.
+2025-04-10 03:02:13 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-10 15:11:00 CDT)" executed successfully
+2025-04-10 03:02:13 PM [INFO] collect_data detected by completion listener.
+2025-04-10 03:02:18 PM [INFO] Updating graphs...
+2025-04-10 03:02:18 PM [INFO] Task listener finished.
+--------------
+2025-04-10 03:03:00 PM [INFO] Running job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-10 15:04:00 CDT)" (scheduled at 2025-04-10 15:03:00-05:00)
+2025-04-10 03:03:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-10 15:04:00 CDT)" executed successfully
+2025-04-10 03:04:00 PM [INFO] Running job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-10 15:05:00 CDT)" (scheduled at 2025-04-10 15:04:00-05:00)
+2025-04-10 03:04:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-10 15:05:00 CDT)" executed successfully
+2025-04-10 03:05:00 PM [INFO] Running job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-10 15:06:00 CDT)" (scheduled at 2025-04-10 15:05:00-05:00)
+2025-04-10 03:05:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-10 15:06:00 CDT)" executed successfully
+2025-04-10 03:06:00 PM [INFO] Running job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-10 15:07:00 CDT)" (scheduled at 2025-04-10 15:06:00-05:00)
+2025-04-10 03:06:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-10 15:07:00 CDT)" executed successfully
+2025-04-10 03:07:00 PM [INFO] Running job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-10 15:08:00 CDT)" (scheduled at 2025-04-10 15:07:00-05:00)
+2025-04-10 03:07:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-10 15:08:00 CDT)" executed successfully
+2025-04-10 03:08:00 PM [INFO] Running job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-10 15:09:00 CDT)" (scheduled at 2025-04-10 15:08:00-05:00)
+2025-04-10 03:08:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-10 15:09:00 CDT)" executed successfully
+2025-04-10 03:08:00 PM [INFO] Cleaning up: closing driver and shutting down scheduler.
+2025-04-10 03:08:00 PM [INFO] Scheduler has been shut down
+2025-04-11 08:22:39 AM [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-11 08:22:39 AM [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-11 08:22:55 AM [INFO] Added job "collectData" to job store "default"
+2025-04-11 08:22:55 AM [INFO] Added job "stockMarketClose" to job store "default"
+2025-04-11 08:22:55 AM [INFO] Scheduler started
+2025-04-11 08:31:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 08:31:00 CDT)" (scheduled at 2025-04-11 08:31:00-05:00)
+2025-04-11 08:31:00 AM [INFO] Starting data collection...
+2025-04-11 08:31:00 AM [INFO] Sleeping for 82.96 seconds before scrolling
+2025-04-11 08:32:39 AM [INFO] 1 stocks added and 3 tweets added!
+2025-04-11 08:32:39 AM [INFO] Data collection completed successfully.
+2025-04-11 08:32:39 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 08:41:00 CDT)" executed successfully
+2025-04-11 08:32:39 AM [INFO] collect_data detected by completion listener.
+2025-04-11 08:32:44 AM [ERROR] Error notifying listener
+Traceback (most recent call last):
+  File "/home/andrew/.local/lib/python3.13/site-packages/apscheduler/schedulers/base.py", line 1038, in _dispatch_event
+    cb(event)
+    ~~^^^^^^^
+  File "/home/andrew/Documents/Real-Time-Public-Sentiment/main2.py", line 121, in task_listener
+    cursor = conn.cursor()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140387796539200 and this is thread id 140382692738752.
+2025-04-11 08:33:46 AM [INFO] Received exit signal. Shutting down...
+2025-04-11 08:33:46 AM [INFO] Cleaning up: closing driver and shutting down scheduler.
+2025-04-11 08:33:46 AM [WARNING] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))': /session/7b1a33b87f0405f97b286cf6ca050b0e
+2025-04-11 08:33:46 AM [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fad651234d0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/7b1a33b87f0405f97b286cf6ca050b0e
+2025-04-11 08:33:46 AM [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fad651225d0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/7b1a33b87f0405f97b286cf6ca050b0e
+2025-04-11 08:33:46 AM [INFO] Scheduler has been shut down
+2025-04-11 08:34:17 AM [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-11 08:34:17 AM [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-11 08:34:29 AM [INFO] Added job "collectData" to job store "default"
+2025-04-11 08:34:29 AM [INFO] Added job "stockMarketClose" to job store "default"
+2025-04-11 08:34:29 AM [INFO] Scheduler started
+2025-04-11 08:41:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 08:41:00 CDT)" (scheduled at 2025-04-11 08:41:00-05:00)
+2025-04-11 08:41:00 AM [INFO] Starting data collection...
+2025-04-11 08:41:00 AM [INFO] Sleeping for 79.94 seconds before scrolling
+2025-04-11 08:42:33 AM [INFO] 11 stocks added and 25 tweets added!
+2025-04-11 08:42:33 AM [INFO] Data collection completed successfully.
+2025-04-11 08:42:33 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 08:51:00 CDT)" executed successfully
+2025-04-11 08:42:33 AM [INFO] collect_data detected by completion listener.
+2025-04-11 08:42:38 AM [ERROR] Error notifying listener
+Traceback (most recent call last):
+  File "/home/andrew/.local/lib/python3.13/site-packages/apscheduler/schedulers/base.py", line 1038, in _dispatch_event
+    cb(event)
+    ~~^^^^^^^
+  File "/home/andrew/Documents/Real-Time-Public-Sentiment/main2.py", line 121, in task_listener
+    cursor.execute("UPDATE flags SET update_graph = 1 WHERE id = 1")
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140188921476928 and this is thread id 140183750223552.
+2025-04-11 08:44:06 AM [INFO] Received exit signal. Shutting down...
+2025-04-11 08:44:06 AM [INFO] Cleaning up: closing driver and shutting down scheduler.
+2025-04-11 08:44:06 AM [WARNING] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))': /session/2e5cf53991977caabcb238a44e64b3ec
+2025-04-11 08:44:06 AM [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7f12ac60d0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2e5cf53991977caabcb238a44e64b3ec
+2025-04-11 08:44:06 AM [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7f12ac6210>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2e5cf53991977caabcb238a44e64b3ec
+2025-04-11 08:44:06 AM [INFO] Scheduler has been shut down
+2025-04-11 08:45:21 AM [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-11 08:45:21 AM [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-11 08:45:32 AM [INFO] Added job "collectData" to job store "default"
+2025-04-11 08:45:32 AM [INFO] Added job "stockMarketClose" to job store "default"
+2025-04-11 08:45:32 AM [INFO] Scheduler started
+2025-04-11 08:47:55 AM [INFO] Received exit signal. Shutting down...
+2025-04-11 08:47:55 AM [INFO] Cleaning up: closing driver and shutting down scheduler.
+2025-04-11 08:47:55 AM [WARNING] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))': /session/942bcf88a32beb89189e4d4e7ffe700c
+2025-04-11 08:47:55 AM [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fce5cb15d10>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/942bcf88a32beb89189e4d4e7ffe700c
+2025-04-11 08:47:55 AM [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fce5cb15f90>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/942bcf88a32beb89189e4d4e7ffe700c
+2025-04-11 08:47:55 AM [INFO] Scheduler has been shut down
+2025-04-11 08:48:08 AM [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-11 08:48:08 AM [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-11 08:48:19 AM [INFO] Added job "collectData" to job store "default"
+2025-04-11 08:48:19 AM [INFO] Added job "stockMarketClose" to job store "default"
+2025-04-11 08:48:19 AM [INFO] Scheduler started
+2025-04-11 08:51:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 08:51:00 CDT)" (scheduled at 2025-04-11 08:51:00-05:00)
+2025-04-11 08:51:00 AM [INFO] Starting data collection...
+2025-04-11 08:51:00 AM [INFO] Sleeping for 89.59 seconds before scrolling
+2025-04-11 08:52:43 AM [INFO] 11 stocks added and 23 tweets added!
+2025-04-11 08:52:43 AM [INFO] Data collection completed successfully.
+2025-04-11 08:52:43 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 09:01:00 CDT)" executed successfully
+2025-04-11 08:52:43 AM [INFO] collect_data detected by completion listener.
+2025-04-11 08:52:48 AM [INFO] Task listener finished.
+--------------
+2025-04-11 09:01:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 09:11:00 CDT)" (scheduled at 2025-04-11 09:01:00-05:00)
+2025-04-11 09:01:00 AM [INFO] Starting data collection...
+2025-04-11 09:01:00 AM [INFO] Sleeping for 79.83 seconds before scrolling
+2025-04-11 09:02:33 AM [INFO] 11 stocks added and 27 tweets added!
+2025-04-11 09:02:33 AM [INFO] Data collection completed successfully.
+2025-04-11 09:02:33 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 09:11:00 CDT)" executed successfully
+2025-04-11 09:02:33 AM [INFO] collect_data detected by completion listener.
+2025-04-11 09:02:38 AM [INFO] Task listener finished.
+--------------
+2025-04-11 09:11:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 09:21:00 CDT)" (scheduled at 2025-04-11 09:11:00-05:00)
+2025-04-11 09:11:00 AM [INFO] Starting data collection...
+2025-04-11 09:11:00 AM [INFO] Sleeping for 84.18 seconds before scrolling
+2025-04-11 09:12:34 AM [INFO] 11 stocks added and 18 tweets added!
+2025-04-11 09:12:34 AM [INFO] Data collection completed successfully.
+2025-04-11 09:12:34 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 09:21:00 CDT)" executed successfully
+2025-04-11 09:12:34 AM [INFO] collect_data detected by completion listener.
+2025-04-11 09:12:39 AM [INFO] Task listener finished.
+--------------
+2025-04-11 09:21:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 09:31:00 CDT)" (scheduled at 2025-04-11 09:21:00-05:00)
+2025-04-11 09:21:00 AM [INFO] Starting data collection...
+2025-04-11 09:21:00 AM [INFO] Sleeping for 89.47 seconds before scrolling
+2025-04-11 09:22:38 AM [INFO] 11 stocks added and 14 tweets added!
+2025-04-11 09:22:38 AM [INFO] Data collection completed successfully.
+2025-04-11 09:22:38 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 09:31:00 CDT)" executed successfully
+2025-04-11 09:22:38 AM [INFO] collect_data detected by completion listener.
+2025-04-11 09:22:44 AM [INFO] Task listener finished.
+--------------
+2025-04-11 09:23:42 AM [INFO] Received exit signal. Shutting down...
+2025-04-11 09:23:42 AM [INFO] Cleaning up: closing driver and shutting down scheduler.
+2025-04-11 09:23:42 AM [WARNING] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))': /session/b95c8c33765e9195a03131d724adddeb
+2025-04-11 09:23:42 AM [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1d1cdb6710>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b95c8c33765e9195a03131d724adddeb
+2025-04-11 09:23:42 AM [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1d1cdb6210>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b95c8c33765e9195a03131d724adddeb
+2025-04-11 09:23:42 AM [INFO] Scheduler has been shut down
+2025-04-11 09:23:48 AM [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-11 09:23:48 AM [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-11 09:23:59 AM [INFO] Added job "collectData" to job store "default"
+2025-04-11 09:23:59 AM [INFO] Added job "stockMarketClose" to job store "default"
+2025-04-11 09:23:59 AM [INFO] Scheduler started
+2025-04-11 09:31:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 09:31:00 CDT)" (scheduled at 2025-04-11 09:31:00-05:00)
+2025-04-11 09:31:00 AM [INFO] Starting data collection...
+2025-04-11 09:31:00 AM [INFO] Sleeping for 73.66 seconds before scrolling
+2025-04-11 09:32:24 AM [INFO] 11 stocks added and 19 tweets added!
+2025-04-11 09:32:24 AM [INFO] Data collection completed successfully.
+2025-04-11 09:32:24 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 09:41:00 CDT)" executed successfully
+2025-04-11 09:32:24 AM [INFO] collect_data detected by completion listener.
+2025-04-11 09:32:29 AM [INFO] Task listener finished.
+--------------
+2025-04-11 09:41:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 09:51:00 CDT)" (scheduled at 2025-04-11 09:41:00-05:00)
+2025-04-11 09:41:00 AM [INFO] Starting data collection...
+2025-04-11 09:41:00 AM [INFO] Sleeping for 63.97 seconds before scrolling
+2025-04-11 09:42:24 AM [INFO] 11 stocks added and 13 tweets added!
+2025-04-11 09:42:24 AM [INFO] Data collection completed successfully.
+2025-04-11 09:42:24 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 09:51:00 CDT)" executed successfully
+2025-04-11 09:42:24 AM [INFO] collect_data detected by completion listener.
+2025-04-11 09:42:29 AM [INFO] Task listener finished.
+--------------
+2025-04-11 09:51:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 10:01:00 CDT)" (scheduled at 2025-04-11 09:51:00-05:00)
+2025-04-11 09:51:00 AM [INFO] Starting data collection...
+2025-04-11 09:51:00 AM [INFO] Sleeping for 73.23 seconds before scrolling
+2025-04-11 09:52:25 AM [INFO] 11 stocks added and 16 tweets added!
+2025-04-11 09:52:25 AM [INFO] Data collection completed successfully.
+2025-04-11 09:52:25 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 10:01:00 CDT)" executed successfully
+2025-04-11 09:52:25 AM [INFO] collect_data detected by completion listener.
+2025-04-11 09:52:30 AM [INFO] Task listener finished.
+--------------
+2025-04-11 10:01:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 10:11:00 CDT)" (scheduled at 2025-04-11 10:01:00-05:00)
+2025-04-11 10:01:00 AM [INFO] Starting data collection...
+2025-04-11 10:01:00 AM [INFO] Sleeping for 63.49 seconds before scrolling
+2025-04-11 10:02:22 AM [INFO] 11 stocks added and 10 tweets added!
+2025-04-11 10:02:22 AM [INFO] Data collection completed successfully.
+2025-04-11 10:02:22 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 10:11:00 CDT)" executed successfully
+2025-04-11 10:02:22 AM [INFO] collect_data detected by completion listener.
+2025-04-11 10:02:27 AM [INFO] Task listener finished.
+--------------
+2025-04-11 10:11:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 10:21:00 CDT)" (scheduled at 2025-04-11 10:11:00-05:00)
+2025-04-11 10:11:00 AM [INFO] Starting data collection...
+2025-04-11 10:11:00 AM [INFO] Sleeping for 62.02 seconds before scrolling
+2025-04-11 10:12:14 AM [INFO] 11 stocks added and 13 tweets added!
+2025-04-11 10:12:14 AM [INFO] Data collection completed successfully.
+2025-04-11 10:12:14 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 10:21:00 CDT)" executed successfully
+2025-04-11 10:12:14 AM [INFO] collect_data detected by completion listener.
+2025-04-11 10:12:19 AM [INFO] Task listener finished.
+--------------
+2025-04-11 10:21:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 10:31:00 CDT)" (scheduled at 2025-04-11 10:21:00-05:00)
+2025-04-11 10:21:00 AM [INFO] Starting data collection...
+2025-04-11 10:21:00 AM [INFO] Sleeping for 80.24 seconds before scrolling
+2025-04-11 10:22:29 AM [INFO] 11 stocks added and 13 tweets added!
+2025-04-11 10:22:29 AM [INFO] Data collection completed successfully.
+2025-04-11 10:22:29 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 10:31:00 CDT)" executed successfully
+2025-04-11 10:22:29 AM [INFO] collect_data detected by completion listener.
+2025-04-11 10:22:34 AM [INFO] Task listener finished.
+--------------
+2025-04-11 10:31:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 10:41:00 CDT)" (scheduled at 2025-04-11 10:31:00-05:00)
+2025-04-11 10:31:00 AM [INFO] Starting data collection...
+2025-04-11 10:31:00 AM [INFO] Sleeping for 78.80 seconds before scrolling
+2025-04-11 10:32:42 AM [INFO] 11 stocks added and 22 tweets added!
+2025-04-11 10:32:42 AM [INFO] Data collection completed successfully.
+2025-04-11 10:32:42 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 10:41:00 CDT)" executed successfully
+2025-04-11 10:32:42 AM [INFO] collect_data detected by completion listener.
+2025-04-11 10:32:47 AM [INFO] Task listener finished.
+--------------
+2025-04-11 10:41:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 10:51:00 CDT)" (scheduled at 2025-04-11 10:41:00-05:00)
+2025-04-11 10:41:00 AM [INFO] Starting data collection...
+2025-04-11 10:41:00 AM [INFO] Sleeping for 67.59 seconds before scrolling
+2025-04-11 10:42:20 AM [INFO] 11 stocks added and 21 tweets added!
+2025-04-11 10:42:20 AM [INFO] Data collection completed successfully.
+2025-04-11 10:42:20 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 10:51:00 CDT)" executed successfully
+2025-04-11 10:42:20 AM [INFO] collect_data detected by completion listener.
+2025-04-11 10:42:25 AM [INFO] Task listener finished.
+--------------
+2025-04-11 10:51:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 11:01:00 CDT)" (scheduled at 2025-04-11 10:51:00-05:00)
+2025-04-11 10:51:00 AM [INFO] Starting data collection...
+2025-04-11 10:51:00 AM [INFO] Sleeping for 86.28 seconds before scrolling
+2025-04-11 10:52:40 AM [INFO] 11 stocks added and 9 tweets added!
+2025-04-11 10:52:40 AM [INFO] Data collection completed successfully.
+2025-04-11 10:52:40 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 11:01:00 CDT)" executed successfully
+2025-04-11 10:52:40 AM [INFO] collect_data detected by completion listener.
+2025-04-11 10:52:45 AM [INFO] Task listener finished.
+--------------
+2025-04-11 11:01:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 11:11:00 CDT)" (scheduled at 2025-04-11 11:01:00-05:00)
+2025-04-11 11:01:00 AM [INFO] Starting data collection...
+2025-04-11 11:01:00 AM [INFO] Sleeping for 78.73 seconds before scrolling
+2025-04-11 11:02:31 AM [INFO] 11 stocks added and 20 tweets added!
+2025-04-11 11:02:31 AM [INFO] Data collection completed successfully.
+2025-04-11 11:02:31 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 11:11:00 CDT)" executed successfully
+2025-04-11 11:02:31 AM [INFO] collect_data detected by completion listener.
+2025-04-11 11:02:36 AM [INFO] Task listener finished.
+--------------
+2025-04-11 11:11:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 11:21:00 CDT)" (scheduled at 2025-04-11 11:11:00-05:00)
+2025-04-11 11:11:00 AM [INFO] Starting data collection...
+2025-04-11 11:11:00 AM [INFO] Sleeping for 86.05 seconds before scrolling
+2025-04-11 11:12:37 AM [INFO] 11 stocks added and 17 tweets added!
+2025-04-11 11:12:37 AM [INFO] Data collection completed successfully.
+2025-04-11 11:12:37 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 11:21:00 CDT)" executed successfully
+2025-04-11 11:12:37 AM [INFO] collect_data detected by completion listener.
+2025-04-11 11:12:42 AM [INFO] Task listener finished.
+--------------
+2025-04-11 11:21:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 11:31:00 CDT)" (scheduled at 2025-04-11 11:21:00-05:00)
+2025-04-11 11:21:00 AM [INFO] Starting data collection...
+2025-04-11 11:21:00 AM [INFO] Sleeping for 70.79 seconds before scrolling
+2025-04-11 11:22:26 AM [INFO] 11 stocks added and 8 tweets added!
+2025-04-11 11:22:26 AM [INFO] Data collection completed successfully.
+2025-04-11 11:22:26 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 11:31:00 CDT)" executed successfully
+2025-04-11 11:22:26 AM [INFO] collect_data detected by completion listener.
+2025-04-11 11:22:31 AM [INFO] Task listener finished.
+--------------
+2025-04-11 11:31:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 11:41:00 CDT)" (scheduled at 2025-04-11 11:31:00-05:00)
+2025-04-11 11:31:00 AM [INFO] Starting data collection...
+2025-04-11 11:31:00 AM [INFO] Sleeping for 88.38 seconds before scrolling
+2025-04-11 11:32:39 AM [INFO] 11 stocks added and 19 tweets added!
+2025-04-11 11:32:39 AM [INFO] Data collection completed successfully.
+2025-04-11 11:32:39 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 11:41:00 CDT)" executed successfully
+2025-04-11 11:32:39 AM [INFO] collect_data detected by completion listener.
+2025-04-11 11:32:45 AM [INFO] Task listener finished.
+--------------
+2025-04-11 11:41:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 11:51:00 CDT)" (scheduled at 2025-04-11 11:41:00-05:00)
+2025-04-11 11:41:00 AM [INFO] Starting data collection...
+2025-04-11 11:41:00 AM [INFO] Sleeping for 78.95 seconds before scrolling
+2025-04-11 11:42:28 AM [INFO] 11 stocks added and 16 tweets added!
+2025-04-11 11:42:28 AM [INFO] Data collection completed successfully.
+2025-04-11 11:42:28 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 11:51:00 CDT)" executed successfully
+2025-04-11 11:42:28 AM [INFO] collect_data detected by completion listener.
+2025-04-11 11:42:33 AM [INFO] Task listener finished.
+--------------
+2025-04-11 11:51:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 12:01:00 CDT)" (scheduled at 2025-04-11 11:51:00-05:00)
+2025-04-11 11:51:00 AM [INFO] Starting data collection...
+2025-04-11 11:51:00 AM [INFO] Sleeping for 70.79 seconds before scrolling
+2025-04-11 11:52:20 AM [INFO] 11 stocks added and 14 tweets added!
+2025-04-11 11:52:20 AM [INFO] Data collection completed successfully.
+2025-04-11 11:52:20 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 12:01:00 CDT)" executed successfully
+2025-04-11 11:52:20 AM [INFO] collect_data detected by completion listener.
+2025-04-11 11:52:25 AM [INFO] Task listener finished.
+--------------
+2025-04-11 12:01:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 12:11:00 CDT)" (scheduled at 2025-04-11 12:01:00-05:00)
+2025-04-11 12:01:00 PM [INFO] Starting data collection...
+2025-04-11 12:01:00 PM [INFO] Sleeping for 75.53 seconds before scrolling
+2025-04-11 12:02:25 PM [INFO] 11 stocks added and 19 tweets added!
+2025-04-11 12:02:25 PM [INFO] Data collection completed successfully.
+2025-04-11 12:02:25 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 12:11:00 CDT)" executed successfully
+2025-04-11 12:02:25 PM [INFO] collect_data detected by completion listener.
+2025-04-11 12:02:30 PM [INFO] Task listener finished.
+--------------
+2025-04-11 12:11:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 12:21:00 CDT)" (scheduled at 2025-04-11 12:11:00-05:00)
+2025-04-11 12:11:00 PM [INFO] Starting data collection...
+2025-04-11 12:11:00 PM [INFO] Sleeping for 87.31 seconds before scrolling
+2025-04-11 12:12:47 PM [INFO] 11 stocks added and 17 tweets added!
+2025-04-11 12:12:47 PM [INFO] Data collection completed successfully.
+2025-04-11 12:12:47 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 12:21:00 CDT)" executed successfully
+2025-04-11 12:12:47 PM [INFO] collect_data detected by completion listener.
+2025-04-11 12:12:52 PM [INFO] Task listener finished.
+--------------
+2025-04-11 12:13:52 PM [INFO] Received exit signal. Shutting down...
+2025-04-11 12:13:52 PM [INFO] Cleaning up: closing driver and shutting down scheduler.
+2025-04-11 12:13:52 PM [WARNING] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))': /session/9f91305dba81d3ef6c76f05d98e8b694
+2025-04-11 12:13:52 PM [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fbd5071e0d0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/9f91305dba81d3ef6c76f05d98e8b694
+2025-04-11 12:13:52 PM [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fbd5071e490>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/9f91305dba81d3ef6c76f05d98e8b694
+2025-04-11 12:13:52 PM [INFO] Scheduler has been shut down
+2025-04-11 12:14:17 PM [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-11 12:14:17 PM [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-11 12:14:31 PM [INFO] Added job "collectData" to job store "default"
+2025-04-11 12:14:31 PM [INFO] Added job "stockMarketClose" to job store "default"
+2025-04-11 12:14:31 PM [INFO] Scheduler started
+2025-04-11 12:21:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 12:21:00 CDT)" (scheduled at 2025-04-11 12:21:00-05:00)
+2025-04-11 12:21:00 PM [INFO] Starting data collection...
+2025-04-11 12:21:00 PM [INFO] Sleeping for 70.85 seconds before scrolling
+2025-04-11 12:22:29 PM [INFO] 11 stocks added and 14 tweets added!
+2025-04-11 12:22:29 PM [INFO] Data collection completed successfully.
+2025-04-11 12:22:29 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 12:31:00 CDT)" executed successfully
+2025-04-11 12:22:29 PM [INFO] collect_data detected by completion listener.
+2025-04-11 12:22:34 PM [INFO] Task listener finished.
+--------------
+2025-04-11 12:31:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 12:41:00 CDT)" (scheduled at 2025-04-11 12:31:00-05:00)
+2025-04-11 12:31:00 PM [INFO] Starting data collection...
+2025-04-11 12:31:00 PM [INFO] Sleeping for 84.69 seconds before scrolling
+2025-04-11 12:32:33 PM [INFO] 11 stocks added and 14 tweets added!
+2025-04-11 12:32:33 PM [INFO] Data collection completed successfully.
+2025-04-11 12:32:33 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 12:41:00 CDT)" executed successfully
+2025-04-11 12:32:33 PM [INFO] collect_data detected by completion listener.
+2025-04-11 12:32:38 PM [INFO] Task listener finished.
+--------------
+2025-04-11 12:41:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 12:51:00 CDT)" (scheduled at 2025-04-11 12:41:00-05:00)
+2025-04-11 12:41:00 PM [INFO] Starting data collection...
+2025-04-11 12:41:00 PM [INFO] Sleeping for 63.82 seconds before scrolling
+2025-04-11 12:42:21 PM [INFO] 11 stocks added and 4 tweets added!
+2025-04-11 12:42:21 PM [INFO] Data collection completed successfully.
+2025-04-11 12:42:21 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 12:51:00 CDT)" executed successfully
+2025-04-11 12:42:21 PM [INFO] collect_data detected by completion listener.
+2025-04-11 12:42:26 PM [INFO] Task listener finished.
+--------------
+2025-04-11 12:51:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 13:01:00 CDT)" (scheduled at 2025-04-11 12:51:00-05:00)
+2025-04-11 12:51:00 PM [INFO] Starting data collection...
+2025-04-11 12:51:00 PM [INFO] Sleeping for 65.19 seconds before scrolling
+2025-04-11 12:52:20 PM [INFO] 11 stocks added and 26 tweets added!
+2025-04-11 12:52:20 PM [INFO] Data collection completed successfully.
+2025-04-11 12:52:20 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 13:01:00 CDT)" executed successfully
+2025-04-11 12:52:20 PM [INFO] collect_data detected by completion listener.
+2025-04-11 12:52:26 PM [INFO] Task listener finished.
+--------------
+2025-04-11 01:01:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 13:11:00 CDT)" (scheduled at 2025-04-11 13:01:00-05:00)
+2025-04-11 01:01:00 PM [INFO] Starting data collection...
+2025-04-11 01:01:00 PM [INFO] Sleeping for 61.23 seconds before scrolling
+2025-04-11 01:02:28 PM [INFO] 11 stocks added and 12 tweets added!
+2025-04-11 01:02:28 PM [INFO] Data collection completed successfully.
+2025-04-11 01:02:28 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 13:11:00 CDT)" executed successfully
+2025-04-11 01:02:28 PM [INFO] collect_data detected by completion listener.
+2025-04-11 01:02:33 PM [INFO] Task listener finished.
+--------------
+2025-04-11 01:11:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 13:21:00 CDT)" (scheduled at 2025-04-11 13:11:00-05:00)
+2025-04-11 01:11:00 PM [INFO] Starting data collection...
+2025-04-11 01:11:00 PM [INFO] Sleeping for 75.73 seconds before scrolling
+2025-04-11 01:12:40 PM [INFO] 11 stocks added and 11 tweets added!
+2025-04-11 01:12:40 PM [INFO] Data collection completed successfully.
+2025-04-11 01:12:40 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 13:21:00 CDT)" executed successfully
+2025-04-11 01:12:40 PM [INFO] collect_data detected by completion listener.
+2025-04-11 01:12:45 PM [INFO] Task listener finished.
+--------------
+2025-04-11 01:21:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 13:31:00 CDT)" (scheduled at 2025-04-11 13:21:00-05:00)
+2025-04-11 01:21:00 PM [INFO] Starting data collection...
+2025-04-11 01:21:00 PM [INFO] Sleeping for 81.38 seconds before scrolling
+2025-04-11 01:22:32 PM [INFO] 11 stocks added and 0 tweets added!
+2025-04-11 01:22:32 PM [INFO] Data collection completed successfully.
+2025-04-11 01:22:32 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 13:31:00 CDT)" executed successfully
+2025-04-11 01:22:32 PM [INFO] collect_data detected by completion listener.
+2025-04-11 01:22:37 PM [INFO] Task listener finished.
+--------------
+2025-04-11 01:31:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 13:41:00 CDT)" (scheduled at 2025-04-11 13:31:00-05:00)
+2025-04-11 01:31:00 PM [INFO] Starting data collection...
+2025-04-11 01:31:00 PM [INFO] Sleeping for 71.56 seconds before scrolling
+2025-04-11 01:32:19 PM [INFO] 11 stocks added and 10 tweets added!
+2025-04-11 01:32:19 PM [INFO] Data collection completed successfully.
+2025-04-11 01:32:19 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 13:41:00 CDT)" executed successfully
+2025-04-11 01:32:19 PM [INFO] collect_data detected by completion listener.
+2025-04-11 01:32:24 PM [INFO] Task listener finished.
+--------------
+2025-04-11 01:41:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 13:51:00 CDT)" (scheduled at 2025-04-11 13:41:00-05:00)
+2025-04-11 01:41:00 PM [INFO] Starting data collection...
+2025-04-11 01:41:00 PM [INFO] Sleeping for 87.98 seconds before scrolling
+2025-04-11 01:42:43 PM [INFO] 11 stocks added and 5 tweets added!
+2025-04-11 01:42:43 PM [INFO] Data collection completed successfully.
+2025-04-11 01:42:43 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 13:51:00 CDT)" executed successfully
+2025-04-11 01:42:43 PM [INFO] collect_data detected by completion listener.
+2025-04-11 01:42:48 PM [INFO] Task listener finished.
+--------------
+2025-04-11 01:51:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 14:01:00 CDT)" (scheduled at 2025-04-11 13:51:00-05:00)
+2025-04-11 01:51:00 PM [INFO] Starting data collection...
+2025-04-11 01:51:00 PM [INFO] Sleeping for 80.53 seconds before scrolling
+2025-04-11 01:52:42 PM [INFO] 11 stocks added and 11 tweets added!
+2025-04-11 01:52:42 PM [INFO] Data collection completed successfully.
+2025-04-11 01:52:42 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 14:01:00 CDT)" executed successfully
+2025-04-11 01:52:42 PM [INFO] collect_data detected by completion listener.
+2025-04-11 01:52:47 PM [INFO] Task listener finished.
+--------------
+2025-04-11 02:01:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 14:11:00 CDT)" (scheduled at 2025-04-11 14:01:00-05:00)
+2025-04-11 02:01:00 PM [INFO] Starting data collection...
+2025-04-11 02:01:00 PM [INFO] Sleeping for 86.09 seconds before scrolling
+2025-04-11 02:02:43 PM [INFO] 11 stocks added and 3 tweets added!
+2025-04-11 02:02:43 PM [INFO] Data collection completed successfully.
+2025-04-11 02:02:43 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 14:11:00 CDT)" executed successfully
+2025-04-11 02:02:43 PM [INFO] collect_data detected by completion listener.
+2025-04-11 02:02:49 PM [INFO] Task listener finished.
+--------------
+2025-04-11 02:11:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 14:21:00 CDT)" (scheduled at 2025-04-11 14:11:00-05:00)
+2025-04-11 02:11:00 PM [INFO] Starting data collection...
+2025-04-11 02:11:00 PM [INFO] Sleeping for 75.26 seconds before scrolling
+2025-04-11 02:12:23 PM [INFO] 11 stocks added and 8 tweets added!
+2025-04-11 02:12:23 PM [INFO] Data collection completed successfully.
+2025-04-11 02:12:23 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 14:21:00 CDT)" executed successfully
+2025-04-11 02:12:23 PM [INFO] collect_data detected by completion listener.
+2025-04-11 02:12:29 PM [INFO] Task listener finished.
+--------------
+2025-04-11 02:21:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 14:31:00 CDT)" (scheduled at 2025-04-11 14:21:00-05:00)
+2025-04-11 02:21:00 PM [INFO] Starting data collection...
+2025-04-11 02:21:00 PM [INFO] Sleeping for 60.82 seconds before scrolling
+2025-04-11 02:22:13 PM [INFO] 11 stocks added and 15 tweets added!
+2025-04-11 02:22:13 PM [INFO] Data collection completed successfully.
+2025-04-11 02:22:13 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 14:31:00 CDT)" executed successfully
+2025-04-11 02:22:13 PM [INFO] collect_data detected by completion listener.
+2025-04-11 02:22:18 PM [INFO] Task listener finished.
+--------------
+2025-04-11 02:31:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 14:41:00 CDT)" (scheduled at 2025-04-11 14:31:00-05:00)
+2025-04-11 02:31:00 PM [INFO] Starting data collection...
+2025-04-11 02:31:00 PM [INFO] Sleeping for 81.50 seconds before scrolling
+2025-04-11 02:32:31 PM [INFO] 11 stocks added and 15 tweets added!
+2025-04-11 02:32:31 PM [INFO] Data collection completed successfully.
+2025-04-11 02:32:31 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 14:41:00 CDT)" executed successfully
+2025-04-11 02:32:31 PM [INFO] collect_data detected by completion listener.
+2025-04-11 02:32:36 PM [INFO] Task listener finished.
+--------------
+2025-04-11 02:41:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 14:51:00 CDT)" (scheduled at 2025-04-11 14:41:00-05:00)
+2025-04-11 02:41:00 PM [INFO] Starting data collection...
+2025-04-11 02:41:00 PM [INFO] Sleeping for 69.82 seconds before scrolling
+2025-04-11 02:42:25 PM [INFO] 11 stocks added and 14 tweets added!
+2025-04-11 02:42:25 PM [INFO] Data collection completed successfully.
+2025-04-11 02:42:25 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 14:51:00 CDT)" executed successfully
+2025-04-11 02:42:25 PM [INFO] collect_data detected by completion listener.
+2025-04-11 02:42:30 PM [INFO] Task listener finished.
+--------------
+2025-04-11 02:51:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 15:01:00 CDT)" (scheduled at 2025-04-11 14:51:00-05:00)
+2025-04-11 02:51:00 PM [INFO] Starting data collection...
+2025-04-11 02:51:00 PM [INFO] Sleeping for 88.58 seconds before scrolling
+2025-04-11 02:52:37 PM [INFO] 11 stocks added and 12 tweets added!
+2025-04-11 02:52:37 PM [INFO] Data collection completed successfully.
+2025-04-11 02:52:37 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 15:01:00 CDT)" executed successfully
+2025-04-11 02:52:37 PM [INFO] collect_data detected by completion listener.
+2025-04-11 02:52:42 PM [INFO] Task listener finished.
+--------------
+2025-04-11 03:00:00 PM [INFO] Running job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-11 15:01:00 CDT)" (scheduled at 2025-04-11 15:00:00-05:00)
+2025-04-11 03:00:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-11 15:01:00 CDT)" executed successfully
+2025-04-11 03:01:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 15:11:00 CDT)" (scheduled at 2025-04-11 15:01:00-05:00)
+2025-04-11 03:01:00 PM [INFO] Running job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-11 15:02:00 CDT)" (scheduled at 2025-04-11 15:01:00-05:00)
+2025-04-11 03:01:00 PM [INFO] Starting data collection...
+2025-04-11 03:01:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-11 15:02:00 CDT)" executed successfully
+2025-04-11 03:01:00 PM [INFO] Sleeping for 80.91 seconds before scrolling
+2025-04-11 03:02:00 PM [INFO] Running job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-11 15:03:00 CDT)" (scheduled at 2025-04-11 15:02:00-05:00)
+2025-04-11 03:02:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-11 15:03:00 CDT)" executed successfully
+2025-04-11 03:02:35 PM [INFO] 10 stocks added and 15 tweets added!
+2025-04-11 03:02:35 PM [INFO] Data collection completed successfully.
+2025-04-11 03:02:35 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-11 15:11:00 CDT)" executed successfully
+2025-04-11 03:02:35 PM [INFO] collect_data detected by completion listener.
+2025-04-11 03:02:40 PM [INFO] Task listener finished.
+--------------
+2025-04-11 03:03:00 PM [INFO] Running job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-11 15:04:00 CDT)" (scheduled at 2025-04-11 15:03:00-05:00)
+2025-04-11 03:03:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-11 15:04:00 CDT)" executed successfully
+2025-04-11 03:04:00 PM [INFO] Running job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-11 15:05:00 CDT)" (scheduled at 2025-04-11 15:04:00-05:00)
+2025-04-11 03:04:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-11 15:05:00 CDT)" executed successfully
+2025-04-11 03:05:00 PM [INFO] Running job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-11 15:06:00 CDT)" (scheduled at 2025-04-11 15:05:00-05:00)
+2025-04-11 03:05:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-11 15:06:00 CDT)" executed successfully
+2025-04-11 03:06:00 PM [INFO] Running job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-11 15:07:00 CDT)" (scheduled at 2025-04-11 15:06:00-05:00)
+2025-04-11 03:06:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-11 15:07:00 CDT)" executed successfully
+2025-04-11 03:07:00 PM [INFO] Running job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-11 15:08:00 CDT)" (scheduled at 2025-04-11 15:07:00-05:00)
+2025-04-11 03:07:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-11 15:08:00 CDT)" executed successfully
+2025-04-11 03:08:00 PM [INFO] Running job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-11 15:09:00 CDT)" (scheduled at 2025-04-11 15:08:00-05:00)
+2025-04-11 03:08:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-11 15:09:00 CDT)" executed successfully
+2025-04-11 03:08:00 PM [INFO] Cleaning up: closing driver and shutting down scheduler.
+2025-04-11 03:08:00 PM [INFO] Scheduler has been shut down
