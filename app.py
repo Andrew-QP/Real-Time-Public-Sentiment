@@ -54,15 +54,55 @@ def get_stock_data_today():
 
     return stock_data_df
 
+def get_predictions():
+    conn = sqlite3.connect("rtsProjectDB.db")
+    cursor = conn.cursor()
 
-def plot_stock_data(df):
+    # Get today's date in Central Time (CT)
+    today_str = datetime.now(pytz.timezone('US/Central')).strftime('%Y-%m-%d')
+
+    cursor.execute("""
+        SELECT time, stockPred 
+        FROM predictions 
+        WHERE time LIKE ? 
+        ORDER BY time ASC
+    """, (today_str + '%',))
+        
+    data = cursor.fetchall()
+    cursor.close()
+
+    # Convert data to DataFrame
+    predictions_df = pd.DataFrame(data, columns=["Time", "StockPred"])
+
+    # Convert 'Time' column from string to datetime in Central Time
+    predictions_df['Time'] = pd.to_datetime(predictions_df['Time'], format='%Y-%m-%d %I:%M %p')
+
+    predictions_df = predictions_df.sort_values(by='Time')
+
+    predictions_df['TimeLabel'] = predictions_df['Time'].dt.strftime('%H:%M')
+
+    return predictions_df
+
+def plot_stock_data(df, predictions_df):
     fig = go.Figure()
+
+    # Real Stock Price Line
     fig.add_trace(go.Scatter(
         x=df['TimeLabel'], 
         y=df['Close'], 
         mode='lines+markers',
         name="Close Price",
         line=dict(color='blue', width=2),
+        marker=dict(size=5)
+    ))
+
+    # Prediction Line (with dashed line and different color)
+    fig.add_trace(go.Scatter(
+        x=predictions_df['TimeLabel'], 
+        y=predictions_df['StockPred'], 
+        mode='lines+markers',
+        name="Only Stock Predicted Close Price",
+        line=dict(color='red', width=2, dash='dash'),  # dashed red line
         marker=dict(size=5)
     ))
 
@@ -89,19 +129,25 @@ st_autorefresh(interval=10000, key="refresh")  # refresh every 10 seconds
 # Always fetch fresh data if flag is 1
 if get_update_flag() == 1:
     todaydf = get_stock_data_today()
+    predictiondf = get_predictions()
     st.session_state['data_cached'] = todaydf
+    st.session_state['predictions_cached'] = predictiondf
     reset_update_flag()
 else:
     # fallback to session cache if already loaded once
     if 'data_cached' not in st.session_state:
         st.session_state['data_cached'] = get_stock_data_today()
+    if 'predictions_cached' not in st.session_state:
+        st.session_state['predictions_cached'] = get_predictions()
     todaydf = st.session_state['data_cached']
+    predictiondf = st.session_state['predictions_cached']
 
 
 # Display graph
 if not todaydf.empty:
-    fig = plot_stock_data(todaydf)
+    fig = plot_stock_data(todaydf, predictiondf)
     st.plotly_chart(fig, use_container_width=True)
-    st.write(todaydf[['Time', 'Close']].tail(10))
+    combined_df = pd.merge(todaydf[['Time', 'Close']], predictiondf[['Time', 'StockPred']], on='Time', how='left')
+    st.write(combined_df.tail(10))
 else:
     st.warning("No stock data available for today yet.")

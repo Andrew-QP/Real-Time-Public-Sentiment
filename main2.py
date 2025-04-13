@@ -1,11 +1,12 @@
 import twitterWebScraper as tws
+from models.simpleModel.use_model import list_available_models,predict_next_10_minutes
 import sqlite3
 import time
 import random
 import logging
 import pytz
 import sys
-from datetime import datetime
+from datetime import datetime, timedelta
 from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.events import EVENT_JOB_EXECUTED, EVENT_JOB_ERROR
 from apscheduler.triggers.cron import CronTrigger
@@ -62,7 +63,6 @@ cursor.execute('''
 cursor.execute('CREATE INDEX IF NOT EXISTS idx_stock_prices_time ON stockPrice(time)')
 conn.commit()
 # Table for flags
-# Create a table for flags
 cursor.execute('''
     CREATE TABLE IF NOT EXISTS flags (
         id INTEGER PRIMARY KEY,
@@ -77,6 +77,17 @@ count = cursor.fetchone()[0]
 if count == 0:
     cursor.execute('INSERT INTO flags (id, update_graph) VALUES (1, 0)')
     conn.commit()
+
+# Create predictions table
+cursor.execute('''
+    CREATE TABLE IF NOT EXISTS predictions (
+        time TEXT NOT NULL,
+        stockPred DECIMAL(10, 2),
+        stockSentimentPred DECIMAL(10, 2)
+    )
+''')
+cursor.execute('CREATE INDEX IF NOT EXISTS idx_prediction_time ON predictions (time)')
+conn.commit()
 
 # Custom time converter for Central Time
 def central_time_converter(*args):
@@ -107,6 +118,30 @@ def collectData():
 
 def make_predictions():
     logging.info("Making predictions...")
+    models = list_available_models()
+    prediction = predict_next_10_minutes(sorted(models, reverse=True)[0])
+    
+    # Get the latest (last inserted) time from stockPrice
+    cursor.execute('SELECT time FROM stockPrice ORDER BY rowid DESC LIMIT 1')
+    row = cursor.fetchone()
+
+    if row:
+        last_time_str = row[0]
+        dt_format = "%Y-%m-%d %I:%M %p"
+
+        # Convert to datetime, add 10 minutes
+        last_time = datetime.strptime(last_time_str, dt_format)
+        next_time = last_time + timedelta(minutes=10)
+
+        # Convert back to string in same format
+        time_str = next_time.strftime(dt_format)
+
+    logging.info(f'Stock data only predicts {prediction:.2f} at {time_str}')
+    cursor.execute('''
+    INSERT INTO predictions (time, stockPred, stockSentimentPred)
+    VALUES (?, ?, ?)
+''', (time_str, prediction, None)) # Need to add stockSentimentPred
+    conn.commit()
 
 # Task completion listener
 def task_listener(event):
@@ -116,7 +151,7 @@ def task_listener(event):
         else:
             logging.error(f"collect_data encountered an error in listener: {event.exception}")
         time.sleep(5)
-        # make_predictions()
+        make_predictions()
 
         try:
             with sqlite3.connect("rtsProjectDB.db") as local_conn:
