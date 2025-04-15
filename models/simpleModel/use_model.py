@@ -5,8 +5,10 @@ import os
 import numpy as np
 import matplotlib.pyplot as plt
 from tensorflow.keras.models import load_model
-from data_loader import DataLoader
-from config import config
+# from data_loader import DataLoader
+from models.simpleModel.data_loader import DataLoader
+# from config import config
+from models.simpleModel.config import config
 from datetime import datetime
 
 

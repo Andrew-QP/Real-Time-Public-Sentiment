@@ -1,5 +1,6 @@
 import twitterWebScraper as tws
-from models.simpleModel.use_model import list_available_models,predict_next_10_minutes
+# from models.simpleModel.use_model import list_available_models,predict_next_10_minutes
+import models.simpleModel.use_model as sm
 import sqlite3
 import time
 import random
@@ -118,30 +119,35 @@ def collectData():
 
 def make_predictions():
     logging.info("Making predictions...")
-    models = list_available_models()
-    prediction = predict_next_10_minutes(sorted(models, reverse=True)[0])
+    models = sm.list_available_models()
+    prediction = sm.predict_next_10_minutes(sorted(models, reverse=True)[0])
     
-    # Get the latest (last inserted) time from stockPrice
-    cursor.execute('SELECT time FROM stockPrice ORDER BY rowid DESC LIMIT 1')
-    row = cursor.fetchone()
+    try:
+        with sqlite3.connect("rtsProjectDB.db") as local_conn:
+            local_cursor = local_conn.cursor()
+            # Get the latest (last inserted) time from stockPrice
+            local_cursor.execute('SELECT time FROM stockPrice ORDER BY rowid DESC LIMIT 1')
+            row = local_cursor.fetchone()
 
-    if row:
-        last_time_str = row[0]
-        dt_format = "%Y-%m-%d %I:%M %p"
+            if row:
+                last_time_str = row[0]
+                dt_format = "%Y-%m-%d %I:%M %p"
 
-        # Convert to datetime, add 10 minutes
-        last_time = datetime.strptime(last_time_str, dt_format)
-        next_time = last_time + timedelta(minutes=10)
+                # Convert to datetime, add 10 minutes
+                last_time = datetime.strptime(last_time_str, dt_format)
+                next_time = last_time + timedelta(minutes=10)
 
-        # Convert back to string in same format
-        time_str = next_time.strftime(dt_format)
+                # Convert back to string in same format
+                time_str = next_time.strftime(dt_format)
 
-    logging.info(f'Stock data only predicts {prediction:.2f} at {time_str}')
-    cursor.execute('''
-    INSERT INTO predictions (time, stockPred, stockSentimentPred)
-    VALUES (?, ?, ?)
-''', (time_str, prediction, None)) # Need to add stockSentimentPred
-    conn.commit()
+            logging.info(f'Stock data only predicts {prediction:.2f} at {time_str}')
+            local_cursor.execute('''
+            INSERT INTO predictions (time, stockPred, stockSentimentPred)
+            VALUES (?, ?, ?)
+        ''', (time_str, prediction, None)) # Need to add stockSentimentPred
+            local_conn.commit()
+    except Exception as e:
+        logging.error(f"make_predictions failed: {e}")
 
 # Task completion listener
 def task_listener(event):

@@ -18,12 +18,12 @@ def getTextSentiment(text):
     emotion_scores = {r['label'].lower(): r['score'] for r in results[0]}
     return emotion_scores
 
-# Example usage
-text = "Bought some $TSLA and started my first ever ETF dividends portfolio :beaming_face_with_smiling_eyes:"
-sentiment_scores = getTextSentiment(text)
+# # Example usage
+# text = "Bought some $TSLA and started my first ever ETF dividends portfolio :beaming_face_with_smiling_eyes:"
+# sentiment_scores = getTextSentiment(text)
 
-print(sentiment_scores)
-# Display results
-print(f"Text: {text}")
-for emotion, score in sentiment_scores.items():
-    print(f"  {emotion}: {score:.4f}")
+# print(sentiment_scores)
+# # Display results
+# print(f"Text: {text}")
+# for emotion, score in sentiment_scores.items():
+#     print(f"  {emotion}: {score:.4f}")

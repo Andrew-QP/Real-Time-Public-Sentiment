@@ -107,8 +107,9 @@ def plot_stock_data(df, predictions_df):
     ))
 
     start_idx = max(0, len(df) - 75)
+    today_str = datetime.now().strftime("%B %d, %Y")
     fig.update_layout(
-        title="Real-Time Stock Price (Today)",
+        title=f"Real-Time Stock Price ({today_str})",
         xaxis_title="Time (CT)",
         yaxis_title="Stock Price (USD)",
         xaxis=dict(
@@ -147,7 +148,7 @@ else:
 if not todaydf.empty:
     fig = plot_stock_data(todaydf, predictiondf)
     st.plotly_chart(fig, use_container_width=True)
-    combined_df = pd.merge(todaydf[['Time', 'Close']], predictiondf[['Time', 'StockPred']], on='Time', how='left')
+    combined_df = pd.merge(todaydf[['Time', 'Close']], predictiondf[['Time', 'StockPred']], on='Time', how='right')
     st.write(combined_df.tail(10))
 else:
     st.warning("No stock data available for today yet.")
