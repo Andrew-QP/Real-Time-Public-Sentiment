@@ -116,7 +116,7 @@ def plot_stock_data(df, predictions_df):
             tickmode='array', 
             tickangle=45, 
             tickvals=df['TimeLabel'][::5],
-            range=[df['TimeLabel'].iloc[start_idx], df['TimeLabel'].iloc[-1]]
+            range=[df['TimeLabel'].iloc[start_idx], predictions_df['TimeLabel'].iloc[-1]]
         ),
         autosize=True,
         margin=dict(l=40, r=40, b=80, t=80),

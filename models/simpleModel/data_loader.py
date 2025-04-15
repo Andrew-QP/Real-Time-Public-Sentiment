@@ -34,7 +34,8 @@ class DataLoader:
         conn.close()
         
         # Convert time column to datetime
-        df['time'] = pd.to_datetime(df['time'])
+        df['time'] = pd.to_datetime(df['time'], format='%Y-%m-%d %I:%M %p')
+        df.sort_values(by='time', inplace=True)
         df.set_index('time', inplace=True)
         
         print(f"Successfully loaded {len(df)} rows of stock data")
