@@ -50,8 +50,6 @@ def get_stock_data_today():
 
     stock_data_df = stock_data_df.sort_values(by='Time')
 
-    stock_data_df['TimeLabel'] = stock_data_df['Time'].dt.strftime('%H:%M')
-
     return stock_data_df
 
 def get_predictions():
@@ -77,9 +75,7 @@ def get_predictions():
     # Convert 'Time' column from string to datetime in Central Time
     predictions_df['Time'] = pd.to_datetime(predictions_df['Time'], format='%Y-%m-%d %I:%M %p')
 
-    predictions_df = predictions_df.sort_values(by='Time')
-
-    predictions_df['TimeLabel'] = predictions_df['Time'].dt.strftime('%H:%M')
+    predictions_df.sort_values(by='Time', inplace=True)
 
     return predictions_df
 
@@ -88,7 +84,7 @@ def plot_stock_data(df, predictions_df):
 
     # Real Stock Price Line
     fig.add_trace(go.Scatter(
-        x=df['TimeLabel'], 
+        x=df['Time'], 
         y=df['Close'], 
         mode='lines+markers',
         name="Close Price",
@@ -98,7 +94,7 @@ def plot_stock_data(df, predictions_df):
 
     # Prediction Line (with dashed line and different color)
     fig.add_trace(go.Scatter(
-        x=predictions_df['TimeLabel'], 
+        x=predictions_df['Time'], 
         y=predictions_df['StockPred'], 
         mode='lines+markers',
         name="Only Stock Predicted Close Price",
@@ -115,8 +111,8 @@ def plot_stock_data(df, predictions_df):
         xaxis=dict(
             tickmode='array', 
             tickangle=45, 
-            tickvals=df['TimeLabel'][::5],
-            range=[df['TimeLabel'].iloc[start_idx], predictions_df['TimeLabel'].iloc[-1]]
+            tickformat="%H:%M",
+            tickvals=df['Time'][::5]
         ),
         autosize=True,
         margin=dict(l=40, r=40, b=80, t=80),
@@ -149,6 +145,7 @@ if not todaydf.empty:
     fig = plot_stock_data(todaydf, predictiondf)
     st.plotly_chart(fig, use_container_width=True)
     combined_df = pd.merge(todaydf[['Time', 'Close']], predictiondf[['Time', 'StockPred']], on='Time', how='right')
+    st.write("Last 10 Predictions")
     st.write(combined_df.tail(10))
 else:
     st.warning("No stock data available for today yet.")
