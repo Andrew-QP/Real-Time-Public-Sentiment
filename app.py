@@ -97,12 +97,11 @@ def plot_stock_data(df, predictions_df):
         x=predictions_df['Time'], 
         y=predictions_df['StockPred'], 
         mode='lines+markers',
-        name="Only Stock Predicted Close Price",
+        name="Close Price Predicted with only Finance Data",
         line=dict(color='red', width=2, dash='dash'),  # dashed red line
         marker=dict(size=5)
     ))
 
-    start_idx = max(0, len(df) - 75)
     today_str = datetime.now().strftime("%B %d, %Y")
     fig.update_layout(
         title=f"Real-Time Stock Price ({today_str})",
