@@ -1,0 +1,4 @@
+Feature weights used:
+Financial: 1.0000
+Sentiment: 1.0000
+Engagement: 1.0000
