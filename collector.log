@@ -3731,3 +3731,485 @@ sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in
 2025-04-16 03:08:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-16 15:09:00 CDT)" executed successfully
 2025-04-16 03:08:00 PM [INFO] Cleaning up: closing driver and shutting down scheduler.
 2025-04-16 03:08:01 PM [INFO] Scheduler has been shut down
+2025-04-17 08:32:01 AM [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-17 08:32:01 AM [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-17 08:32:16 AM [INFO] Added job "collectData" to job store "default"
+2025-04-17 08:32:16 AM [INFO] Added job "stockMarketClose" to job store "default"
+2025-04-17 08:32:16 AM [INFO] Scheduler started
+2025-04-17 08:41:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 08:41:00 CDT)" (scheduled at 2025-04-17 08:41:00-05:00)
+2025-04-17 08:41:00 AM [INFO] Starting data collection...
+2025-04-17 08:41:00 AM [INFO] Sleeping for 86.02 seconds before scrolling
+2025-04-17 08:42:41 AM [INFO] 10 stocks added and 20 tweets added!
+2025-04-17 08:42:41 AM [INFO] Data collection completed successfully.
+2025-04-17 08:42:41 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 08:51:00 CDT)" executed successfully
+2025-04-17 08:42:41 AM [INFO] collect_data detected by completion listener.
+2025-04-17 08:42:46 AM [INFO] Making predictions...
+2025-04-17 08:42:46 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-17 08:42:46 AM [INFO] Stock data only predicts 240.39 at 2025-04-17 08:49 AM
+2025-04-17 08:42:47 AM [INFO] Task listener finished.
+--------------
+2025-04-17 08:51:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 09:01:00 CDT)" (scheduled at 2025-04-17 08:51:00-05:00)
+2025-04-17 08:51:00 AM [INFO] Starting data collection...
+2025-04-17 08:51:00 AM [INFO] Sleeping for 88.72 seconds before scrolling
+2025-04-17 08:52:40 AM [INFO] 11 stocks added and 15 tweets added!
+2025-04-17 08:52:40 AM [INFO] Data collection completed successfully.
+2025-04-17 08:52:40 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 09:01:00 CDT)" executed successfully
+2025-04-17 08:52:40 AM [INFO] collect_data detected by completion listener.
+2025-04-17 08:52:45 AM [INFO] Making predictions...
+2025-04-17 08:52:45 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-17 08:52:46 AM [INFO] Stock data only predicts 242.44 at 2025-04-17 09:00 AM
+2025-04-17 08:52:46 AM [INFO] Task listener finished.
+--------------
+2025-04-17 09:01:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 09:11:00 CDT)" (scheduled at 2025-04-17 09:01:00-05:00)
+2025-04-17 09:01:00 AM [INFO] Starting data collection...
+2025-04-17 09:01:00 AM [INFO] Sleeping for 85.78 seconds before scrolling
+2025-04-17 09:02:41 AM [INFO] 11 stocks added and 7 tweets added!
+2025-04-17 09:02:41 AM [INFO] Data collection completed successfully.
+2025-04-17 09:02:41 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 09:11:00 CDT)" executed successfully
+2025-04-17 09:02:41 AM [INFO] collect_data detected by completion listener.
+2025-04-17 09:02:46 AM [INFO] Making predictions...
+2025-04-17 09:02:46 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-17 09:02:46 AM [INFO] Stock data only predicts 242.00 at 2025-04-17 09:10 AM
+2025-04-17 09:02:46 AM [INFO] Task listener finished.
+--------------
+2025-04-17 09:11:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 09:21:00 CDT)" (scheduled at 2025-04-17 09:11:00-05:00)
+2025-04-17 09:11:00 AM [INFO] Starting data collection...
+2025-04-17 09:11:00 AM [INFO] Sleeping for 82.58 seconds before scrolling
+2025-04-17 09:12:37 AM [INFO] 11 stocks added and 21 tweets added!
+2025-04-17 09:12:37 AM [INFO] Data collection completed successfully.
+2025-04-17 09:12:37 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 09:21:00 CDT)" executed successfully
+2025-04-17 09:12:37 AM [INFO] collect_data detected by completion listener.
+2025-04-17 09:12:42 AM [INFO] Making predictions...
+2025-04-17 09:12:42 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-17 09:12:42 AM [INFO] Stock data only predicts 241.66 at 2025-04-17 09:20 AM
+2025-04-17 09:12:42 AM [INFO] Task listener finished.
+--------------
+2025-04-17 09:32:16 AM [INFO] Received exit signal. Shutting down...
+2025-04-17 09:32:16 AM [INFO] Cleaning up: closing driver and shutting down scheduler.
+2025-04-17 09:32:16 AM [WARNING] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(104, 'Connection reset by peer')': /session/580b498bdbe720b25ba55f4606b1f783
+2025-04-17 09:32:16 AM [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f6cc10f3010>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/580b498bdbe720b25ba55f4606b1f783
+2025-04-17 09:32:16 AM [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f6c4c7ad480>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/580b498bdbe720b25ba55f4606b1f783
+2025-04-17 09:32:16 AM [INFO] Scheduler has been shut down
+2025-04-17 09:32:24 AM [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-17 09:32:24 AM [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-17 09:32:39 AM [INFO] Added job "collectData" to job store "default"
+2025-04-17 09:32:39 AM [INFO] Added job "stockMarketClose" to job store "default"
+2025-04-17 09:32:39 AM [INFO] Scheduler started
+2025-04-17 09:41:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 09:41:00 CDT)" (scheduled at 2025-04-17 09:41:00-05:00)
+2025-04-17 09:41:00 AM [INFO] Starting data collection...
+2025-04-17 09:41:00 AM [INFO] Sleeping for 85.39 seconds before scrolling
+2025-04-17 09:42:35 AM [INFO] 11 stocks added and 16 tweets added!
+2025-04-17 09:42:35 AM [INFO] Data collection completed successfully.
+2025-04-17 09:42:35 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 09:51:00 CDT)" executed successfully
+2025-04-17 09:42:35 AM [INFO] collect_data detected by completion listener.
+2025-04-17 09:42:40 AM [INFO] Making predictions...
+2025-04-17 09:42:40 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-17 09:42:40 AM [INFO] Stock data only predicts 238.06 at 2025-04-17 09:50 AM
+2025-04-17 09:42:40 AM [INFO] Task listener finished.
+--------------
+2025-04-17 09:51:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 10:01:00 CDT)" (scheduled at 2025-04-17 09:51:00-05:00)
+2025-04-17 09:51:00 AM [INFO] Starting data collection...
+2025-04-17 09:51:00 AM [INFO] Sleeping for 89.03 seconds before scrolling
+2025-04-17 09:52:38 AM [INFO] 11 stocks added and 17 tweets added!
+2025-04-17 09:52:38 AM [INFO] Data collection completed successfully.
+2025-04-17 09:52:38 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 10:01:00 CDT)" executed successfully
+2025-04-17 09:52:38 AM [INFO] collect_data detected by completion listener.
+2025-04-17 09:52:43 AM [INFO] Making predictions...
+2025-04-17 09:52:43 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-17 09:52:43 AM [INFO] Stock data only predicts 240.09 at 2025-04-17 10:00 AM
+2025-04-17 09:52:43 AM [INFO] Task listener finished.
+--------------
+2025-04-17 10:01:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 10:11:00 CDT)" (scheduled at 2025-04-17 10:01:00-05:00)
+2025-04-17 10:01:00 AM [INFO] Starting data collection...
+2025-04-17 10:01:00 AM [INFO] Sleeping for 85.33 seconds before scrolling
+2025-04-17 10:02:46 AM [INFO] 11 stocks added and 14 tweets added!
+2025-04-17 10:02:46 AM [INFO] Data collection completed successfully.
+2025-04-17 10:02:46 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 10:11:00 CDT)" executed successfully
+2025-04-17 10:02:46 AM [INFO] collect_data detected by completion listener.
+2025-04-17 10:02:51 AM [INFO] Making predictions...
+2025-04-17 10:02:51 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-17 10:02:51 AM [INFO] Stock data only predicts 239.72 at 2025-04-17 10:10 AM
+2025-04-17 10:02:51 AM [INFO] Task listener finished.
+--------------
+2025-04-17 10:11:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 10:21:00 CDT)" (scheduled at 2025-04-17 10:11:00-05:00)
+2025-04-17 10:11:00 AM [INFO] Starting data collection...
+2025-04-17 10:11:00 AM [INFO] Sleeping for 67.17 seconds before scrolling
+2025-04-17 10:12:24 AM [INFO] 11 stocks added and 9 tweets added!
+2025-04-17 10:12:24 AM [INFO] Data collection completed successfully.
+2025-04-17 10:12:24 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 10:21:00 CDT)" executed successfully
+2025-04-17 10:12:24 AM [INFO] collect_data detected by completion listener.
+2025-04-17 10:12:29 AM [INFO] Making predictions...
+2025-04-17 10:12:29 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-17 10:12:29 AM [INFO] Stock data only predicts 241.19 at 2025-04-17 10:20 AM
+2025-04-17 10:12:29 AM [INFO] Task listener finished.
+--------------
+2025-04-17 10:21:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 10:31:00 CDT)" (scheduled at 2025-04-17 10:21:00-05:00)
+2025-04-17 10:21:00 AM [INFO] Starting data collection...
+2025-04-17 10:21:00 AM [INFO] Sleeping for 75.71 seconds before scrolling
+2025-04-17 10:22:25 AM [INFO] 11 stocks added and 13 tweets added!
+2025-04-17 10:22:25 AM [INFO] Data collection completed successfully.
+2025-04-17 10:22:25 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 10:31:00 CDT)" executed successfully
+2025-04-17 10:22:25 AM [INFO] collect_data detected by completion listener.
+2025-04-17 10:22:30 AM [INFO] Making predictions...
+2025-04-17 10:22:30 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-17 10:22:30 AM [WARNING] 5 out of the last 5 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x7fc480572c20> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2025-04-17 10:22:30 AM [INFO] Stock data only predicts 240.80 at 2025-04-17 10:30 AM
+2025-04-17 10:22:30 AM [INFO] Task listener finished.
+--------------
+2025-04-17 10:31:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 10:41:00 CDT)" (scheduled at 2025-04-17 10:31:00-05:00)
+2025-04-17 10:31:00 AM [INFO] Starting data collection...
+2025-04-17 10:31:00 AM [INFO] Sleeping for 89.76 seconds before scrolling
+2025-04-17 10:32:54 AM [INFO] 11 stocks added and 18 tweets added!
+2025-04-17 10:32:54 AM [INFO] Data collection completed successfully.
+2025-04-17 10:32:54 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 10:41:00 CDT)" executed successfully
+2025-04-17 10:32:54 AM [INFO] collect_data detected by completion listener.
+2025-04-17 10:32:59 AM [INFO] Making predictions...
+2025-04-17 10:32:59 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-17 10:32:59 AM [WARNING] 6 out of the last 6 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x7fc480321120> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2025-04-17 10:32:59 AM [INFO] Stock data only predicts 239.11 at 2025-04-17 10:40 AM
+2025-04-17 10:32:59 AM [INFO] Task listener finished.
+--------------
+2025-04-17 10:41:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 10:51:00 CDT)" (scheduled at 2025-04-17 10:41:00-05:00)
+2025-04-17 10:41:00 AM [INFO] Starting data collection...
+2025-04-17 10:41:00 AM [INFO] Sleeping for 84.51 seconds before scrolling
+2025-04-17 10:42:35 AM [INFO] 11 stocks added and 12 tweets added!
+2025-04-17 10:42:35 AM [INFO] Data collection completed successfully.
+2025-04-17 10:42:35 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 10:51:00 CDT)" executed successfully
+2025-04-17 10:42:35 AM [INFO] collect_data detected by completion listener.
+2025-04-17 10:42:40 AM [INFO] Making predictions...
+2025-04-17 10:42:40 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-17 10:42:40 AM [INFO] Stock data only predicts 240.23 at 2025-04-17 10:50 AM
+2025-04-17 10:42:40 AM [INFO] Task listener finished.
+--------------
+2025-04-17 10:51:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 11:01:00 CDT)" (scheduled at 2025-04-17 10:51:00-05:00)
+2025-04-17 10:51:00 AM [INFO] Starting data collection...
+2025-04-17 10:51:00 AM [INFO] Sleeping for 81.31 seconds before scrolling
+2025-04-17 10:52:34 AM [INFO] 11 stocks added and 21 tweets added!
+2025-04-17 10:52:34 AM [INFO] Data collection completed successfully.
+2025-04-17 10:52:34 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 11:01:00 CDT)" executed successfully
+2025-04-17 10:52:34 AM [INFO] collect_data detected by completion listener.
+2025-04-17 10:52:39 AM [INFO] Making predictions...
+2025-04-17 10:52:39 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-17 10:52:39 AM [INFO] Stock data only predicts 239.63 at 2025-04-17 11:00 AM
+2025-04-17 10:52:39 AM [INFO] Task listener finished.
+--------------
+2025-04-17 11:01:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 11:11:00 CDT)" (scheduled at 2025-04-17 11:01:00-05:00)
+2025-04-17 11:01:00 AM [INFO] Starting data collection...
+2025-04-17 11:01:00 AM [INFO] Sleeping for 76.04 seconds before scrolling
+2025-04-17 11:02:26 AM [INFO] 11 stocks added and 11 tweets added!
+2025-04-17 11:02:26 AM [INFO] Data collection completed successfully.
+2025-04-17 11:02:26 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 11:11:00 CDT)" executed successfully
+2025-04-17 11:02:26 AM [INFO] collect_data detected by completion listener.
+2025-04-17 11:02:31 AM [INFO] Making predictions...
+2025-04-17 11:02:31 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-17 11:02:31 AM [INFO] Stock data only predicts 239.12 at 2025-04-17 11:10 AM
+2025-04-17 11:02:31 AM [INFO] Task listener finished.
+--------------
+2025-04-17 11:11:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 11:21:00 CDT)" (scheduled at 2025-04-17 11:11:00-05:00)
+2025-04-17 11:11:00 AM [INFO] Starting data collection...
+2025-04-17 11:11:00 AM [INFO] Sleeping for 85.26 seconds before scrolling
+2025-04-17 11:12:34 AM [INFO] 11 stocks added and 10 tweets added!
+2025-04-17 11:12:34 AM [INFO] Data collection completed successfully.
+2025-04-17 11:12:34 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 11:21:00 CDT)" executed successfully
+2025-04-17 11:12:34 AM [INFO] collect_data detected by completion listener.
+2025-04-17 11:12:39 AM [INFO] Making predictions...
+2025-04-17 11:12:39 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-17 11:12:39 AM [INFO] Stock data only predicts 239.94 at 2025-04-17 11:20 AM
+2025-04-17 11:12:39 AM [INFO] Task listener finished.
+--------------
+2025-04-17 11:21:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 11:31:00 CDT)" (scheduled at 2025-04-17 11:21:00-05:00)
+2025-04-17 11:21:00 AM [INFO] Starting data collection...
+2025-04-17 11:21:00 AM [INFO] Sleeping for 73.84 seconds before scrolling
+2025-04-17 11:22:26 AM [INFO] 11 stocks added and 11 tweets added!
+2025-04-17 11:22:26 AM [INFO] Data collection completed successfully.
+2025-04-17 11:22:26 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 11:31:00 CDT)" executed successfully
+2025-04-17 11:22:26 AM [INFO] collect_data detected by completion listener.
+2025-04-17 11:22:31 AM [INFO] Making predictions...
+2025-04-17 11:22:32 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-17 11:22:32 AM [INFO] Stock data only predicts 240.55 at 2025-04-17 11:30 AM
+2025-04-17 11:22:32 AM [INFO] Task listener finished.
+--------------
+2025-04-17 11:31:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 11:41:00 CDT)" (scheduled at 2025-04-17 11:31:00-05:00)
+2025-04-17 11:31:00 AM [INFO] Starting data collection...
+2025-04-17 11:31:00 AM [INFO] Sleeping for 80.35 seconds before scrolling
+2025-04-17 11:32:33 AM [INFO] 11 stocks added and 10 tweets added!
+2025-04-17 11:32:33 AM [INFO] Data collection completed successfully.
+2025-04-17 11:32:33 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 11:41:00 CDT)" executed successfully
+2025-04-17 11:32:33 AM [INFO] collect_data detected by completion listener.
+2025-04-17 11:32:38 AM [INFO] Making predictions...
+2025-04-17 11:32:38 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-17 11:32:38 AM [INFO] Stock data only predicts 241.03 at 2025-04-17 11:40 AM
+2025-04-17 11:32:38 AM [INFO] Task listener finished.
+--------------
+2025-04-17 11:41:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 11:51:00 CDT)" (scheduled at 2025-04-17 11:41:00-05:00)
+2025-04-17 11:41:00 AM [INFO] Starting data collection...
+2025-04-17 11:41:00 AM [INFO] Sleeping for 76.55 seconds before scrolling
+2025-04-17 11:42:26 AM [INFO] 11 stocks added and 15 tweets added!
+2025-04-17 11:42:26 AM [INFO] Data collection completed successfully.
+2025-04-17 11:42:26 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 11:51:00 CDT)" executed successfully
+2025-04-17 11:42:26 AM [INFO] collect_data detected by completion listener.
+2025-04-17 11:42:31 AM [INFO] Making predictions...
+2025-04-17 11:42:31 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-17 11:42:31 AM [INFO] Stock data only predicts 240.83 at 2025-04-17 11:50 AM
+2025-04-17 11:42:31 AM [INFO] Task listener finished.
+--------------
+2025-04-17 11:51:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 12:01:00 CDT)" (scheduled at 2025-04-17 11:51:00-05:00)
+2025-04-17 11:51:00 AM [INFO] Starting data collection...
+2025-04-17 11:51:00 AM [INFO] Sleeping for 61.39 seconds before scrolling
+2025-04-17 11:52:12 AM [INFO] 11 stocks added and 16 tweets added!
+2025-04-17 11:52:12 AM [INFO] Data collection completed successfully.
+2025-04-17 11:52:12 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 12:01:00 CDT)" executed successfully
+2025-04-17 11:52:12 AM [INFO] collect_data detected by completion listener.
+2025-04-17 11:52:17 AM [INFO] Making predictions...
+2025-04-17 11:52:17 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-17 11:52:17 AM [INFO] Stock data only predicts 239.88 at 2025-04-17 12:00 PM
+2025-04-17 11:52:17 AM [INFO] Task listener finished.
+--------------
+2025-04-17 12:01:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 12:11:00 CDT)" (scheduled at 2025-04-17 12:01:00-05:00)
+2025-04-17 12:01:00 PM [INFO] Starting data collection...
+2025-04-17 12:01:00 PM [INFO] Sleeping for 73.47 seconds before scrolling
+2025-04-17 12:02:26 PM [INFO] 11 stocks added and 16 tweets added!
+2025-04-17 12:02:26 PM [INFO] Data collection completed successfully.
+2025-04-17 12:02:26 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 12:11:00 CDT)" executed successfully
+2025-04-17 12:02:26 PM [INFO] collect_data detected by completion listener.
+2025-04-17 12:02:31 PM [INFO] Making predictions...
+2025-04-17 12:02:31 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-17 12:02:31 PM [INFO] Stock data only predicts 240.20 at 2025-04-17 12:10 PM
+2025-04-17 12:02:32 PM [INFO] Task listener finished.
+--------------
+2025-04-17 12:11:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 12:21:00 CDT)" (scheduled at 2025-04-17 12:11:00-05:00)
+2025-04-17 12:11:00 PM [INFO] Starting data collection...
+2025-04-17 12:11:00 PM [INFO] Sleeping for 68.39 seconds before scrolling
+2025-04-17 12:12:16 PM [INFO] 11 stocks added and 8 tweets added!
+2025-04-17 12:12:16 PM [INFO] Data collection completed successfully.
+2025-04-17 12:12:16 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 12:21:00 CDT)" executed successfully
+2025-04-17 12:12:16 PM [INFO] collect_data detected by completion listener.
+2025-04-17 12:12:21 PM [INFO] Making predictions...
+2025-04-17 12:12:21 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-17 12:12:21 PM [INFO] Stock data only predicts 240.66 at 2025-04-17 12:20 PM
+2025-04-17 12:12:21 PM [INFO] Task listener finished.
+--------------
+2025-04-17 12:21:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 12:31:00 CDT)" (scheduled at 2025-04-17 12:21:00-05:00)
+2025-04-17 12:21:00 PM [INFO] Starting data collection...
+2025-04-17 12:21:00 PM [INFO] Sleeping for 69.90 seconds before scrolling
+2025-04-17 12:22:20 PM [INFO] 11 stocks added and 13 tweets added!
+2025-04-17 12:22:20 PM [INFO] Data collection completed successfully.
+2025-04-17 12:22:20 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 12:31:00 CDT)" executed successfully
+2025-04-17 12:22:20 PM [INFO] collect_data detected by completion listener.
+2025-04-17 12:22:25 PM [INFO] Making predictions...
+2025-04-17 12:22:25 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-17 12:22:25 PM [INFO] Stock data only predicts 239.59 at 2025-04-17 12:30 PM
+2025-04-17 12:22:25 PM [INFO] Task listener finished.
+--------------
+2025-04-17 12:31:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 12:41:00 CDT)" (scheduled at 2025-04-17 12:31:00-05:00)
+2025-04-17 12:31:00 PM [INFO] Starting data collection...
+2025-04-17 12:31:00 PM [INFO] Sleeping for 83.29 seconds before scrolling
+2025-04-17 12:32:31 PM [INFO] 11 stocks added and 8 tweets added!
+2025-04-17 12:32:31 PM [INFO] Data collection completed successfully.
+2025-04-17 12:32:31 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 12:41:00 CDT)" executed successfully
+2025-04-17 12:32:31 PM [INFO] collect_data detected by completion listener.
+2025-04-17 12:32:36 PM [INFO] Making predictions...
+2025-04-17 12:32:36 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-17 12:32:36 PM [INFO] Stock data only predicts 239.02 at 2025-04-17 12:40 PM
+2025-04-17 12:32:36 PM [INFO] Task listener finished.
+--------------
+2025-04-17 12:41:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 12:51:00 CDT)" (scheduled at 2025-04-17 12:41:00-05:00)
+2025-04-17 12:41:00 PM [INFO] Starting data collection...
+2025-04-17 12:41:00 PM [INFO] Sleeping for 73.86 seconds before scrolling
+2025-04-17 12:42:24 PM [INFO] 11 stocks added and 9 tweets added!
+2025-04-17 12:42:24 PM [INFO] Data collection completed successfully.
+2025-04-17 12:42:24 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 12:51:00 CDT)" executed successfully
+2025-04-17 12:42:24 PM [INFO] collect_data detected by completion listener.
+2025-04-17 12:42:29 PM [INFO] Making predictions...
+2025-04-17 12:42:29 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-17 12:42:29 PM [INFO] Stock data only predicts 239.41 at 2025-04-17 12:50 PM
+2025-04-17 12:42:29 PM [INFO] Task listener finished.
+--------------
+2025-04-17 12:51:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 13:01:00 CDT)" (scheduled at 2025-04-17 12:51:00-05:00)
+2025-04-17 12:51:00 PM [INFO] Starting data collection...
+2025-04-17 12:51:00 PM [INFO] Sleeping for 68.39 seconds before scrolling
+2025-04-17 12:52:21 PM [INFO] 11 stocks added and 10 tweets added!
+2025-04-17 12:52:21 PM [INFO] Data collection completed successfully.
+2025-04-17 12:52:21 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 13:01:00 CDT)" executed successfully
+2025-04-17 12:52:21 PM [INFO] collect_data detected by completion listener.
+2025-04-17 12:52:26 PM [INFO] Making predictions...
+2025-04-17 12:52:26 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-17 12:52:26 PM [INFO] Stock data only predicts 240.07 at 2025-04-17 01:00 PM
+2025-04-17 12:52:27 PM [INFO] Task listener finished.
+--------------
+2025-04-17 01:01:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 13:11:00 CDT)" (scheduled at 2025-04-17 13:01:00-05:00)
+2025-04-17 01:01:00 PM [INFO] Starting data collection...
+2025-04-17 01:01:00 PM [INFO] Sleeping for 89.20 seconds before scrolling
+2025-04-17 01:02:47 PM [INFO] 11 stocks added and 9 tweets added!
+2025-04-17 01:02:47 PM [INFO] Data collection completed successfully.
+2025-04-17 01:02:47 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 13:11:00 CDT)" executed successfully
+2025-04-17 01:02:47 PM [INFO] collect_data detected by completion listener.
+2025-04-17 01:02:52 PM [INFO] Making predictions...
+2025-04-17 01:02:52 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-17 01:02:52 PM [INFO] Stock data only predicts 240.26 at 2025-04-17 01:10 PM
+2025-04-17 01:02:52 PM [INFO] Task listener finished.
+--------------
+2025-04-17 01:11:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 13:21:00 CDT)" (scheduled at 2025-04-17 13:11:00-05:00)
+2025-04-17 01:11:00 PM [INFO] Starting data collection...
+2025-04-17 01:11:00 PM [INFO] Sleeping for 72.18 seconds before scrolling
+2025-04-17 01:12:34 PM [INFO] 11 stocks added and 9 tweets added!
+2025-04-17 01:12:34 PM [INFO] Data collection completed successfully.
+2025-04-17 01:12:34 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 13:21:00 CDT)" executed successfully
+2025-04-17 01:12:34 PM [INFO] collect_data detected by completion listener.
+2025-04-17 01:12:39 PM [INFO] Making predictions...
+2025-04-17 01:12:39 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-17 01:12:39 PM [INFO] Stock data only predicts 240.93 at 2025-04-17 01:20 PM
+2025-04-17 01:12:39 PM [INFO] Task listener finished.
+--------------
+2025-04-17 01:21:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 13:31:00 CDT)" (scheduled at 2025-04-17 13:21:00-05:00)
+2025-04-17 01:21:00 PM [INFO] Starting data collection...
+2025-04-17 01:21:00 PM [INFO] Sleeping for 65.56 seconds before scrolling
+2025-04-17 01:22:14 PM [INFO] 11 stocks added and 9 tweets added!
+2025-04-17 01:22:14 PM [INFO] Data collection completed successfully.
+2025-04-17 01:22:14 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 13:31:00 CDT)" executed successfully
+2025-04-17 01:22:14 PM [INFO] collect_data detected by completion listener.
+2025-04-17 01:22:19 PM [INFO] Making predictions...
+2025-04-17 01:22:19 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-17 01:22:19 PM [INFO] Stock data only predicts 240.86 at 2025-04-17 01:30 PM
+2025-04-17 01:22:19 PM [INFO] Task listener finished.
+--------------
+2025-04-17 01:31:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 13:41:00 CDT)" (scheduled at 2025-04-17 13:31:00-05:00)
+2025-04-17 01:31:00 PM [INFO] Starting data collection...
+2025-04-17 01:31:00 PM [INFO] Sleeping for 64.35 seconds before scrolling
+2025-04-17 01:32:14 PM [INFO] 11 stocks added and 3 tweets added!
+2025-04-17 01:32:14 PM [INFO] Data collection completed successfully.
+2025-04-17 01:32:14 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 13:41:00 CDT)" executed successfully
+2025-04-17 01:32:14 PM [INFO] collect_data detected by completion listener.
+2025-04-17 01:32:19 PM [INFO] Making predictions...
+2025-04-17 01:32:19 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-17 01:32:19 PM [INFO] Stock data only predicts 240.75 at 2025-04-17 01:40 PM
+2025-04-17 01:32:19 PM [INFO] Task listener finished.
+--------------
+2025-04-17 01:41:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 13:51:00 CDT)" (scheduled at 2025-04-17 13:41:00-05:00)
+2025-04-17 01:41:00 PM [INFO] Starting data collection...
+2025-04-17 01:41:00 PM [INFO] Sleeping for 72.49 seconds before scrolling
+2025-04-17 01:42:22 PM [INFO] 11 stocks added and 11 tweets added!
+2025-04-17 01:42:22 PM [INFO] Data collection completed successfully.
+2025-04-17 01:42:22 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 13:51:00 CDT)" executed successfully
+2025-04-17 01:42:22 PM [INFO] collect_data detected by completion listener.
+2025-04-17 01:42:27 PM [INFO] Making predictions...
+2025-04-17 01:42:27 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-17 01:42:28 PM [INFO] Stock data only predicts 241.18 at 2025-04-17 01:50 PM
+2025-04-17 01:42:28 PM [INFO] Task listener finished.
+--------------
+2025-04-17 01:51:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 14:01:00 CDT)" (scheduled at 2025-04-17 13:51:00-05:00)
+2025-04-17 01:51:00 PM [INFO] Starting data collection...
+2025-04-17 01:51:00 PM [INFO] Sleeping for 75.42 seconds before scrolling
+2025-04-17 01:52:31 PM [INFO] 11 stocks added and 12 tweets added!
+2025-04-17 01:52:31 PM [INFO] Data collection completed successfully.
+2025-04-17 01:52:31 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 14:01:00 CDT)" executed successfully
+2025-04-17 01:52:31 PM [INFO] collect_data detected by completion listener.
+2025-04-17 01:52:36 PM [INFO] Making predictions...
+2025-04-17 01:52:36 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-17 01:52:36 PM [INFO] Stock data only predicts 240.40 at 2025-04-17 02:00 PM
+2025-04-17 01:52:36 PM [INFO] Task listener finished.
+--------------
+2025-04-17 02:01:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 14:11:00 CDT)" (scheduled at 2025-04-17 14:01:00-05:00)
+2025-04-17 02:01:00 PM [INFO] Starting data collection...
+2025-04-17 02:01:00 PM [INFO] Sleeping for 74.71 seconds before scrolling
+2025-04-17 02:02:29 PM [INFO] 11 stocks added and 17 tweets added!
+2025-04-17 02:02:29 PM [INFO] Data collection completed successfully.
+2025-04-17 02:02:29 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 14:11:00 CDT)" executed successfully
+2025-04-17 02:02:29 PM [INFO] collect_data detected by completion listener.
+2025-04-17 02:02:34 PM [INFO] Making predictions...
+2025-04-17 02:02:34 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-17 02:02:34 PM [INFO] Stock data only predicts 239.67 at 2025-04-17 02:10 PM
+2025-04-17 02:02:34 PM [INFO] Task listener finished.
+--------------
+2025-04-17 02:11:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 14:21:00 CDT)" (scheduled at 2025-04-17 14:11:00-05:00)
+2025-04-17 02:11:00 PM [INFO] Starting data collection...
+2025-04-17 02:11:00 PM [INFO] Sleeping for 61.20 seconds before scrolling
+2025-04-17 02:12:12 PM [INFO] 11 stocks added and 15 tweets added!
+2025-04-17 02:12:12 PM [INFO] Data collection completed successfully.
+2025-04-17 02:12:12 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 14:21:00 CDT)" executed successfully
+2025-04-17 02:12:12 PM [INFO] collect_data detected by completion listener.
+2025-04-17 02:12:17 PM [INFO] Making predictions...
+2025-04-17 02:12:17 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-17 02:12:17 PM [INFO] Stock data only predicts 239.62 at 2025-04-17 02:20 PM
+2025-04-17 02:12:17 PM [INFO] Task listener finished.
+--------------
+2025-04-17 02:21:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 14:31:00 CDT)" (scheduled at 2025-04-17 14:21:00-05:00)
+2025-04-17 02:21:00 PM [INFO] Starting data collection...
+2025-04-17 02:21:00 PM [INFO] Sleeping for 77.25 seconds before scrolling
+2025-04-17 02:22:28 PM [INFO] 11 stocks added and 11 tweets added!
+2025-04-17 02:22:28 PM [INFO] Data collection completed successfully.
+2025-04-17 02:22:28 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 14:31:00 CDT)" executed successfully
+2025-04-17 02:22:28 PM [INFO] collect_data detected by completion listener.
+2025-04-17 02:22:33 PM [INFO] Making predictions...
+2025-04-17 02:22:33 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-17 02:22:33 PM [INFO] Stock data only predicts 239.02 at 2025-04-17 02:30 PM
+2025-04-17 02:22:33 PM [INFO] Task listener finished.
+--------------
+2025-04-17 02:31:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 14:41:00 CDT)" (scheduled at 2025-04-17 14:31:00-05:00)
+2025-04-17 02:31:00 PM [INFO] Starting data collection...
+2025-04-17 02:31:00 PM [INFO] Sleeping for 77.80 seconds before scrolling
+2025-04-17 02:32:24 PM [INFO] 11 stocks added and 6 tweets added!
+2025-04-17 02:32:24 PM [INFO] Data collection completed successfully.
+2025-04-17 02:32:24 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 14:41:00 CDT)" executed successfully
+2025-04-17 02:32:24 PM [INFO] collect_data detected by completion listener.
+2025-04-17 02:32:29 PM [INFO] Making predictions...
+2025-04-17 02:32:29 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-17 02:32:29 PM [INFO] Stock data only predicts 238.86 at 2025-04-17 02:40 PM
+2025-04-17 02:32:29 PM [INFO] Task listener finished.
+--------------
+2025-04-17 02:41:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 14:51:00 CDT)" (scheduled at 2025-04-17 14:41:00-05:00)
+2025-04-17 02:41:00 PM [INFO] Starting data collection...
+2025-04-17 02:41:00 PM [INFO] Sleeping for 83.83 seconds before scrolling
+2025-04-17 02:42:32 PM [INFO] 11 stocks added and 6 tweets added!
+2025-04-17 02:42:32 PM [INFO] Data collection completed successfully.
+2025-04-17 02:42:32 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 14:51:00 CDT)" executed successfully
+2025-04-17 02:42:32 PM [INFO] collect_data detected by completion listener.
+2025-04-17 02:42:37 PM [INFO] Making predictions...
+2025-04-17 02:42:37 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-17 02:42:37 PM [INFO] Stock data only predicts 239.44 at 2025-04-17 02:50 PM
+2025-04-17 02:42:37 PM [INFO] Task listener finished.
+--------------
+2025-04-17 02:51:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 15:01:00 CDT)" (scheduled at 2025-04-17 14:51:00-05:00)
+2025-04-17 02:51:00 PM [INFO] Starting data collection...
+2025-04-17 02:51:00 PM [INFO] Sleeping for 75.91 seconds before scrolling
+2025-04-17 02:52:41 PM [INFO] 11 stocks added and 9 tweets added!
+2025-04-17 02:52:41 PM [INFO] Data collection completed successfully.
+2025-04-17 02:52:41 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 15:01:00 CDT)" executed successfully
+2025-04-17 02:52:41 PM [INFO] collect_data detected by completion listener.
+2025-04-17 02:52:46 PM [INFO] Making predictions...
+2025-04-17 02:52:46 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-17 02:52:46 PM [INFO] Stock data only predicts 239.68 at 2025-04-17 03:00 PM
+2025-04-17 02:52:47 PM [INFO] Task listener finished.
+--------------
+2025-04-17 03:00:00 PM [INFO] Running job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-17 15:01:00 CDT)" (scheduled at 2025-04-17 15:00:00-05:00)
+2025-04-17 03:00:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-17 15:01:00 CDT)" executed successfully
+2025-04-17 03:01:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 15:11:00 CDT)" (scheduled at 2025-04-17 15:01:00-05:00)
+2025-04-17 03:01:00 PM [INFO] Running job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-17 15:02:00 CDT)" (scheduled at 2025-04-17 15:01:00-05:00)
+2025-04-17 03:01:00 PM [INFO] Starting data collection...
+2025-04-17 03:01:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-17 15:02:00 CDT)" executed successfully
+2025-04-17 03:01:00 PM [INFO] Sleeping for 67.20 seconds before scrolling
+2025-04-17 03:02:00 PM [INFO] Running job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-17 15:03:00 CDT)" (scheduled at 2025-04-17 15:02:00-05:00)
+2025-04-17 03:02:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-17 15:03:00 CDT)" executed successfully
+2025-04-17 03:02:20 PM [INFO] 10 stocks added and 13 tweets added!
+2025-04-17 03:02:20 PM [INFO] Data collection completed successfully.
+2025-04-17 03:02:20 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-17 15:11:00 CDT)" executed successfully
+2025-04-17 03:02:20 PM [INFO] collect_data detected by completion listener.
+2025-04-17 03:02:25 PM [INFO] Making predictions...
+2025-04-17 03:02:25 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-17 03:02:25 PM [INFO] Stock data only predicts 240.79 at 2025-04-17 03:09 PM
+2025-04-17 03:02:25 PM [INFO] Task listener finished.
+--------------
+2025-04-17 03:03:00 PM [INFO] Running job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-17 15:04:00 CDT)" (scheduled at 2025-04-17 15:03:00-05:00)
+2025-04-17 03:03:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-17 15:04:00 CDT)" executed successfully
+2025-04-17 03:04:00 PM [INFO] Running job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-17 15:05:00 CDT)" (scheduled at 2025-04-17 15:04:00-05:00)
+2025-04-17 03:04:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-17 15:05:00 CDT)" executed successfully
+2025-04-17 03:05:00 PM [INFO] Running job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-17 15:06:00 CDT)" (scheduled at 2025-04-17 15:05:00-05:00)
+2025-04-17 03:05:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-17 15:06:00 CDT)" executed successfully
+2025-04-17 03:06:00 PM [INFO] Running job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-17 15:07:00 CDT)" (scheduled at 2025-04-17 15:06:00-05:00)
+2025-04-17 03:06:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-17 15:07:00 CDT)" executed successfully
+2025-04-17 03:07:00 PM [INFO] Running job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-17 15:08:00 CDT)" (scheduled at 2025-04-17 15:07:00-05:00)
+2025-04-17 03:07:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-17 15:08:00 CDT)" executed successfully
+2025-04-17 03:08:00 PM [INFO] Running job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-17 15:09:00 CDT)" (scheduled at 2025-04-17 15:08:00-05:00)
+2025-04-17 03:08:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-17 15:09:00 CDT)" executed successfully
+2025-04-17 03:08:00 PM [INFO] Cleaning up: closing driver and shutting down scheduler.
+2025-04-17 03:08:01 PM [INFO] Scheduler has been shut down
