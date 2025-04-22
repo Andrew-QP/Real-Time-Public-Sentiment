@@ -198,13 +198,13 @@ if not todaydf.empty:
     combined_df = pd.merge(combined_df, 
                         sentiPredictiondf[['Time', 'Sentiment Model Prediction']], 
                         on='Time', how='outer')
-
+    # Drop rows where both predictions are empty
+    combined_df.dropna(subset=['Simple Model Prediction', 'Sentiment Model Prediction'], how='all', inplace=True)
     # Sort by time
     combined_df.sort_values('Time', inplace=True)
 
     # Show last 10 entries
     st.write("Last 10 Predictions")
     st.dataframe(combined_df.tail(10), use_container_width=True)
-    # st.write(combined_df.tail(10))
 else:
     st.warning("No stock data available for today yet.")

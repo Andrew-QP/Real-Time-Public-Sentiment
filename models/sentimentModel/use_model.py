@@ -92,16 +92,28 @@ def get_latest_data(limit=None):
     limit_clause = f"LIMIT {limit}" if limit is not None else ""
     
     # Simple query to get the most recent data
+    # query = f"""
+    #     SELECT createdDate, 
+    #            {financial_features}, 
+    #            {sentiment_features}, 
+    #            {engagement_features}
+    #     FROM tweets 
+    #     WHERE {config["target_column"]} IS NOT NULL
+    #     ORDER BY createdDate DESC
+    #     {limit_clause}
+    # """
+
     query = f"""
         SELECT createdDate, 
-               {financial_features}, 
-               {sentiment_features}, 
-               {engagement_features}
+            {financial_features}, 
+            {sentiment_features}, 
+            {engagement_features}
         FROM tweets 
         WHERE {config["target_column"]} IS NOT NULL
-        ORDER BY createdDate DESC
+        ORDER BY rowid DESC
         {limit_clause}
     """
+
     
     df = pd.read_sql_query(query, conn)
     
@@ -116,9 +128,8 @@ def get_latest_data(limit=None):
     # df = df.sort_values('createdDate')
 
     # Convert time column to datetime
-    df['createdDate'] = pd.to_datetime(df['createdDate'], format='%Y-%m-%d %I:%M %p')
+    df['createdDate'] = pd.to_datetime(df['createdDate'], format='%Y-%m-%d %I:%M %p', errors="coerce")
     df.sort_values(by='createdDate', inplace=True)
-    df.set_index('createdDate', inplace=True)
     
     
     # Convert engagement features from strings to numeric values
