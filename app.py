@@ -52,7 +52,7 @@ def get_stock_data_today():
 
     return stock_data_df
 
-def get_predictions():
+def get_simple_predictions():
     conn = sqlite3.connect("rtsProjectDB.db")
     cursor = conn.cursor()
 
@@ -60,8 +60,8 @@ def get_predictions():
     today_str = datetime.now(pytz.timezone('US/Central')).strftime('%Y-%m-%d')
 
     cursor.execute("""
-        SELECT time, stockPred 
-        FROM predictions 
+        SELECT time, prediction 
+        FROM simplePrediction 
         WHERE time LIKE ? 
         ORDER BY time ASC
     """, (today_str + '%',))
@@ -70,7 +70,7 @@ def get_predictions():
     cursor.close()
 
     # Convert data to DataFrame
-    predictions_df = pd.DataFrame(data, columns=["Time", "StockPred"])
+    predictions_df = pd.DataFrame(data, columns=["Time", "Prediction"])
 
     # Convert 'Time' column from string to datetime in Central Time
     predictions_df['Time'] = pd.to_datetime(predictions_df['Time'], format='%Y-%m-%d %I:%M %p')
@@ -79,7 +79,34 @@ def get_predictions():
 
     return predictions_df
 
-def plot_stock_data(df, predictions_df):
+def get_sentiment_predictions():
+    conn = sqlite3.connect("rtsProjectDB.db")
+    cursor = conn.cursor()
+
+    # Get today's date in Central Time (CT)
+    today_str = datetime.now(pytz.timezone('US/Central')).strftime('%Y-%m-%d')
+
+    cursor.execute("""
+        SELECT time, prediction 
+        FROM sentimentPrediction 
+        WHERE time LIKE ? 
+        ORDER BY time ASC
+    """, (today_str + '%',))
+        
+    data = cursor.fetchall()
+    cursor.close()
+
+    # Convert data to DataFrame
+    predictions_df = pd.DataFrame(data, columns=["Time", "Prediction"])
+
+    # Convert 'Time' column from string to datetime in Central Time
+    predictions_df['Time'] = pd.to_datetime(predictions_df['Time'], format='%Y-%m-%d %I:%M %p')
+
+    predictions_df.sort_values(by='Time', inplace=True)
+
+    return predictions_df
+
+def plot_stock_data(df, simplePredictionsdf, sentiPredictiondf):
     fig = go.Figure()
 
     # Real Stock Price Line
@@ -92,13 +119,23 @@ def plot_stock_data(df, predictions_df):
         marker=dict(size=5)
     ))
 
-    # Prediction Line (with dashed line and different color)
+    # Simple Model Prediction Line
     fig.add_trace(go.Scatter(
-        x=predictions_df['Time'], 
-        y=predictions_df['StockPred'], 
+        x=simplePredictionsdf['Time'], 
+        y=simplePredictionsdf['Prediction'], 
         mode='lines+markers',
         name="Prediction with Finance Only",
-        line=dict(color='red', width=2, dash='dash'),  # dashed red line
+        line=dict(color='red', width=2, dash='dash'),
+        marker=dict(size=5)
+    ))
+
+    # Sentiment Model Prediction Line
+    fig.add_trace(go.Scatter(
+        x=sentiPredictiondf['Time'], 
+        y=sentiPredictiondf['Prediction'], 
+        mode='lines+markers',
+        name="Prediction with Sentiment & Finance",
+        line=dict(color='green', width=2, dash='dash'),
         marker=dict(size=5)
     ))
 
@@ -125,26 +162,49 @@ st_autorefresh(interval=10000, key="refresh")  # refresh every 10 seconds
 # Always fetch fresh data if flag is 1
 if get_update_flag() == 1:
     todaydf = get_stock_data_today()
-    predictiondf = get_predictions()
+    simplePredictiondf = get_simple_predictions()
+    sentiPredictiondf = get_sentiment_predictions()
     st.session_state['data_cached'] = todaydf
-    st.session_state['predictions_cached'] = predictiondf
+    st.session_state['simple_predictions_cached'] = simplePredictiondf
+    st.session_state['sentiment_predictions_cached'] = sentiPredictiondf
     reset_update_flag()
 else:
     # fallback to session cache if already loaded once
     if 'data_cached' not in st.session_state:
         st.session_state['data_cached'] = get_stock_data_today()
-    if 'predictions_cached' not in st.session_state:
-        st.session_state['predictions_cached'] = get_predictions()
+    if 'simple_predictions_cached' not in st.session_state:
+        st.session_state['simple_predictions_cached'] = get_simple_predictions()
+    if 'sentiment_predictions_cached' not in st.session_state:
+        st.session_state['sentiment_predictions_cached'] = get_sentiment_predictions()
     todaydf = st.session_state['data_cached']
-    predictiondf = st.session_state['predictions_cached']
+    simplePredictiondf = st.session_state['simple_predictions_cached']
+    sentiPredictiondf = st.session_state['sentiment_predictions_cached']
 
 
 # Display graph
 if not todaydf.empty:
-    fig = plot_stock_data(todaydf, predictiondf)
+    fig = plot_stock_data(todaydf, simplePredictiondf, sentiPredictiondf)
     st.plotly_chart(fig, use_container_width=True)
-    combined_df = pd.merge(todaydf[['Time', 'Close']], predictiondf[['Time', 'StockPred']], on='Time', how='right')
+    # combined_df = pd.merge(todaydf[['Time', 'Close']], simplePredictiondf[['Time', 'Prediction']], on='Time', how='right')
+    # Rename prediction columns to distinguish them
+    simplePredictiondf = simplePredictiondf.rename(columns={"Prediction": "Simple Model Prediction"})
+    sentiPredictiondf = sentiPredictiondf.rename(columns={"Prediction": "Sentiment Model Prediction"})
+
+    # Outer merge to include all timestamps even if some are missing
+    combined_df = pd.merge(todaydf[['Time', 'Close']], 
+                        simplePredictiondf[['Time', 'Simple Model Prediction']], 
+                        on='Time', how='outer')
+
+    combined_df = pd.merge(combined_df, 
+                        sentiPredictiondf[['Time', 'Sentiment Model Prediction']], 
+                        on='Time', how='outer')
+
+    # Sort by time
+    combined_df.sort_values('Time', inplace=True)
+
+    # Show last 10 entries
     st.write("Last 10 Predictions")
-    st.write(combined_df.tail(10))
+    st.dataframe(combined_df.tail(10), use_container_width=True)
+    # st.write(combined_df.tail(10))
 else:
     st.warning("No stock data available for today yet.")

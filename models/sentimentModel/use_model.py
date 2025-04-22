@@ -7,7 +7,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from tensorflow.keras.models import load_model
-from config import config
+from models.sentimentModel.config import config
 from datetime import datetime, timedelta
 from sklearn.preprocessing import MinMaxScaler
 
@@ -110,11 +110,16 @@ def get_latest_data(limit=None):
         conn.close()
         return pd.DataFrame()
     
+    # # Convert time column to datetime
+    # df['createdDate'] = pd.to_datetime(df['createdDate'], format='%Y-%m-%d %I:%M %p', errors='coerce')
+    # # Sort by created date (ascending)
+    # df = df.sort_values('createdDate')
+
     # Convert time column to datetime
-    df['createdDate'] = pd.to_datetime(df['createdDate'], format='%Y-%m-%d %I:%M %p', errors='coerce')
+    df['createdDate'] = pd.to_datetime(df['createdDate'], format='%Y-%m-%d %I:%M %p')
+    df.sort_values(by='createdDate', inplace=True)
+    df.set_index('createdDate', inplace=True)
     
-    # Sort by created date (ascending)
-    df = df.sort_values('createdDate')
     
     # Convert engagement features from strings to numeric values
     for feature in config["use_engagement_features"]:

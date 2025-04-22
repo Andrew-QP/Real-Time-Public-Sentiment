@@ -1,6 +1,6 @@
 import twitterWebScraper as tws
-# from models.simpleModel.use_model import list_available_models,predict_next_10_minutes
-import models.simpleModel.use_model as sm
+import models.simpleModel.use_model as simpleModel
+import models.sentimentModel.use_model as sentiModel
 import sqlite3
 import time
 import random
@@ -79,15 +79,24 @@ if count == 0:
     cursor.execute('INSERT INTO flags (id, update_graph) VALUES (1, 0)')
     conn.commit()
 
-# Create predictions table
+# Create simple model predictions table
 cursor.execute('''
-    CREATE TABLE IF NOT EXISTS predictions (
-        time TEXT NOT NULL,
-        stockPred DECIMAL(10, 2),
-        stockSentimentPred DECIMAL(10, 2)
+    CREATE TABLE IF NOT EXISTS simplePrediction (
+        time TEXT PRIMARY KEY,
+        prediction DECIMAL(10, 2)
     )
 ''')
-cursor.execute('CREATE INDEX IF NOT EXISTS idx_prediction_time ON predictions (time)')
+cursor.execute('CREATE INDEX IF NOT EXISTS idx_prediction_time ON simplePrediction (time)')
+conn.commit()
+
+# Create sentiment model predictions table
+cursor.execute('''
+    CREATE TABLE IF NOT EXISTS sentimentPrediction (
+        time TEXT PRIMARY KEY,
+        prediction DECIMAL(10, 2)
+    )
+''')
+cursor.execute('CREATE INDEX IF NOT EXISTS idx_prediction_time ON sentimentPrediction (time)')
 conn.commit()
 
 # Custom time converter for Central Time
@@ -119,9 +128,10 @@ def collectData():
 
 def make_predictions():
     logging.info("Making predictions...")
-    models = sm.list_available_models()
-    prediction = sm.predict_next_10_minutes(sorted(models, reverse=True)[0])
-    
+
+    # Predicting with simple model
+    simpleModels = simpleModel.list_available_models()
+    simplePrediction = simpleModel.predict_next_10_minutes(sorted(simpleModels, reverse=True)[0])
     try:
         with sqlite3.connect("rtsProjectDB.db") as local_conn:
             local_cursor = local_conn.cursor()
@@ -140,14 +150,44 @@ def make_predictions():
                 # Convert back to string in same format
                 time_str = next_time.strftime(dt_format)
 
-            logging.info(f'Stock data only predicts {prediction:.2f} at {time_str}')
+            logging.info(f'Simple model predicts {simplePrediction:.2f} at {time_str}')
             local_cursor.execute('''
-            INSERT INTO predictions (time, stockPred, stockSentimentPred)
-            VALUES (?, ?, ?)
-        ''', (time_str, prediction, None)) # Need to add stockSentimentPred
+            INSERT INTO simplePrediction (time, prediction)
+            VALUES (?, ?)
+        ''', (time_str, simplePrediction))
             local_conn.commit()
     except Exception as e:
-        logging.error(f"make_predictions failed: {e}")
+        logging.error(f"Prediction with simple model failed: {e}")
+
+    # Predicting with sentiment model
+    sentimentModels = sentiModel.list_available_models()
+    sentimentPrediction = sentiModel.predict_next_10_minutes(sorted(sentimentModels, reverse=True)[0])  
+    try:
+        with sqlite3.connect("rtsProjectDB.db") as local_conn:
+            local_cursor = local_conn.cursor()
+            # Get the latest (last inserted) time from tweets
+            local_cursor.execute('SELECT createdDate FROM tweets ORDER BY rowid DESC LIMIT 1')
+            row = local_cursor.fetchone()
+
+            if row:
+                last_time_str = row[0]
+                dt_format = "%Y-%m-%d %I:%M %p"
+
+                # Convert to datetime, add 10 minutes
+                last_time = datetime.strptime(last_time_str, dt_format)
+                next_time = last_time + timedelta(minutes=10)
+
+                # Convert back to string in same format
+                time_str = next_time.strftime(dt_format)
+            logging.info(f'Sentiment model predicts {sentimentPrediction:.2f} at {time_str}')
+            local_cursor.execute('''
+            INSERT INTO sentimentPrediction (time, prediction)
+            VALUES (?, ?)
+        ''', (time_str, sentimentPrediction))
+            local_conn.commit()
+
+    except Exception as e:
+        logging.error(f"Prediction with sentiment model failed: {e}")
 
 # Task completion listener
 def task_listener(event):
@@ -216,3 +256,4 @@ finally:
             scheduler.shutdown()
     except Exception as e:
         logging.error(f"Error shutting down scheduler: {e}")
+    print("Program has shut down.")

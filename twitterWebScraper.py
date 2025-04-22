@@ -212,18 +212,8 @@ def getStockData():
         if hist.index.tzinfo is None:
             hist.index = hist.index.tz_localize('UTC')
 
-        # Print available timestamps
-        # print("\nAll timestamps in data:")
-        # print(hist.index)
-
         # Filter based on UTC timestamps
         hist_filtered = hist[(hist.index >= start_time_utc) & (hist.index <= end_time_utc)]
-
-        # Debug output
-        # print(f"\nLocal Start Time (ET): {start_time}")
-        # print(f"Local End Time (ET): {end_time}")
-        # print(f"UTC Start Time: {start_time_utc}")
-        # print(f"UTC End Time: {end_time_utc}")
 
         if hist_filtered.empty:
             print("No data returned for the 10-minute window. Market might be closed.")
@@ -242,10 +232,6 @@ def getStockData():
             for idx, row in hist_filtered.iterrows()
         ]
 
-        # Print result with timestamps
-        # print("\nFiltered Data:")
-        # for entry in result:
-        #     print(entry)
         print(f"getStockData found {len(result)}")
         return result
     except Exception as e:
