@@ -8343,3 +8343,549 @@ KeyError: 'createdDate'
 2025-04-29 03:08:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-29 15:09:00 CDT)" executed successfully
 2025-04-29 03:08:00 PM [INFO] Cleaning up: closing driver and shutting down scheduler.
 2025-04-29 03:08:01 PM [INFO] Scheduler has been shut down
+2025-04-30 09:00:12 AM [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-30 09:00:12 AM [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-30 09:00:35 AM [INFO] Added job "collectData" to job store "default"
+2025-04-30 09:00:35 AM [INFO] Added job "stockMarketClose" to job store "default"
+2025-04-30 09:00:35 AM [INFO] Scheduler started
+2025-04-30 09:01:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 09:01:00 CDT)" (scheduled at 2025-04-30 09:01:00-05:00)
+2025-04-30 09:01:00 AM [INFO] Starting data collection...
+2025-04-30 09:01:00 AM [INFO] Sleeping for 88.91 seconds before scrolling
+2025-04-30 09:02:41 AM [INFO] 11 stocks added and 20 tweets added!
+2025-04-30 09:02:41 AM [INFO] Data collection completed successfully.
+2025-04-30 09:02:41 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 09:11:00 CDT)" executed successfully
+2025-04-30 09:02:41 AM [INFO] collect_data detected by completion listener.
+2025-04-30 09:02:46 AM [INFO] Making predictions...
+2025-04-30 09:02:46 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 09:02:47 AM [INFO] Simple model predicts 271.84 at 2025-04-30 09:10 AM
+2025-04-30 09:02:47 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 09:02:47 AM [INFO] Sentiment model predicts 273.13 at 2025-04-30 09:10 AM
+2025-04-30 09:02:47 AM [INFO] Task listener finished.
+--------------
+2025-04-30 09:11:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 09:21:00 CDT)" (scheduled at 2025-04-30 09:11:00-05:00)
+2025-04-30 09:11:00 AM [INFO] Starting data collection...
+2025-04-30 09:11:00 AM [INFO] Sleeping for 86.76 seconds before scrolling
+2025-04-30 09:12:38 AM [INFO] 11 stocks added and 21 tweets added!
+2025-04-30 09:12:38 AM [INFO] Data collection completed successfully.
+2025-04-30 09:12:38 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 09:21:00 CDT)" executed successfully
+2025-04-30 09:12:38 AM [INFO] collect_data detected by completion listener.
+2025-04-30 09:12:43 AM [INFO] Making predictions...
+2025-04-30 09:12:44 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 09:12:44 AM [INFO] Simple model predicts 273.26 at 2025-04-30 09:20 AM
+2025-04-30 09:12:44 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 09:12:44 AM [INFO] Sentiment model predicts 273.54 at 2025-04-30 09:20 AM
+2025-04-30 09:12:44 AM [INFO] Task listener finished.
+--------------
+2025-04-30 09:21:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 09:31:00 CDT)" (scheduled at 2025-04-30 09:21:00-05:00)
+2025-04-30 09:21:00 AM [INFO] Starting data collection...
+2025-04-30 09:21:00 AM [INFO] Sleeping for 62.27 seconds before scrolling
+2025-04-30 09:22:16 AM [INFO] 11 stocks added and 25 tweets added!
+2025-04-30 09:22:16 AM [INFO] Data collection completed successfully.
+2025-04-30 09:22:16 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 09:31:00 CDT)" executed successfully
+2025-04-30 09:22:16 AM [INFO] collect_data detected by completion listener.
+2025-04-30 09:22:21 AM [INFO] Making predictions...
+2025-04-30 09:22:21 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 09:22:21 AM [WARNING] 5 out of the last 5 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x7f587473cd30> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2025-04-30 09:22:21 AM [INFO] Simple model predicts 275.26 at 2025-04-30 09:30 AM
+2025-04-30 09:22:21 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 09:22:21 AM [WARNING] 6 out of the last 6 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x7f5864792320> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2025-04-30 09:22:21 AM [INFO] Sentiment model predicts 275.99 at 2025-04-30 09:30 AM
+2025-04-30 09:22:21 AM [INFO] Task listener finished.
+--------------
+2025-04-30 09:31:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 09:41:00 CDT)" (scheduled at 2025-04-30 09:31:00-05:00)
+2025-04-30 09:31:00 AM [INFO] Starting data collection...
+2025-04-30 09:31:00 AM [INFO] Sleeping for 83.79 seconds before scrolling
+2025-04-30 09:32:35 AM [INFO] 11 stocks added and 21 tweets added!
+2025-04-30 09:32:35 AM [INFO] Data collection completed successfully.
+2025-04-30 09:32:35 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 09:41:00 CDT)" executed successfully
+2025-04-30 09:32:35 AM [INFO] collect_data detected by completion listener.
+2025-04-30 09:32:40 AM [INFO] Making predictions...
+2025-04-30 09:32:40 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 09:32:40 AM [INFO] Simple model predicts 276.68 at 2025-04-30 09:40 AM
+2025-04-30 09:32:40 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 09:32:40 AM [INFO] Sentiment model predicts 277.00 at 2025-04-30 09:40 AM
+2025-04-30 09:32:40 AM [INFO] Task listener finished.
+--------------
+2025-04-30 09:41:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 09:51:00 CDT)" (scheduled at 2025-04-30 09:41:00-05:00)
+2025-04-30 09:41:00 AM [INFO] Starting data collection...
+2025-04-30 09:41:00 AM [INFO] Sleeping for 88.29 seconds before scrolling
+2025-04-30 09:42:51 AM [INFO] 11 stocks added and 10 tweets added!
+2025-04-30 09:42:51 AM [INFO] Data collection completed successfully.
+2025-04-30 09:42:51 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 09:51:00 CDT)" executed successfully
+2025-04-30 09:42:51 AM [INFO] collect_data detected by completion listener.
+2025-04-30 09:42:56 AM [INFO] Making predictions...
+2025-04-30 09:42:56 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 09:42:56 AM [INFO] Simple model predicts 275.92 at 2025-04-30 09:50 AM
+2025-04-30 09:42:56 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 09:42:56 AM [INFO] Sentiment model predicts 275.88 at 2025-04-30 09:50 AM
+2025-04-30 09:42:56 AM [INFO] Task listener finished.
+--------------
+2025-04-30 09:51:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 10:01:00 CDT)" (scheduled at 2025-04-30 09:51:00-05:00)
+2025-04-30 09:51:00 AM [INFO] Starting data collection...
+2025-04-30 09:51:00 AM [INFO] Sleeping for 63.83 seconds before scrolling
+2025-04-30 09:52:19 AM [INFO] 11 stocks added and 27 tweets added!
+2025-04-30 09:52:19 AM [INFO] Data collection completed successfully.
+2025-04-30 09:52:19 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 10:01:00 CDT)" executed successfully
+2025-04-30 09:52:19 AM [INFO] collect_data detected by completion listener.
+2025-04-30 09:52:24 AM [INFO] Making predictions...
+2025-04-30 09:52:24 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 09:52:24 AM [INFO] Simple model predicts 275.21 at 2025-04-30 10:00 AM
+2025-04-30 09:52:24 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 09:52:24 AM [INFO] Sentiment model predicts 275.03 at 2025-04-30 10:00 AM
+2025-04-30 09:52:24 AM [INFO] Task listener finished.
+--------------
+2025-04-30 10:01:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 10:11:00 CDT)" (scheduled at 2025-04-30 10:01:00-05:00)
+2025-04-30 10:01:00 AM [INFO] Starting data collection...
+2025-04-30 10:01:00 AM [INFO] Sleeping for 67.96 seconds before scrolling
+2025-04-30 10:02:24 AM [INFO] 11 stocks added and 13 tweets added!
+2025-04-30 10:02:24 AM [INFO] Data collection completed successfully.
+2025-04-30 10:02:24 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 10:11:00 CDT)" executed successfully
+2025-04-30 10:02:24 AM [INFO] collect_data detected by completion listener.
+2025-04-30 10:02:29 AM [INFO] Making predictions...
+2025-04-30 10:02:29 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 10:02:30 AM [INFO] Simple model predicts 277.13 at 2025-04-30 10:10 AM
+2025-04-30 10:02:30 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 10:02:30 AM [INFO] Sentiment model predicts 276.87 at 2025-04-30 10:09 AM
+2025-04-30 10:02:30 AM [INFO] Task listener finished.
+--------------
+2025-04-30 10:11:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 10:21:00 CDT)" (scheduled at 2025-04-30 10:11:00-05:00)
+2025-04-30 10:11:00 AM [INFO] Starting data collection...
+2025-04-30 10:11:00 AM [INFO] Sleeping for 80.51 seconds before scrolling
+2025-04-30 10:12:44 AM [INFO] 11 stocks added and 21 tweets added!
+2025-04-30 10:12:44 AM [INFO] Data collection completed successfully.
+2025-04-30 10:12:44 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 10:21:00 CDT)" executed successfully
+2025-04-30 10:12:44 AM [INFO] collect_data detected by completion listener.
+2025-04-30 10:12:49 AM [INFO] Making predictions...
+2025-04-30 10:12:49 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 10:12:49 AM [INFO] Simple model predicts 277.92 at 2025-04-30 10:20 AM
+2025-04-30 10:12:49 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 10:12:50 AM [INFO] Sentiment model predicts 278.25 at 2025-04-30 10:20 AM
+2025-04-30 10:12:50 AM [INFO] Task listener finished.
+--------------
+2025-04-30 10:21:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 10:31:00 CDT)" (scheduled at 2025-04-30 10:21:00-05:00)
+2025-04-30 10:21:00 AM [INFO] Starting data collection...
+2025-04-30 10:21:00 AM [INFO] Sleeping for 72.29 seconds before scrolling
+2025-04-30 10:22:21 AM [INFO] 11 stocks added and 22 tweets added!
+2025-04-30 10:22:21 AM [INFO] Data collection completed successfully.
+2025-04-30 10:22:21 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 10:31:00 CDT)" executed successfully
+2025-04-30 10:22:21 AM [INFO] collect_data detected by completion listener.
+2025-04-30 10:22:26 AM [INFO] Making predictions...
+2025-04-30 10:22:26 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 10:22:27 AM [INFO] Simple model predicts 279.37 at 2025-04-30 10:30 AM
+2025-04-30 10:22:27 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 10:22:27 AM [INFO] Sentiment model predicts 279.42 at 2025-04-30 10:30 AM
+2025-04-30 10:22:27 AM [INFO] Task listener finished.
+--------------
+2025-04-30 10:31:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 10:41:00 CDT)" (scheduled at 2025-04-30 10:31:00-05:00)
+2025-04-30 10:31:00 AM [INFO] Starting data collection...
+2025-04-30 10:31:00 AM [INFO] Sleeping for 88.92 seconds before scrolling
+2025-04-30 10:32:45 AM [INFO] 11 stocks added and 17 tweets added!
+2025-04-30 10:32:45 AM [INFO] Data collection completed successfully.
+2025-04-30 10:32:45 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 10:41:00 CDT)" executed successfully
+2025-04-30 10:32:45 AM [INFO] collect_data detected by completion listener.
+2025-04-30 10:32:50 AM [INFO] Making predictions...
+2025-04-30 10:32:50 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 10:32:50 AM [INFO] Simple model predicts 279.05 at 2025-04-30 10:40 AM
+2025-04-30 10:32:50 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 10:32:50 AM [INFO] Sentiment model predicts 278.78 at 2025-04-30 10:37 AM
+2025-04-30 10:32:50 AM [INFO] Task listener finished.
+--------------
+2025-04-30 10:41:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 10:51:00 CDT)" (scheduled at 2025-04-30 10:41:00-05:00)
+2025-04-30 10:41:00 AM [INFO] Starting data collection...
+2025-04-30 10:41:00 AM [INFO] Sleeping for 83.68 seconds before scrolling
+2025-04-30 10:42:33 AM [INFO] 11 stocks added and 15 tweets added!
+2025-04-30 10:42:33 AM [INFO] Data collection completed successfully.
+2025-04-30 10:42:33 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 10:51:00 CDT)" executed successfully
+2025-04-30 10:42:33 AM [INFO] collect_data detected by completion listener.
+2025-04-30 10:42:38 AM [INFO] Making predictions...
+2025-04-30 10:42:38 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 10:42:38 AM [INFO] Simple model predicts 278.57 at 2025-04-30 10:50 AM
+2025-04-30 10:42:39 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 10:42:39 AM [INFO] Sentiment model predicts 278.80 at 2025-04-30 10:50 AM
+2025-04-30 10:42:39 AM [INFO] Task listener finished.
+--------------
+2025-04-30 10:51:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 11:01:00 CDT)" (scheduled at 2025-04-30 10:51:00-05:00)
+2025-04-30 10:51:00 AM [INFO] Starting data collection...
+2025-04-30 10:51:00 AM [INFO] Sleeping for 87.89 seconds before scrolling
+2025-04-30 10:52:37 AM [INFO] 11 stocks added and 17 tweets added!
+2025-04-30 10:52:37 AM [INFO] Data collection completed successfully.
+2025-04-30 10:52:37 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 11:01:00 CDT)" executed successfully
+2025-04-30 10:52:37 AM [INFO] collect_data detected by completion listener.
+2025-04-30 10:52:42 AM [INFO] Making predictions...
+2025-04-30 10:52:42 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 10:52:42 AM [INFO] Simple model predicts 278.62 at 2025-04-30 11:00 AM
+2025-04-30 10:52:42 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 10:52:42 AM [INFO] Sentiment model predicts 278.73 at 2025-04-30 11:00 AM
+2025-04-30 10:52:43 AM [INFO] Task listener finished.
+--------------
+2025-04-30 11:01:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 11:11:00 CDT)" (scheduled at 2025-04-30 11:01:00-05:00)
+2025-04-30 11:01:00 AM [INFO] Starting data collection...
+2025-04-30 11:01:00 AM [INFO] Sleeping for 71.76 seconds before scrolling
+2025-04-30 11:02:26 AM [INFO] 11 stocks added and 21 tweets added!
+2025-04-30 11:02:26 AM [INFO] Data collection completed successfully.
+2025-04-30 11:02:26 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 11:11:00 CDT)" executed successfully
+2025-04-30 11:02:26 AM [INFO] collect_data detected by completion listener.
+2025-04-30 11:02:31 AM [INFO] Making predictions...
+2025-04-30 11:02:31 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 11:02:31 AM [INFO] Simple model predicts 278.52 at 2025-04-30 11:10 AM
+2025-04-30 11:02:31 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 11:02:31 AM [INFO] Sentiment model predicts 278.85 at 2025-04-30 11:10 AM
+2025-04-30 11:02:32 AM [INFO] Task listener finished.
+--------------
+2025-04-30 11:11:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 11:21:00 CDT)" (scheduled at 2025-04-30 11:11:00-05:00)
+2025-04-30 11:11:00 AM [INFO] Starting data collection...
+2025-04-30 11:11:00 AM [INFO] Sleeping for 79.21 seconds before scrolling
+2025-04-30 11:12:39 AM [INFO] 11 stocks added and 19 tweets added!
+2025-04-30 11:12:39 AM [INFO] Data collection completed successfully.
+2025-04-30 11:12:39 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 11:21:00 CDT)" executed successfully
+2025-04-30 11:12:39 AM [INFO] collect_data detected by completion listener.
+2025-04-30 11:12:44 AM [INFO] Making predictions...
+2025-04-30 11:12:44 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 11:12:44 AM [INFO] Simple model predicts 277.92 at 2025-04-30 11:20 AM
+2025-04-30 11:12:44 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 11:12:44 AM [INFO] Sentiment model predicts 277.89 at 2025-04-30 11:20 AM
+2025-04-30 11:12:45 AM [INFO] Task listener finished.
+--------------
+2025-04-30 11:21:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 11:31:00 CDT)" (scheduled at 2025-04-30 11:21:00-05:00)
+2025-04-30 11:21:00 AM [INFO] Starting data collection...
+2025-04-30 11:21:00 AM [INFO] Sleeping for 79.68 seconds before scrolling
+2025-04-30 11:22:29 AM [INFO] 11 stocks added and 14 tweets added!
+2025-04-30 11:22:29 AM [INFO] Data collection completed successfully.
+2025-04-30 11:22:29 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 11:31:00 CDT)" executed successfully
+2025-04-30 11:22:29 AM [INFO] collect_data detected by completion listener.
+2025-04-30 11:22:34 AM [INFO] Making predictions...
+2025-04-30 11:22:34 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 11:22:34 AM [INFO] Simple model predicts 276.95 at 2025-04-30 11:30 AM
+2025-04-30 11:22:35 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 11:22:35 AM [INFO] Sentiment model predicts 277.14 at 2025-04-30 11:30 AM
+2025-04-30 11:22:35 AM [INFO] Task listener finished.
+--------------
+2025-04-30 11:31:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 11:41:00 CDT)" (scheduled at 2025-04-30 11:31:00-05:00)
+2025-04-30 11:31:00 AM [INFO] Starting data collection...
+2025-04-30 11:31:00 AM [INFO] Sleeping for 66.14 seconds before scrolling
+2025-04-30 11:32:16 AM [INFO] 11 stocks added and 17 tweets added!
+2025-04-30 11:32:16 AM [INFO] Data collection completed successfully.
+2025-04-30 11:32:16 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 11:41:00 CDT)" executed successfully
+2025-04-30 11:32:16 AM [INFO] collect_data detected by completion listener.
+2025-04-30 11:32:21 AM [INFO] Making predictions...
+2025-04-30 11:32:21 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 11:32:21 AM [INFO] Simple model predicts 275.94 at 2025-04-30 11:40 AM
+2025-04-30 11:32:22 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 11:32:22 AM [INFO] Sentiment model predicts 275.96 at 2025-04-30 11:40 AM
+2025-04-30 11:32:22 AM [INFO] Task listener finished.
+--------------
+2025-04-30 11:41:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 11:51:00 CDT)" (scheduled at 2025-04-30 11:41:00-05:00)
+2025-04-30 11:41:00 AM [INFO] Starting data collection...
+2025-04-30 11:41:00 AM [INFO] Sleeping for 64.45 seconds before scrolling
+2025-04-30 11:42:13 AM [INFO] 11 stocks added and 10 tweets added!
+2025-04-30 11:42:13 AM [INFO] Data collection completed successfully.
+2025-04-30 11:42:13 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 11:51:00 CDT)" executed successfully
+2025-04-30 11:42:13 AM [INFO] collect_data detected by completion listener.
+2025-04-30 11:42:18 AM [INFO] Making predictions...
+2025-04-30 11:42:18 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 11:42:19 AM [INFO] Simple model predicts 276.74 at 2025-04-30 11:50 AM
+2025-04-30 11:42:19 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 11:42:19 AM [INFO] Sentiment model predicts 276.69 at 2025-04-30 11:50 AM
+2025-04-30 11:42:19 AM [INFO] Task listener finished.
+--------------
+2025-04-30 11:51:00 AM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 12:01:00 CDT)" (scheduled at 2025-04-30 11:51:00-05:00)
+2025-04-30 11:51:00 AM [INFO] Starting data collection...
+2025-04-30 11:51:00 AM [INFO] Sleeping for 89.55 seconds before scrolling
+2025-04-30 11:52:39 AM [INFO] 11 stocks added and 19 tweets added!
+2025-04-30 11:52:39 AM [INFO] Data collection completed successfully.
+2025-04-30 11:52:39 AM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 12:01:00 CDT)" executed successfully
+2025-04-30 11:52:39 AM [INFO] collect_data detected by completion listener.
+2025-04-30 11:52:44 AM [INFO] Making predictions...
+2025-04-30 11:52:44 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 11:52:44 AM [INFO] Simple model predicts 276.60 at 2025-04-30 12:00 PM
+2025-04-30 11:52:44 AM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 11:52:45 AM [INFO] Sentiment model predicts 276.95 at 2025-04-30 12:00 PM
+2025-04-30 11:52:45 AM [INFO] Task listener finished.
+--------------
+2025-04-30 12:01:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 12:11:00 CDT)" (scheduled at 2025-04-30 12:01:00-05:00)
+2025-04-30 12:01:00 PM [INFO] Starting data collection...
+2025-04-30 12:01:00 PM [INFO] Sleeping for 67.33 seconds before scrolling
+2025-04-30 12:02:17 PM [INFO] 11 stocks added and 17 tweets added!
+2025-04-30 12:02:17 PM [INFO] Data collection completed successfully.
+2025-04-30 12:02:17 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 12:11:00 CDT)" executed successfully
+2025-04-30 12:02:17 PM [INFO] collect_data detected by completion listener.
+2025-04-30 12:02:22 PM [INFO] Making predictions...
+2025-04-30 12:02:22 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 12:02:22 PM [INFO] Simple model predicts 277.32 at 2025-04-30 12:10 PM
+2025-04-30 12:02:22 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 12:02:23 PM [INFO] Sentiment model predicts 277.47 at 2025-04-30 12:10 PM
+2025-04-30 12:02:23 PM [INFO] Task listener finished.
+--------------
+2025-04-30 12:11:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 12:21:00 CDT)" (scheduled at 2025-04-30 12:11:00-05:00)
+2025-04-30 12:11:00 PM [INFO] Starting data collection...
+2025-04-30 12:11:00 PM [INFO] Sleeping for 68.46 seconds before scrolling
+2025-04-30 12:12:22 PM [INFO] 11 stocks added and 20 tweets added!
+2025-04-30 12:12:22 PM [INFO] Data collection completed successfully.
+2025-04-30 12:12:22 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 12:21:00 CDT)" executed successfully
+2025-04-30 12:12:22 PM [INFO] collect_data detected by completion listener.
+2025-04-30 12:12:27 PM [INFO] Making predictions...
+2025-04-30 12:12:27 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 12:12:27 PM [INFO] Simple model predicts 275.98 at 2025-04-30 12:20 PM
+2025-04-30 12:12:28 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 12:12:28 PM [INFO] Sentiment model predicts 276.21 at 2025-04-30 12:20 PM
+2025-04-30 12:12:28 PM [INFO] Task listener finished.
+--------------
+2025-04-30 12:21:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 12:31:00 CDT)" (scheduled at 2025-04-30 12:21:00-05:00)
+2025-04-30 12:21:00 PM [INFO] Starting data collection...
+2025-04-30 12:21:00 PM [INFO] Sleeping for 80.76 seconds before scrolling
+2025-04-30 12:22:30 PM [INFO] 11 stocks added and 20 tweets added!
+2025-04-30 12:22:30 PM [INFO] Data collection completed successfully.
+2025-04-30 12:22:30 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 12:31:00 CDT)" executed successfully
+2025-04-30 12:22:30 PM [INFO] collect_data detected by completion listener.
+2025-04-30 12:22:35 PM [INFO] Making predictions...
+2025-04-30 12:22:36 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 12:22:36 PM [INFO] Simple model predicts 276.79 at 2025-04-30 12:30 PM
+2025-04-30 12:22:36 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 12:22:36 PM [INFO] Sentiment model predicts 277.06 at 2025-04-30 12:30 PM
+2025-04-30 12:22:37 PM [INFO] Task listener finished.
+--------------
+2025-04-30 12:31:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 12:41:00 CDT)" (scheduled at 2025-04-30 12:31:00-05:00)
+2025-04-30 12:31:00 PM [INFO] Starting data collection...
+2025-04-30 12:31:00 PM [INFO] Sleeping for 66.77 seconds before scrolling
+2025-04-30 12:32:18 PM [INFO] 11 stocks added and 27 tweets added!
+2025-04-30 12:32:18 PM [INFO] Data collection completed successfully.
+2025-04-30 12:32:18 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 12:41:00 CDT)" executed successfully
+2025-04-30 12:32:18 PM [INFO] collect_data detected by completion listener.
+2025-04-30 12:32:23 PM [INFO] Making predictions...
+2025-04-30 12:32:23 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 12:32:23 PM [INFO] Simple model predicts 277.78 at 2025-04-30 12:40 PM
+2025-04-30 12:32:23 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 12:32:23 PM [INFO] Sentiment model predicts 277.81 at 2025-04-30 12:40 PM
+2025-04-30 12:32:23 PM [INFO] Task listener finished.
+--------------
+2025-04-30 12:41:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 12:51:00 CDT)" (scheduled at 2025-04-30 12:41:00-05:00)
+2025-04-30 12:41:00 PM [INFO] Starting data collection...
+2025-04-30 12:41:00 PM [INFO] Sleeping for 77.10 seconds before scrolling
+2025-04-30 12:42:28 PM [INFO] 11 stocks added and 20 tweets added!
+2025-04-30 12:42:28 PM [INFO] Data collection completed successfully.
+2025-04-30 12:42:28 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 12:51:00 CDT)" executed successfully
+2025-04-30 12:42:28 PM [INFO] collect_data detected by completion listener.
+2025-04-30 12:42:33 PM [INFO] Making predictions...
+2025-04-30 12:42:33 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 12:42:33 PM [INFO] Simple model predicts 278.95 at 2025-04-30 12:50 PM
+2025-04-30 12:42:33 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 12:42:33 PM [INFO] Sentiment model predicts 279.07 at 2025-04-30 12:50 PM
+2025-04-30 12:42:34 PM [INFO] Task listener finished.
+--------------
+2025-04-30 12:51:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 13:01:00 CDT)" (scheduled at 2025-04-30 12:51:00-05:00)
+2025-04-30 12:51:00 PM [INFO] Starting data collection...
+2025-04-30 12:51:00 PM [INFO] Sleeping for 78.65 seconds before scrolling
+2025-04-30 12:52:51 PM [INFO] 11 stocks added and 15 tweets added!
+2025-04-30 12:52:51 PM [INFO] Data collection completed successfully.
+2025-04-30 12:52:51 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 13:01:00 CDT)" executed successfully
+2025-04-30 12:52:51 PM [INFO] collect_data detected by completion listener.
+2025-04-30 12:52:56 PM [INFO] Making predictions...
+2025-04-30 12:52:56 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 12:52:56 PM [INFO] Simple model predicts 278.82 at 2025-04-30 01:00 PM
+2025-04-30 12:52:56 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 12:52:57 PM [INFO] Sentiment model predicts 278.99 at 2025-04-30 01:00 PM
+2025-04-30 12:52:57 PM [INFO] Task listener finished.
+--------------
+2025-04-30 01:01:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 13:11:00 CDT)" (scheduled at 2025-04-30 13:01:00-05:00)
+2025-04-30 01:01:00 PM [INFO] Starting data collection...
+2025-04-30 01:01:00 PM [INFO] Sleeping for 60.08 seconds before scrolling
+2025-04-30 01:02:11 PM [INFO] 11 stocks added and 19 tweets added!
+2025-04-30 01:02:11 PM [INFO] Data collection completed successfully.
+2025-04-30 01:02:11 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 13:11:00 CDT)" executed successfully
+2025-04-30 01:02:11 PM [INFO] collect_data detected by completion listener.
+2025-04-30 01:02:16 PM [INFO] Making predictions...
+2025-04-30 01:02:16 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 01:02:16 PM [INFO] Simple model predicts 278.93 at 2025-04-30 01:10 PM
+2025-04-30 01:02:16 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 01:02:16 PM [INFO] Sentiment model predicts 279.06 at 2025-04-30 01:10 PM
+2025-04-30 01:02:16 PM [INFO] Task listener finished.
+--------------
+2025-04-30 01:11:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 13:21:00 CDT)" (scheduled at 2025-04-30 13:11:00-05:00)
+2025-04-30 01:11:00 PM [INFO] Starting data collection...
+2025-04-30 01:11:00 PM [INFO] Sleeping for 74.40 seconds before scrolling
+2025-04-30 01:12:38 PM [INFO] 11 stocks added and 21 tweets added!
+2025-04-30 01:12:38 PM [INFO] Data collection completed successfully.
+2025-04-30 01:12:38 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 13:21:00 CDT)" executed successfully
+2025-04-30 01:12:38 PM [INFO] collect_data detected by completion listener.
+2025-04-30 01:12:43 PM [INFO] Making predictions...
+2025-04-30 01:12:43 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 01:12:43 PM [INFO] Simple model predicts 280.03 at 2025-04-30 01:20 PM
+2025-04-30 01:12:43 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 01:12:43 PM [INFO] Sentiment model predicts 280.21 at 2025-04-30 01:20 PM
+2025-04-30 01:12:43 PM [INFO] Task listener finished.
+--------------
+2025-04-30 01:21:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 13:31:00 CDT)" (scheduled at 2025-04-30 13:21:00-05:00)
+2025-04-30 01:21:00 PM [INFO] Starting data collection...
+2025-04-30 01:21:00 PM [INFO] Sleeping for 79.83 seconds before scrolling
+2025-04-30 01:22:33 PM [INFO] 11 stocks added and 17 tweets added!
+2025-04-30 01:22:33 PM [INFO] Data collection completed successfully.
+2025-04-30 01:22:33 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 13:31:00 CDT)" executed successfully
+2025-04-30 01:22:33 PM [INFO] collect_data detected by completion listener.
+2025-04-30 01:22:38 PM [INFO] Making predictions...
+2025-04-30 01:22:38 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 01:22:38 PM [INFO] Simple model predicts 279.96 at 2025-04-30 01:30 PM
+2025-04-30 01:22:38 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 01:22:39 PM [INFO] Sentiment model predicts 280.08 at 2025-04-30 01:30 PM
+2025-04-30 01:22:39 PM [INFO] Task listener finished.
+--------------
+2025-04-30 01:31:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 13:41:00 CDT)" (scheduled at 2025-04-30 13:31:00-05:00)
+2025-04-30 01:31:00 PM [INFO] Starting data collection...
+2025-04-30 01:31:00 PM [INFO] Sleeping for 69.74 seconds before scrolling
+2025-04-30 01:32:23 PM [INFO] 11 stocks added and 10 tweets added!
+2025-04-30 01:32:23 PM [INFO] Data collection completed successfully.
+2025-04-30 01:32:23 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 13:41:00 CDT)" executed successfully
+2025-04-30 01:32:23 PM [INFO] collect_data detected by completion listener.
+2025-04-30 01:32:28 PM [INFO] Making predictions...
+2025-04-30 01:32:28 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 01:32:28 PM [INFO] Simple model predicts 279.03 at 2025-04-30 01:40 PM
+2025-04-30 01:32:28 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 01:32:28 PM [INFO] Sentiment model predicts 279.47 at 2025-04-30 01:40 PM
+2025-04-30 01:32:28 PM [INFO] Task listener finished.
+--------------
+2025-04-30 01:41:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 13:51:00 CDT)" (scheduled at 2025-04-30 13:41:00-05:00)
+2025-04-30 01:41:00 PM [INFO] Starting data collection...
+2025-04-30 01:41:00 PM [INFO] Sleeping for 78.47 seconds before scrolling
+2025-04-30 01:42:27 PM [INFO] 11 stocks added and 8 tweets added!
+2025-04-30 01:42:27 PM [INFO] Data collection completed successfully.
+2025-04-30 01:42:27 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 13:51:00 CDT)" executed successfully
+2025-04-30 01:42:27 PM [INFO] collect_data detected by completion listener.
+2025-04-30 01:42:32 PM [INFO] Making predictions...
+2025-04-30 01:42:32 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 01:42:32 PM [INFO] Simple model predicts 278.20 at 2025-04-30 01:50 PM
+2025-04-30 01:42:32 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 01:42:33 PM [INFO] Sentiment model predicts 278.44 at 2025-04-30 01:50 PM
+2025-04-30 01:42:33 PM [INFO] Task listener finished.
+--------------
+2025-04-30 01:51:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 14:01:00 CDT)" (scheduled at 2025-04-30 13:51:00-05:00)
+2025-04-30 01:51:00 PM [INFO] Starting data collection...
+2025-04-30 01:51:00 PM [INFO] Sleeping for 85.75 seconds before scrolling
+2025-04-30 01:52:33 PM [INFO] 11 stocks added and 8 tweets added!
+2025-04-30 01:52:33 PM [INFO] Data collection completed successfully.
+2025-04-30 01:52:33 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 14:01:00 CDT)" executed successfully
+2025-04-30 01:52:33 PM [INFO] collect_data detected by completion listener.
+2025-04-30 01:52:38 PM [INFO] Making predictions...
+2025-04-30 01:52:38 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 01:52:38 PM [INFO] Simple model predicts 279.30 at 2025-04-30 02:00 PM
+2025-04-30 01:52:39 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 01:52:39 PM [INFO] Sentiment model predicts 279.16 at 2025-04-30 02:00 PM
+2025-04-30 01:52:39 PM [INFO] Task listener finished.
+--------------
+2025-04-30 02:01:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 14:11:00 CDT)" (scheduled at 2025-04-30 14:01:00-05:00)
+2025-04-30 02:01:00 PM [INFO] Starting data collection...
+2025-04-30 02:01:00 PM [INFO] Sleeping for 81.72 seconds before scrolling
+2025-04-30 02:02:36 PM [INFO] 11 stocks added and 14 tweets added!
+2025-04-30 02:02:36 PM [INFO] Data collection completed successfully.
+2025-04-30 02:02:36 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 14:11:00 CDT)" executed successfully
+2025-04-30 02:02:36 PM [INFO] collect_data detected by completion listener.
+2025-04-30 02:02:41 PM [INFO] Making predictions...
+2025-04-30 02:02:41 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 02:02:41 PM [INFO] Simple model predicts 278.51 at 2025-04-30 02:10 PM
+2025-04-30 02:02:41 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 02:02:41 PM [INFO] Sentiment model predicts 279.22 at 2025-04-30 02:10 PM
+2025-04-30 02:02:42 PM [INFO] Task listener finished.
+--------------
+2025-04-30 02:11:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 14:21:00 CDT)" (scheduled at 2025-04-30 14:11:00-05:00)
+2025-04-30 02:11:00 PM [INFO] Starting data collection...
+2025-04-30 02:11:00 PM [INFO] Sleeping for 72.65 seconds before scrolling
+2025-04-30 02:12:23 PM [INFO] 11 stocks added and 14 tweets added!
+2025-04-30 02:12:23 PM [INFO] Data collection completed successfully.
+2025-04-30 02:12:23 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 14:21:00 CDT)" executed successfully
+2025-04-30 02:12:23 PM [INFO] collect_data detected by completion listener.
+2025-04-30 02:12:28 PM [INFO] Making predictions...
+2025-04-30 02:12:28 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 02:12:29 PM [INFO] Simple model predicts 280.30 at 2025-04-30 02:20 PM
+2025-04-30 02:12:29 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 02:12:29 PM [INFO] Sentiment model predicts 280.43 at 2025-04-30 02:20 PM
+2025-04-30 02:12:29 PM [INFO] Task listener finished.
+--------------
+2025-04-30 02:21:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 14:31:00 CDT)" (scheduled at 2025-04-30 14:21:00-05:00)
+2025-04-30 02:21:00 PM [INFO] Starting data collection...
+2025-04-30 02:21:00 PM [INFO] Sleeping for 73.03 seconds before scrolling
+2025-04-30 02:22:25 PM [INFO] 11 stocks added and 16 tweets added!
+2025-04-30 02:22:25 PM [INFO] Data collection completed successfully.
+2025-04-30 02:22:25 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 14:31:00 CDT)" executed successfully
+2025-04-30 02:22:25 PM [INFO] collect_data detected by completion listener.
+2025-04-30 02:22:30 PM [INFO] Making predictions...
+2025-04-30 02:22:30 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 02:22:30 PM [INFO] Simple model predicts 281.72 at 2025-04-30 02:30 PM
+2025-04-30 02:22:30 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 02:22:30 PM [INFO] Sentiment model predicts 281.67 at 2025-04-30 02:30 PM
+2025-04-30 02:22:31 PM [INFO] Task listener finished.
+--------------
+2025-04-30 02:31:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 14:41:00 CDT)" (scheduled at 2025-04-30 14:31:00-05:00)
+2025-04-30 02:31:00 PM [INFO] Starting data collection...
+2025-04-30 02:31:00 PM [INFO] Sleeping for 74.23 seconds before scrolling
+2025-04-30 02:32:26 PM [INFO] 11 stocks added and 10 tweets added!
+2025-04-30 02:32:26 PM [INFO] Data collection completed successfully.
+2025-04-30 02:32:26 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 14:41:00 CDT)" executed successfully
+2025-04-30 02:32:26 PM [INFO] collect_data detected by completion listener.
+2025-04-30 02:32:31 PM [INFO] Making predictions...
+2025-04-30 02:32:31 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 02:32:32 PM [INFO] Simple model predicts 281.52 at 2025-04-30 02:40 PM
+2025-04-30 02:32:32 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 02:32:32 PM [INFO] Sentiment model predicts 281.55 at 2025-04-30 02:40 PM
+2025-04-30 02:32:32 PM [INFO] Task listener finished.
+--------------
+2025-04-30 02:41:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 14:51:00 CDT)" (scheduled at 2025-04-30 14:41:00-05:00)
+2025-04-30 02:41:00 PM [INFO] Starting data collection...
+2025-04-30 02:41:00 PM [INFO] Sleeping for 81.96 seconds before scrolling
+2025-04-30 02:42:30 PM [INFO] 11 stocks added and 0 tweets added!
+2025-04-30 02:42:30 PM [INFO] Data collection completed successfully.
+2025-04-30 02:42:30 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 14:51:00 CDT)" executed successfully
+2025-04-30 02:42:30 PM [INFO] collect_data detected by completion listener.
+2025-04-30 02:42:35 PM [INFO] Making predictions...
+2025-04-30 02:42:35 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 02:42:35 PM [INFO] Simple model predicts 282.03 at 2025-04-30 02:50 PM
+2025-04-30 02:42:35 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 02:42:35 PM [INFO] Sentiment model predicts 281.55 at 2025-04-30 02:40 PM
+2025-04-30 02:42:35 PM [ERROR] Prediction with sentiment model failed: UNIQUE constraint failed: sentimentPrediction.time
+2025-04-30 02:42:35 PM [INFO] Task listener finished.
+--------------
+2025-04-30 02:51:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 15:01:00 CDT)" (scheduled at 2025-04-30 14:51:00-05:00)
+2025-04-30 02:51:00 PM [INFO] Starting data collection...
+2025-04-30 02:51:00 PM [INFO] Sleeping for 60.24 seconds before scrolling
+2025-04-30 02:52:10 PM [INFO] 11 stocks added and 16 tweets added!
+2025-04-30 02:52:10 PM [INFO] Data collection completed successfully.
+2025-04-30 02:52:10 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 15:01:00 CDT)" executed successfully
+2025-04-30 02:52:10 PM [INFO] collect_data detected by completion listener.
+2025-04-30 02:52:15 PM [INFO] Making predictions...
+2025-04-30 02:52:15 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 02:52:15 PM [INFO] Simple model predicts 283.18 at 2025-04-30 03:00 PM
+2025-04-30 02:52:15 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 02:52:16 PM [INFO] Sentiment model predicts 283.24 at 2025-04-30 02:59 PM
+2025-04-30 02:52:16 PM [INFO] Task listener finished.
+--------------
+2025-04-30 03:00:00 PM [INFO] Running job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-30 15:01:00 CDT)" (scheduled at 2025-04-30 15:00:00-05:00)
+2025-04-30 03:00:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-30 15:01:00 CDT)" executed successfully
+2025-04-30 03:01:00 PM [INFO] Running job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 15:11:00 CDT)" (scheduled at 2025-04-30 15:01:00-05:00)
+2025-04-30 03:01:00 PM [INFO] Running job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-30 15:02:00 CDT)" (scheduled at 2025-04-30 15:01:00-05:00)
+2025-04-30 03:01:00 PM [INFO] Starting data collection...
+2025-04-30 03:01:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-30 15:02:00 CDT)" executed successfully
+2025-04-30 03:01:00 PM [INFO] Sleeping for 65.63 seconds before scrolling
+2025-04-30 03:02:00 PM [INFO] Running job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-30 15:03:00 CDT)" (scheduled at 2025-04-30 15:02:00-05:00)
+2025-04-30 03:02:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-30 15:03:00 CDT)" executed successfully
+2025-04-30 03:02:19 PM [INFO] 10 stocks added and 16 tweets added!
+2025-04-30 03:02:19 PM [INFO] Data collection completed successfully.
+2025-04-30 03:02:19 PM [INFO] Job "collectData (trigger: cron[minute='1,11,21,31,41,51'], next run at: 2025-04-30 15:11:00 CDT)" executed successfully
+2025-04-30 03:02:19 PM [INFO] collect_data detected by completion listener.
+2025-04-30 03:02:24 PM [INFO] Making predictions...
+2025-04-30 03:02:24 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 03:02:24 PM [INFO] Simple model predicts 282.18 at 2025-04-30 03:09 PM
+2025-04-30 03:02:24 PM [WARNING] Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-30 03:02:25 PM [INFO] Sentiment model predicts 282.88 at 2025-04-30 03:09 PM
+2025-04-30 03:02:25 PM [INFO] Task listener finished.
+--------------
+2025-04-30 03:03:00 PM [INFO] Running job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-30 15:04:00 CDT)" (scheduled at 2025-04-30 15:03:00-05:00)
+2025-04-30 03:03:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-30 15:04:00 CDT)" executed successfully
+2025-04-30 03:04:00 PM [INFO] Running job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-30 15:05:00 CDT)" (scheduled at 2025-04-30 15:04:00-05:00)
+2025-04-30 03:04:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-30 15:05:00 CDT)" executed successfully
+2025-04-30 03:05:00 PM [INFO] Running job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-30 15:06:00 CDT)" (scheduled at 2025-04-30 15:05:00-05:00)
+2025-04-30 03:05:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-30 15:06:00 CDT)" executed successfully
+2025-04-30 03:06:00 PM [INFO] Running job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-30 15:07:00 CDT)" (scheduled at 2025-04-30 15:06:00-05:00)
+2025-04-30 03:06:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-30 15:07:00 CDT)" executed successfully
+2025-04-30 03:07:00 PM [INFO] Running job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-30 15:08:00 CDT)" (scheduled at 2025-04-30 15:07:00-05:00)
+2025-04-30 03:07:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-30 15:08:00 CDT)" executed successfully
+2025-04-30 03:08:00 PM [INFO] Running job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-30 15:09:00 CDT)" (scheduled at 2025-04-30 15:08:00-05:00)
+2025-04-30 03:08:00 PM [INFO] Job "stockMarketClose (trigger: cron[hour='15', minute='*'], next run at: 2025-04-30 15:09:00 CDT)" executed successfully
+2025-04-30 03:08:00 PM [INFO] Cleaning up: closing driver and shutting down scheduler.
+2025-04-30 03:08:00 PM [INFO] Scheduler has been shut down
